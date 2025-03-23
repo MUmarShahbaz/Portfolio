@@ -1,0 +1,14 @@
+<div
+  {% if include.id %}
+  id="{{ include.id }}"
+  {% endif %}
+  style="{% if include.max-width %} max-width: {{ include.max-width }}; {% endif %} {% if include.max-height %} max-height: {{ include.max-height }}; {% endif %} margin: 0 auto;">
+  <video
+    width="100%"
+    height="auto"
+    {{ include.parameters }}
+    style="border-radius: {{ include.radius }}">
+    <source src="{{ include.src }}">
+    Your browser does not support the video tag.
+  </video>
+</div>
