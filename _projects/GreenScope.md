@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Work in Progress
-importance: 2
+importance: 3
 Link: /projects/GreenScope.html
 img: /assets/media/Projects/GS/GS.jpg
 title: GreenScope

@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Work in Progress
-importance: 1
+importance: 2
 Link: /projects/SkySpectrum.html
 img: /assets/media/Projects/SS/SS.png
 title: SkySpectrum
@@ -15,7 +15,7 @@ repository:
   - name: SkySpectrum
 slideshow: true
 model3d: true
-vip: 1
+vip: 2
 description: >
   A versatile wireless communication system featuring a custom RF transmitter and a universal receiver with support for RF, WiFi, Bluetooth, and ESP-NOW.
 ---

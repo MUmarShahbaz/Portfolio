@@ -12,7 +12,7 @@ icons:
 repository:
   - name: Arduino-Language-Support
 slideshow: true
-vip: 4
+vip: 1
 description: >
   A VS Code extension that creates an isolated environment for .ino and .cpp files. Prevents conflicts with C++ linters and extensions while providing Arduino-specific syntax highlighting and two custom themes. 4.1K Installs in 7 months.
 ---
