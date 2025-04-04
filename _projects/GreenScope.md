@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Work in Progress
-importance: 2
+importance: 3
 Link: /projects/GreenScope.html
 img: /assets/media/Projects/GS/GS.jpg
 title: GreenScope
@@ -29,7 +29,7 @@ repository:
     name: DBA
   - author: alshedivat
     name: al-folio
-related_projects: [ESP32 Environmental Data Logger, Oscilloscope Online, Graph Plotter]
+related_projects: [ESP32 Environmental Data Logger, Oscilloscope Online V2]
 vip: 2
 description: >
   A low-cost environmental data logger and mini-weather station network that collects live data, stores it on an SQL Server, and provides public access via graphs, raw data, and an AI chatbot.
@@ -58,6 +58,14 @@ At the current stage, Green Scope is just going to record data from different pa
 
 <hr>
 
+## Current Status
+
+{% include elements/image.liquid src="/assets/media/Projects/GS/Task Summary · Green Scope.png" max-width="1500px" %}
+
+{% include elements/redirect_button.liquid text="Download PDF" id="download-GS-TS" link="/assets/media/Projects/GS/Task Summary · Green Scope.pdf" %}
+
+<hr>
+
 ## EEDL
 EEDL stands for *ESP32 Environmental Data Logger*. It uses multiple dedicated sensors to take readings and calculate certain values and transmits the values to the GreenScope database using PHP and SQL. The ESP32 serves as the control unit, transmitter and a sequencer. The EEDL costs roughly around Rs 50K and can record the following:
 
@@ -68,10 +76,8 @@ EEDL stands for *ESP32 Environmental Data Logger*. It uses multiple dedicated se
 
 | Name             | Contribution                                                        |
 |:----------------:|:--------------------------------------------------------------------|
-| M. Umar Shahbaz  | Database, EEDL Design, Graph Plotter, Administration, Documentation |
+| M. Umar Shahbaz  | Database, Website, Graph Plotter, Administration, Documentation,    |
+| M. Ahsan Saleem  | Database, Website, Graph Plotter                                    |
 | Maarij Zafar     | EEDL software, AI Statistics                                        |
-| M. Ahsan Saleem  | Website, EEDL Build                                                 |
-| M. Haris         | Website, EEDL Build                                                 |
-| M. Taha          | Website, Media                                                      |
+| Arafat Bhatti    | EEDL Design, 3D Modelling                                           |
 | Ch. Abdur Rehman | Finances                                                            |
-| Arafat Bhatti    | EEDL Build, 3D Modelling                                            |

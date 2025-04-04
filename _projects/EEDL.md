@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Work in Progress
-importance: 3
+importance: 4
 Link: /projects/EEDL.html
 img: /assets/media/Projects/EEDL/EEDL.png
 title: ESP32 Environmental Data Logger

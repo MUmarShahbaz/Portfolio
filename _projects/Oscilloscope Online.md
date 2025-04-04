@@ -15,8 +15,8 @@ icons:
     site: devicons
 repository:
   - name: Oscilloscope-Online
-related_projects: [Graph Plotter]
-vip: 3
+related_projects: [Oscilloscope Online V2, Graph Plotter]
+vip: 5
 description: >
   A web-based oscilloscope that interfaces with microcontrollers to capture, visualize, and analyze real-time signals remotely.
 ---
