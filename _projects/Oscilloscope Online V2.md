@@ -7,7 +7,7 @@ img: /assets/media/Projects/OO2/OO2.png
 title: Oscilloscope Online V2
 grade: S+
 icons:
-  - file: /assets/media/Projects/OO2/uPlot - custom icon.png
+  - file: https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg
   - file: javascript/javascript-original.svg
     site: devicons
   - file: html5/html5-original.svg
@@ -41,10 +41,10 @@ uPlot:
   Switch between light and dark themes based on your preference or environment.
 
 - **Plug and Play**  
-  No installation required—simply download and start using immediately.
+  No installation required—simply open the link and start using immediately.
 
 - **Offline Access**  
-  Fully local functionality—download and host the site locally for use without an internet connection.
+  Fully local functionality—download the repo and host the site locally for use without an internet connection.
 
 - **Unlimited Plotting**  
   Visualize as many data streams as you need without restrictions.
@@ -153,6 +153,6 @@ To ensure full functionality, your browser must support the following:
 <div class="card-container" style="align-items:center; flex-direction: row; justify-content: center; gap: 10px;">
 {% include elements/repo_card.liquid repo=page.uPlot %}
 <div style="width:300px; height:300px; border: 1px solid black; border-radius:15px;">
-{% include elements/image.liquid src="/assets/media/Projects/OO2/uPlot - custom icon.png" max-width="300px" radius="15px" %}
+{% include elements/image.liquid src="https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg" max-width="300px" radius="15px" %}
 </div>
 </div>
