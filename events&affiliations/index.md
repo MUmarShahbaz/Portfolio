@@ -10,7 +10,7 @@ title: Events & Affiliations
     {% include elements/card.liquid title="Crescent Chess Club" %}
     {% include elements/card.liquid title="Crescent Football Club" %}
     {% include elements/card.liquid title="LGS JT Robotics Club" %}
-    {% include elements/card.liquid title="LGS JT HackClub" %}
+    {% include elements/card.liquid title="HackClub" %}
 </div>
 
 {% include elements/sub-heading.liquid text="Community Service Societies" %}

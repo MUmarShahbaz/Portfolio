@@ -3,7 +3,7 @@ keywords: [Portfolio, Student, Developer, Programmer, GitHub, Muhammad, Umar, Sh
 author: M. Umar Shahbaz
 email: m.umarshahbaz.2007@gmail.com
 img: assets/media/Home/profile_picture.jpg
-baseURL: https://m-umar.me
+url: https://m-umar.me
 description: >-
   I've spent the past 7 years as a developer, building programs across a range of languages and experimenting with
   different fields in tech. I'm passionate about open-source projects and love the idea of sharing knowledge to create
@@ -23,6 +23,7 @@ collections:
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 sass:
   style: expanded
