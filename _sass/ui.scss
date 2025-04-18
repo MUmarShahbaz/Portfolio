@@ -1,0 +1,94 @@
+@import "theme";
+
+html {
+    background-color: var(--background-color);
+    background-image: var(--background-pattern);
+}
+
+#body {
+    background-color: var(--body-background-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+
+#nav-bar {
+    background-color: var(--nav-bar-bg-color);
+
+    #nav-links {
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: x-large;
+            &:hover {
+                color: var(--secondary-color);
+                font-size: xx-large;
+                transition: font-size 0.2s ease-out;
+            }
+        }
+    }
+
+
+
+    .progress {
+        background-color: var(--secondary-color);
+    }
+}
+
+#foot {
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
+
+    #foot-bar {
+        background-color: var(--secondary-color);
+    }
+}
+
+.button {
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--button-text-color);
+    fill: var(--button-text-color);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px var(--button-shadow-color);
+
+    &:hover {
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-text-color);
+        fill: var(--button-hover-text-color);
+        translate: 0px -5px;
+        transition: all 0.15s ease-in-out;
+    }
+}
+
+@media (max-width: 1000px) {
+    #nav-bar {
+        #nav-links {
+            background-color: var(--nav-drop-links-bg-color);
+            transition: top 0.5s ease-out;
+        }
+
+        #menu-bg {
+            background-color: var(--nav-bar-bg-color);
+
+            #menu {
+                background-color: var(--nav-bar-bg-color);
+                color: var(--primary-color);
+                font-size: x-large;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--secondary-color);
+                    font-size: xx-large;
+                    transition: 0.3s ease-out;
+                }
+            }
+        }
+    }
+}
