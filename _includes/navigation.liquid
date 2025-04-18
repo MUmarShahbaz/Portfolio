@@ -1,0 +1,13 @@
+<div id="nav-bar">
+  <div id="menu-bg">
+    <button id="menu">☰</button>
+  </div>
+  <nav id="nav-links">
+    {%  assign pages = site.pages | sort: "nav-order" %}
+    {% for page in pages %}
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+    {% endfor %}
+  </nav>
+  <div class="progress" id="live-progress"></div>
+  <div class="progress" style="width: 100%; background-color: #272626; z-index: 999;"></div>
+</div>

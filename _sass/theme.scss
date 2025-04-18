@@ -1,0 +1,53 @@
+:root {
+  /* Main Colors */
+  --primary-color: #66b3ff;
+  --secondary-color: #ff9933;
+  --text-color: #000000;
+
+  /* Nav-Bar Colors */
+  --nav-bar-bg-color: #000000;
+  --nav-drop-links-bg-color: #333333;
+
+  /*Footer Colors*/
+  --footer-background-color: #000000;
+  --footer-text-color: #ffffff;
+
+  /* Background Colors */
+  --background-color: #66b3ff;
+  --background-pattern: url('../assets/img/bg-light.png');
+  --body-background-color: #ffffff;
+
+  /* Button Colors */
+  --button-background-color: #004cff;
+  --button-hover-background-color: #ffffff;
+  --button-text-color: #ffffff;
+  --button-hover-text-color: #004cff;
+  --button-shadow-color: #000000;
+}
+
+[data-theme="dark"] {
+  /* Main Colors */
+  --primary-color: #66b3ff;
+  --secondary-color: #ff9933;
+  --text-color: #ffffff;
+
+  /* Nav-Bar Colors */
+  --nav-bar-bg-color: #000000;
+  --nav-drop-links-bg-color: #333333;
+
+  /*Footer Colors*/
+  --footer-background-color: #000000;
+  --footer-text-color: #ffffff;
+
+  /* Background Colors */
+  --background-color: #071e34;
+  --background-pattern: url('../assets/img/bg-dark.png');
+  --body-background-color: #414141;
+
+  /* Button Colors */
+  --button-background-color: #023360;
+  --button-hover-background-color: #ffffff;
+  --button-text-color: #ffffff;
+  --button-hover-text-color: #023360;
+  --button-shadow-color: #000000;
+}

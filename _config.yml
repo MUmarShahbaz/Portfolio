@@ -1,3 +1,14 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+url: https://m-umar.me
+baseurl: /
+title: MUS
+description: The Archives of M. Umar Shahbaz
+author: M. Umar Shahbaz
+
+collections:
+  pages:
+    output: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
