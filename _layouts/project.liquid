@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div style="margin: 5%;">
+{% include project-intro.liquid title=page.title description=page.description img=page.img icons=page.icons %}
+</div>
+<hr class="spacer">
+
+{% if page.repositories %}
+{% for repo in page.repositories %}
+{% include repo-card.liquid repo=repo %}
+{% endfor %}
+<hr class="spacer">
+{% endif %}
+
+{{ content }}

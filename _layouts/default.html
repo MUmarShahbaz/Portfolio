@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.project-intros %} <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}"> {% endif %}
+    {% if page.code-highlight %} <link rel="stylesheet" href="{{ '/assets/css/code-highlight.css' | relative_url }}"> {% endif %}
     <script src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
     {% feed_meta %}
     {% seo %}

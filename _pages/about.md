@@ -11,13 +11,17 @@ nav-order: 2
 
 <h1 class="heading center-text uppercase">M. Umar Shahbaz</h1>
 
-I'm your friendly neighborhood programmer! My origin story is one of passion and hard work.
+I’m your friendly neighborhood programmer! My origin story is one of passion and hard work.
 
-Way back in 2018, I was annoyed by my siblings always poking into my room without permission. Security Alarms were too expensive for 11 year old me, so I decided to make one.
+Way back in 2018, I was annoyed by my siblings always poking into my room without permission. Security alarms were too expensive for 11-year-old me, so I decided to make one.
 
-So came forth the Arduino, the small piece of hardware that started the journey to **Robotics**; **Web Development**; **WinForms Application Development**; **Electrical Engineering** and even **Digital Electronics**. I'm halfway to becoming a Jack-of-Trades!
+So came forth the Arduino—the small piece of hardware that started the journey into **Robotics**, **Web Development**, **Application Development**, **Electrical Engineering**, and even **Digital Electronics**.
 
-My strengths lie in my skills of deduction, adaption and creative problem solving. I have what it takes to learn new aspects, such as new programming languages and new frameworks, in the most efficient way possible.
+I’m halfway to becoming a **Jack-of-all-Trades**—or at least the guy sticking his leg into everything!
+
+My strengths lie in my skills of deduction, adaptation, and creative problem-solving. I have what it takes to learn new aspects, such as new programming languages and frameworks, in the most efficient way possible.
+
+Needless to say, I'm not a fast learner. I'm a faster learner.
 
 <br class="spacer">
 
@@ -50,6 +54,15 @@ My strengths lie in my skills of deduction, adaption and creative problem solvin
 <h1 class="heading uppercase">Programming Languages</h1>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
+        {% include figure.liquid path=icon.path width="100px" class="rounded-corners no-shadow " %}
+    {% endfor %}
+</div>
+
+<br class="spacer">
+
+<h1 class="heading uppercase right-text">Tools</h1>
+<div class="center-element row p-margins icons">
+    {% for icon in site.data.tech.tools %}
         {% include figure.liquid path=icon.path width="100px" class="rounded-corners no-shadow " %}
     {% endfor %}
 </div>

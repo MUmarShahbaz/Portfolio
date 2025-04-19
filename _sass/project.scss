@@ -1,0 +1,32 @@
+.project-intro {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .project-img {
+        max-width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .project-vertical-hr {
+        align-self: stretch;
+        margin: 0 20px;
+        width: 0px;
+    }
+
+    .project-content {
+        flex: 1;
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
