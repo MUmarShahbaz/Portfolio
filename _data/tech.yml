@@ -1,0 +1,38 @@
+languages:
+  # Core Programming Languages
+  - name: Python
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg
+  - name: JavaScript
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg
+  - name: C++
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg
+  - name: C#
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg
+  - name: PHP
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg
+
+  # Web Languages & Markup
+  - name: HTML5
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg
+  - name: CSS
+    path: https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg
+  - name: SASS
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg
+  - name: LIQUID
+    path: https://sissel.gallerycdn.vsassets.io/extensions/sissel/shopify-liquid/4.0.1/1699358936199/Microsoft.VisualStudio.Services.Icons.Default
+
+  # Data & Config Formats
+  - name: JSON
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg
+  - name: YAML
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yaml/yaml-original.svg
+  - name: MD
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg
+
+  # Database
+  - name: MySQL
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg
+
+  # Creative / Visual
+  - name: Processing
+    path: https://skillicons.dev/icons?i=processing

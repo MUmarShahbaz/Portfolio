@@ -1,0 +1,10 @@
+<div class="card {{ include.class }}{% if include.link %} card-link"> <a href="{{ include.link }}" target="{{ include.target |  default: "_blank"}} {% endif %}">
+    {% if include.img %}
+        {% include figure.liquid path=include.img loading="lazy" %}
+    {% endif %}
+    <div class="card-body">
+        <h2 class="primary center-text">{{ include.title }}</h2>
+        {{ include.body }}
+    </div>
+    {% if include.link %}<p class="read-more center-text">Read more</p></a>{% endif %}
+</div>

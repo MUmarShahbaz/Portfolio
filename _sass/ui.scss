@@ -1,6 +1,4 @@
-@import "theme";
-
-html {
+body {
     background-color: var(--background-color);
     background-image: var(--background-pattern);
 }
@@ -17,13 +15,16 @@ html {
 
     #nav-links {
         a {
+            font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif;
             text-decoration: none;
-            color: var(--primary-color);
-            font-size: x-large;
+            text-transform: uppercase;
+            color: var(--nav-bar-text-color);
+            font-size: large;
+            font-weight: bold;
             &:hover {
-                color: var(--secondary-color);
-                font-size: xx-large;
-                transition: font-size 0.2s ease-out;
+                color: var(--nav-bar-text-hover-color);
+                //font-size: xx-large;
+                transition: color 0.3s ease-in;
             }
         }
     }
@@ -44,26 +45,13 @@ html {
     }
 }
 
-.button {
-    background-color: var(--button-background-color);
-    border: 1px solid var(--button-background-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: var(--button-text-color);
-    fill: var(--button-text-color);
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px var(--button-shadow-color);
+p, li, ol, ul {
+    font-size: large;
+    line-height: 1.5;
+}
 
-    &:hover {
-        background-color: var(--button-hover-background-color);
-        color: var(--button-hover-text-color);
-        fill: var(--button-hover-text-color);
-        translate: 0px -5px;
-        transition: all 0.15s ease-in-out;
-    }
+img {
+    box-shadow: 0 0 10px var(--image-shadow-color);
 }
 
 @media (max-width: 1000px) {
@@ -78,14 +66,14 @@ html {
 
             #menu {
                 background-color: var(--nav-bar-bg-color);
-                color: var(--primary-color);
+                color: var(--nav-bar-text-color);
                 font-size: x-large;
                 border: none;
                 cursor: pointer;
 
                 &:hover {
-                    color: var(--secondary-color);
-                    font-size: xx-large;
+                    color: var(--nav-bar-text-hover-color);
+                    //font-size: xx-large;
                     transition: 0.3s ease-out;
                 }
             }

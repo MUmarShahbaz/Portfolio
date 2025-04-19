@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    height: 100%;
 }
 
 #body {
@@ -59,13 +60,6 @@ body {
     }
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-}
-
 #theme-selector {
     position: fixed;
     bottom: 20px;
@@ -73,4 +67,17 @@ body {
     width: 50px;
     height: 50px;
     padding: 10px;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, ol, ul, .p-margins {
+    margin: 20px 10%;
+}
+
+hr {
+    margin: 50px 80px;
+    width: calc(100% - 160px);
+}
+
+figure {
+    margin: 0;
 }

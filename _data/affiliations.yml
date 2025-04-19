@@ -1,0 +1,4 @@
+- name: GreenScope
+  link: https://greenscope.github.io/
+  img: /assets/img/Projects/GS/GS.jpg
+  description: A low-cost environmental data logger and mini-weather station network that collects live data, stores it on an SQL Server, and provides public access via graphs, raw data, and an AI chatbot.

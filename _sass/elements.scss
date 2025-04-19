@@ -1,0 +1,85 @@
+@import "text", "card";
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--button-text-color);
+    fill: var(--button-text-color);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px var(--button-shadow-color);
+
+    &:hover {
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-text-color);
+        fill: var(--button-hover-text-color);
+        translate: 0px -5px;
+        transition: all 0.15s ease-in-out;
+    }
+
+    &:active {
+        translate: 0px 0px;
+        box-shadow: 0px 0px 5px var(--button-shadow-color);
+    }
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.rounded-corners {
+    border-radius: 5%;
+}
+
+.heading{
+    color: var(--secondary-color);
+    margin: 20px 50px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 10px 30px;
+    width: calc(100% - 160px);
+    font-weight: bolder;
+}
+
+.spacer {
+    margin: 20px;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.icons {
+    img {
+        padding: 5px;
+    }
+}

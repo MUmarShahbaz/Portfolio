@@ -4,7 +4,7 @@ addEventListener("DOMContentLoaded", () => {
   const progressbar = document.getElementById("live-progress");
 
   menu.addEventListener("click", () => {
-    links.style.top = links.style.top === "85px" ? "-711px" : "85px";
+    links.style.top = links.style.top === "82px" ? "-711px" : "82px";
   });
 
   this.window.addEventListener("scroll", () => {
