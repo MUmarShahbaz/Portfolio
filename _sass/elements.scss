@@ -51,7 +51,8 @@
 }
 
 .spacer {
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .center-element {
@@ -81,5 +82,53 @@
 .icons {
     img {
         padding: 5px;
+    }
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.title-with-element {
+    h1 {
+        margin: 0;
+    }
+
+    .element {
+        float: right;
+    }
+}
+
+.vertical-hr {
+    height: 100%;
+    margin: 0 20px;
+    width: 0px;
+}
+
+.no-padding {
+    padding: 0;
+}
+.no-margin {
+    margin: 0;
+}
+
+@media (max-width: 550px) {
+    .title-with-element {
+        .element {
+            float: none;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            display: block;
+        }
     }
 }

@@ -69,8 +69,12 @@ body {
     padding: 10px;
 }
 
-p, h1, h2, h3, h4, h5, h6, li, ol, ul, .p-margins {
+p, h1, h2, h3, h4, h5, h6, ol, ul, .p-margins {
     margin: 20px 10%;
+}
+
+li p {
+    margin: 10px 0;
 }
 
 hr {

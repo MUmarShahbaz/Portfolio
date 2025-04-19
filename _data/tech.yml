@@ -33,6 +33,37 @@ languages:
   - name: MySQL
     path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg
 
-  # Creative / Visual
-  - name: Processing
+tools:
+  # IDEs & Code Editors
+  - name: Visual Studio Code
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg
+  - name: Visual Studio
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg
+  - name: Processing IDE
     path: https://skillicons.dev/icons?i=processing
+
+  # Microcontrollers & Embedded
+  - name: Arduino
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg
+  - name: Espressif
+    path: https://www.espressif.com/sites/all/themes/espressif/images/logo-guidelines/primary-vertical-logo.png
+  - name: EasyEDA
+    path: https://easyeda.com/images/easyeda-thumbnail.png?id=d5ed1fe5930602975df1
+
+  # Version Control & Deployment
+  - name: GitHub
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg
+  - name: GitKraken
+    path: https://www.gitkraken.com/wp-content/uploads/2021/03/gitkraken-logo-dark-sq.png
+  - name: Inno Setup
+    path: https://upload.wikimedia.org/wikipedia/commons/c/cc/Inno_Setup_icon.png
+
+  # Web & Static Site Tools
+  - name: Jekyll
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jekyll/jekyll-original.svg
+  - name: XAMPP
+    path: https://images.icon-icons.com/1381/PNG/512/xampp_94513.png
+
+  # 3D Modeling
+  - name: 123D Design
+    path: https://peterasencio.github.io/assets/images/icon256-1400x1400.png

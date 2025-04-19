@@ -12,6 +12,7 @@ body {
 
 #nav-bar {
     background-color: var(--nav-bar-bg-color);
+    transition: top 0.5s ease-out;
 
     #nav-links {
         a {
@@ -33,6 +34,7 @@ body {
 
     .progress {
         background-color: var(--secondary-color);
+        transition: top 0.5s ease-out;
     }
 }
 
@@ -63,6 +65,7 @@ img {
 
         #menu-bg {
             background-color: var(--nav-bar-bg-color);
+            transition: top 0.5s ease-out;
 
             #menu {
                 background-color: var(--nav-bar-bg-color);

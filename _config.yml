@@ -7,6 +7,8 @@ author: M. Umar Shahbaz
 collections:
   pages:
     output: true
+  projects:
+    output: true
 
 plugins:
   - jekyll-feed
@@ -32,3 +34,12 @@ imagemagick:
     webp: "-quality 85"
 
 lazy_loading_images: true
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM  # GitHub Flavored Markdown
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
