@@ -1,0 +1,16 @@
+- name: "Crescent Model School"
+  link: "https://www.crescentschool.edu.pk"
+  img: /assets/img/EA/Crescent.png
+  location: "Shadman, Lahore, Pakistan"
+  degree: "O-Levels"
+  field_of_study: "Computer Science"
+  enrollment_year: 2020
+  graduation_year: 2023
+- name: "Lahore Grammar School"
+  link: "https://www.lgsjt.edu.pk/"
+  img: /assets/img/EA/LGS_JT.jpg
+  location: "Johar Town, Lahore, Pakistan"
+  degree: "A-Levels"
+  field_of_study: "Computer Science with Chemistry"
+  enrollment_year: 2023
+  graduation_year: 2025
