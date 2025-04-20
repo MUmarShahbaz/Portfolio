@@ -1,24 +1,16 @@
 <div class="project-intro">
     <div class="project-img">
-        {%  include figure.liquid path=include.img class="no-shadow rounded-corners" max-width="250px" %}
+        {%  include figure.liquid path=include.img class="rounded-corners" max-width="250px" %}
     </div>
     <hr class="project-vertical-hr">
     <div class="project-content">
         <div class="title-with-element primary">
-            <h2 class="capitalize inline no-margin">{{ include.title }}</h2>
+            <h1 class="capitalize inline no-margin">{{ include.title }}</h1>
             {% if include.icons %}
-                <div class="center-element row element">
-                    {% for icon in include.icons %}
-                        {%  assign object = site.data.tech.languages | where: "name", icon |  first %}
-                        {% if object == nil %}
-                            {%  assign object = site.data.tech.tools| where: "name", icon |  first %}
-                        {% endif %}
-                        <img width="50px" src="{{ object.path }}" alt="{{ icon }}" class="icon no-shadow no-padding" title="{{ icon }}">
-                    {% endfor %}
-                </div>
+                {% include tech-icons.liquid icons=include.icons class="element" icon-width="50px" %}
             {% endif %}
         </div>
-        <br class="spacer">
+        <br class="big-spacer">
         <p>{{ include.description }}</p>
         {% if include.link %}
         <a href="{{ include.link }}" class="button center-element row">Open {{ include.title }}</a>

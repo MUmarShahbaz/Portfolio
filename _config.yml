@@ -1,8 +1,8 @@
 url: https://m-umar.me
-baseurl: /
 title: MUS
 description: The Archives of M. Umar Shahbaz
 author: M. Umar Shahbaz
+logo: /assets/img/icon.png
 
 collections:
   pages:
@@ -15,6 +15,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-imagemagick
+  - jekyll-minifier
 
 imagemagick:
   enabled: true

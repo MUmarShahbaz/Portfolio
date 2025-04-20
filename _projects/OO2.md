@@ -1,23 +1,27 @@
 ---
+permalink: /projects/Oscilloscope-Online-2
+layout: project
+css:
+  - project
+  - code-highlight
+
 title: Oscilloscope Online 2
-img: /assets/img/Projects/OO2/OO2.png
-description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals remotely.
+image: /assets/img/Projects/OO2/OO2.png
+description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
+
 icons:
   - HTML5
   - CSS
   - JavaScript
-layout: project
-permalink: /projects/Oscilloscope-Online-2
 repositories:
   - name: Oscilloscope-Online-V2
+
 uPlot:
   name: uPlot
   author: leeoniya
-project-intros: true
-code-highlight: true
 ---
 
-{% include figure.liquid path="/assets/img/Projects/OO2/Live Plot.gif" max-width="1000px" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Live Plot.gif" max-width="1000px" class="rounded-corners" %}
 
 <a href="https://mumarshahbaz.github.io/Oscilloscope-Online-V2" class="button" style="font-size: 30px; height: auto; padding: 10px" target="_blank">Open Oscilloscope Online V2</a>
 
@@ -53,7 +57,7 @@ code-highlight: true
 - **Support for Null Values**  
   Handles incomplete or missing data gracefully during plotting.
 
-- **Auto CLS**
+- **Auto CLS**  
   Automatically clears screen after the number of collected data has passed a pre-defined threshold.
 
 - **Auto-Scaling Y-Axis**  
@@ -63,7 +67,7 @@ code-highlight: true
   Zoom in and explore plots dynamically with a responsive, interactive graphing interface.
 
 ### Example of Interactivity
-{% include figure.liquid path="/assets/img/Projects/OO2/Zoom.gif" max-width="1000px" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Zoom.gif" max-width="1000px" class="rounded-corners" %}
 
 <hr class="spacer">
 
@@ -81,7 +85,7 @@ The plotter supports three distinct modes to fit a variety of use cases, ranging
   Treats the first value in each data packet as the timestamp (typically in milliseconds). Ideal for high-precision plots—especially when using functions like `millis()` in Arduino-based applications. This mode offers the most reliable timing accuracy for microcontroller data.
 
 ### Example of Time Scale feature
-{% include figure.liquid path="/assets/img/Projects/OO2/Time Scale.gif" max-width="1000px" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Time Scale.gif" max-width="1000px" class="rounded-corners" %}
 
 <hr class="spacer">
 
@@ -116,7 +120,7 @@ function DataProcessor(message, timeReceived) {
 
 There are 2 basic things you need to keep in mind:
 - Each value should be separated by the configured **break character**.
-- The data line must end with a newline (`\n`).
+- The data line must end with a newline (<span class="inline-code">\n</span>).
 
 ### 🧹 Clear Screen Command
 
@@ -127,7 +131,7 @@ This will reset the plotter and erase existing data.
 ### ⏱ Manual Time Scaling Note
 
 If you're using **Manual Time Scale** mode, the first value is treated as the **timestamp in milliseconds**.  
-This is ideal for use with <span style="font-family: monospace; font-size: large; font-weight: bold;">millis()</span> in Arduino or similar microcontrollers.
+This is ideal for use with <span class="inline-code">millis()</span> in Arduino or similar microcontrollers.
 
 <hr class="spacer">
 
@@ -138,7 +142,7 @@ You can customize parameters such as baud rate, break/CLS characters, plot types
 
 A built-in **Help** section is also provided to explain the purpose and functionality of each setting—perfect for new users or quick reference.
 
-{% include figure.liquid path="/assets/img/Projects/OO2/setup.png" max-width="1000px" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/setup.png" max-width="1000px" class="rounded-corners" %}
 
 <hr class="spacer">
 
@@ -149,7 +153,7 @@ The application supports both **Light** and **Dark** themes to suit different en
 You can toggle between themes anytime.  
 Your selected theme is automatically applied across all pages for a consistent visual experience.
 
-{% include figure.liquid path="/assets/img/Projects/OO2/Light - Dark Mode.gif" max-width="1000px" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Light - Dark Mode.gif" max-width="1000px" class="rounded-corners" %}
 
 <hr class="spacer">
 
@@ -169,9 +173,8 @@ To ensure full functionality, your browser must support the following:
 <hr class="spacer">
 
 ## Made with uPlot
-<div class="card-container" style="align-items:center; flex-direction: row; justify-content: center; gap: 10px;">
+<div class="center-element row">
 {% include repo-card.liquid repo=page.uPlot %}
-<div style="width:300px; height:300px; border: 1px solid black; border-radius:15px;">
-{% include figure.liquid path="https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg" max-width="300px" class="rounded-corners white-bg no-shadow" %}
+{% include figure.liquid path="https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg" max-width="300px" class="rounded-corners white-bg no-shadow black-border" %}
 </div>
-</div>
+<br class="spacer">

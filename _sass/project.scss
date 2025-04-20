@@ -25,8 +25,37 @@
     .project-content {
         flex: 1;
 
-        h2 {
+        h1 {
             font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .project-content {
+        .title-with-element {
+            .element {
+                float: none;
+                margin: 20px auto;
+            }
+            h1 {
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-intro {
+        display: block;
+
+        .project-img {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .project-vertical-hr {
+            display: none;
         }
     }
 }
