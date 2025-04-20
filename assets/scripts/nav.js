@@ -19,9 +19,9 @@ addEventListener("DOMContentLoaded", () => {
     const currentScroll = window.scrollY;
     if (currentScroll > lastScroll + 30) {
       navBG.forEach((element) => {
-        element.style.top = "-83px"; });
+        element.style.top = "-80px"; });
       progressbars.forEach((element) => {
-        element.style.top = "-3px"; });
+        element.style.top = "0px"; });
     } else if (currentScroll < lastScroll - 30) {
       navBG.forEach((element) => {
         element.style.top = "0"; });

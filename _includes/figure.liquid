@@ -72,7 +72,7 @@
       {% elsif site.lazy_loading_images %}
         loading="lazy"
       {% endif %}
-      onerror="this.onerror=null; this.closest('picture')?.querySelectorAll('source').forEach(sourceTag => sourceTag.remove());"
+      onerror="this.onerror=null; this.closest('picture')?.querySelector('source').remove();"
     >
   </picture>
 

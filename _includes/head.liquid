@@ -1,0 +1,28 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#FF4C60">
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" href="{{ site.logo | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ site.logo | relative_url }}">
+
+    <!-- CSS Insertion -->
+    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+
+    {% for cssFile in include.css %}
+        <link rel="stylesheet" href="{{ '/assets/css/' | append: cssFile | append: '.css' | relative_url }}">
+    {% endfor %}
+
+    <!-- JS Insertion -->
+    <script src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
+
+    {% for jsFile in include.js %}
+        <script src="{{{ '/assets/script/' | append: jsFile | append: '.js' | relative_url }}"></script>
+    {% endfor %}
+
+    <!-- Meta and Feed -->
+    {% feed_meta %}
+    {% seo %}
+</head>

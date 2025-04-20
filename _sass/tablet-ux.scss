@@ -41,8 +41,37 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     #body {
         width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    #foot {
+        #foot-content {
+
+            flex-direction: column;
+            justify-content: center;
+
+            #foot-main {
+                margin: auto;
+                text-align: center;
+            }
+
+            #foot-socials {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #foot {
+        #foot-content {
+            #foot-main {
+                width: 100%;
+            }
+        }
     }
 }

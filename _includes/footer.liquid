@@ -1,4 +1,22 @@
 <div id="foot">
     <div id="foot-bar"></div>
-    <p>// Add Socials</p>
+    <div id="foot-content">
+        <div id="foot-main">
+            <h1 class="heading primary">{{ site.title }}</h1>
+            <p class="subheading">{{ site.description }}</p>
+        </div>
+        <div id="foot-socials">
+            <h2 class="primary" style="margin: 30px 0;">Socials</h2>
+            {% for social in site.data.socials %}
+            <a href="{{ social.url }}" target="_blank" class="center-element row" style="justify-content: left; margin: 10px 0;">
+                {% include figure.liquid path=social.icon width="30px" class="no-shadow" %}
+                <p style="margin: 0 10px;">{{ social.username }}</p>
+            </a>
+            {% endfor %}
+            <br class="spacer">
+        </div>
+    </div>
+    <hr style="margin-top: 0; margin-bottom: 0">
+    <div style="width: 90%;">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p></div>
 </div>
