@@ -7,7 +7,7 @@ css:
 
 title: Oscilloscope Online 2
 image: /assets/img/Projects/OO2/OO2.png
-description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
+description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales.
 
 icons:
   - HTML5

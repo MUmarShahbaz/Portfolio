@@ -33,7 +33,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
             <h3>{{ school.degree }}</h3>
             <h4>{{ school.field_of_study }}</h4>
         {% endcapture %}
-        {%  include card.liquid img=school.img title=school.name body=body link=school.link %}
+        {%  include card.liquid img=school.img title=school.name body=body link=school.link target="_blank" %}
     {% endfor %}
 </div>
 
@@ -45,7 +45,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
         {%  capture body %}
             <p style="font-size: small;">{{ affiliate.description }}</p>
         {% endcapture %}
-        {%  include card.liquid img=affiliate.img title=affiliate.name body=body link=affiliate.link %}
+        {%  include card.liquid img=affiliate.img title=affiliate.name body=body link=affiliate.link target="_blank" %}
     {% endfor %}
 </div>
 
@@ -54,7 +54,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
 <h1 class="heading uppercase">Programming Languages</h1>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
-        {% include figure.liquid path=icon.path width="100px" class="no-shadow " %}
+        <img width="80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>
 
@@ -63,7 +63,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
 <h1 class="heading uppercase right-text">Tools</h1>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.tools %}
-        {% include figure.liquid path=icon.path width="100px" class="no-shadow " %}
+        <img width="80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>
 
