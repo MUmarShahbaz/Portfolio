@@ -4,23 +4,32 @@ this.addEventListener('DOMContentLoaded', function() {
         const slides = track.querySelectorAll('.card');
         const nextBtn = carousel.querySelector('.next-button');
         const prevBtn = carousel.querySelector('.prev-button');
-        const trackWidth = track.offsetWidth;
         const slideWidth = slides[0].offsetWidth;
-        const initial_position = (trackWidth - slideWidth) / 2;
-        track.style.transform = `translateX(${initial_position}px)`;
+        let trackWidth = track.offsetWidth;
+        let initial_position = (trackWidth - slideWidth) / 2;
         let index = 0;
+
+        track.style.transform = `translateX(${initial_position}px)`;
+
+        function getTranslateX() {
+            return initial_position - (index * (slideWidth + 140));
+        }
     
         nextBtn.addEventListener('click', () => {
             index = (index + 1) % slides.length;
-            translateX = initial_position - (index * (slideWidth + 140));
-            track.style.transform = `translateX(${translateX}px)`;
+            track.style.transform = `translateX(${getTranslateX()}px)`;
 
         });
     
         prevBtn.addEventListener('click', () => {
             index = (index - 1 + slides.length) % slides.length;
-            translateX = initial_position - (index * (slideWidth + 140));
-            track.style.transform = `translateX(${translateX}px)`;
+            track.style.transform = `translateX(${getTranslateX()}px)`;
+        });
+
+        this.addEventListener('resize', () => {
+            trackWidth = track.offsetWidth;
+            initial_position = (trackWidth - slideWidth) / 2;
+            track.style.transform = `translateX(${getTranslateX()}px)`;
         });
     });
 });
