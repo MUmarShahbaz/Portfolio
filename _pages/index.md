@@ -48,9 +48,9 @@ js:
 <h3 class="heading uppercase">Tech Stack</h3>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
-        {% include figure.liquid path=icon.path width="50px" class="no-shadow " %}
+      <img width="50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
     {% for icon in site.data.tech.tools %}
-        {% include figure.liquid path=icon.path width="50px" class="no-shadow " %}
+      <img width="50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>

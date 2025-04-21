@@ -1,4 +1,4 @@
-<div class="card {{ include.class }}{% if include.link %} card-link"> <a href="{{ include.link }}" target="{{ include.target |  default: "_blank"}} {% endif %}">
+<div class="card {{ include.class }}{% if include.link %} card-link"> <a href="{{ include.link }} {% if include.target %}" target="{{ include.target }} {% endif %} {% endif %}">
     {% if include.img %}
         {% assign loading = include.loading |  default: "lazy" %}
         {% include figure.liquid path=include.img loading=loading class="card-img" %}

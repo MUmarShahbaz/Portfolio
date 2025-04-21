@@ -1,17 +1,30 @@
--  title: Robotic Arm
-   image: /assets/img/Projects/RBA/RBA.jpg
-   description: A robotic arm that can be controlled using a desktop application, allowing for precise movements in with angular accuracy
-   icons:
-     - Arduino
-   best: 1
--  title: Yellow Rammer
-   image: /assets/img/Projects/YR/YR.png
-   description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
-   icons:
-     - Arduino
-   best: 2
--  title:  Line Follower
-   image: /assets/img/Projects/LFR/LFR.jpg
-   description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
-   icons:
-     - Arduino
+- title: Robotic Arm
+  image: /assets/img/Projects/RBA/RBA.jpg
+  description: A robotic arm that can be controlled using a desktop application, allowing for precise movements in with angular accuracy
+  icons:
+    - Arduino
+- title: Yellow Rammer
+  image: /assets/img/Projects/YR/YR.png
+  description: A durable bluetooth-controlled robotic vehicle with controllable lighting
+  icons:
+    - Arduino
+- title:  Line Follower
+  image: /assets/img/Projects/LFR/LFR.jpg
+  description: A line-following robot that uses infrared sensors to detect and follow a line on the ground
+  icons:
+    - Arduino
+- title: Automatic Night Lamp
+  image: /assets/img/Projects/ANL/ANL.jpg
+  description: A lamp that automatically turns on at night and off during the day using a light sensor and TTL logic, DOES NOT USE ANY MICROCONTROLLER
+  icons:
+    - Arduino
+- title: IR Home
+  image: /assets/img/Projects/IRH/IRH.jpg
+  description: A system that allows you to control home appliances using infrared signals from a remote control, using a microcontroller and IR receiver module
+  icons:
+    - Arduino
+- title: PROTON
+  image: /assets/img/Projects/PRO/PROTON.jpg
+  description: A dummy robotic vehicle used for debugging and testing code for other robotic vehicles
+  icons:
+    - Arduino

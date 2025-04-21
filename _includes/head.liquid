@@ -19,7 +19,7 @@
     <script src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
 
     {% for jsFile in include.js %}
-        <script src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
+        <script defer src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
     {% endfor %}
 
     <!-- Meta and Feed -->

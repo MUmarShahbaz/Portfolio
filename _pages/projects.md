@@ -20,7 +20,7 @@ js:
       {% include tech-icons.liquid icons=project.icons icon-width="50px" %}
       <p style="font-size: small;">{{ project.description }}</p>
     {% endcapture %}
-    {% include card.liquid img=project.image title=project.title body=body link=project.url target="_self" loading="eager" %}
+    {% include card.liquid img=project.image title=project.title body=body link=project.url loading="eager" %}
   {% endfor %}
   {% for project in Pageless_Best_Projects %}
     {% capture body %}
