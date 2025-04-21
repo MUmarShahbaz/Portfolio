@@ -1,6 +1,7 @@
 <div class="card {{ include.class }}{% if include.link %} card-link"> <a href="{{ include.link }}" target="{{ include.target |  default: "_blank"}} {% endif %}">
     {% if include.img %}
-        {% include figure.liquid path=include.img loading="lazy" %}
+        {% assign loading = include.loading |  default: "lazy" %}
+        {% include figure.liquid path=include.img loading=loading class="card-img" %}
     {% endif %}
     <div class="card-body">
         <h2 class="primary center-text">{{ include.title }}</h2>

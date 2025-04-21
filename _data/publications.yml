@@ -1,0 +1,12 @@
+- name: Transistors, The Core of Digital Innovation and Logic Circuitry
+  image: /assets/img/Publications/transistors.jpg
+  type: Short Article
+  year: 2024
+  description: A brief introduction to TTL (Transistor-Transistor Logic), by giving an explanation of the Logic Gates, Logic States, BJTs and the 74XX IC Series.
+  url: https://afaqeilm.blog/2024/09/09/transistors-the-core-of-digital-innovation-and-logic-circuitry/
+
+- name: Evolution, Ethics and the Future of Military Robotics
+  image: /assets/img/Publications/military-robotics.jpeg
+  type: Research Paper
+  year: PROOFREADING STAGE
+  description: A study displaying the effects of technological advancements on the increased casualties per war and increased frequency of war occurrence. The study describes the most probable outcome in the future.
