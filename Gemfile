@@ -7,5 +7,6 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
   gem 'jekyll-imagemagick'
-  gem 'jekyll-minifier'
+  #gem 'jekyll-minifier'
+  #gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
 end
