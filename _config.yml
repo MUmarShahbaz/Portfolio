@@ -15,8 +15,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-imagemagick
-  #- jekyll-minifier
-  #- jekyll-terser
+  - jekyll-minifier
+  - jekyll-terser
 
 imagemagick:
   enabled: true
@@ -41,7 +41,14 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
-  input: GFM  # GitHub Flavored Markdown
+  input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
+
+jekyll-minifier:
+  compress_javascript: false
+
+terser:
+  compress:
+    drop_console: true
