@@ -1,0 +1,80 @@
+.highlight {
+    background: #0A0F29; /* CLI navy */
+    color: #ffffff;       /* Default mango tone */
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    line-height: 1.6;
+    margin: 10px 5%;
+  }
+  
+  /* --- Rouge Tokens tuned for JavaScript --- */
+  
+  /* Comments */
+  .highlight .c1 {
+    color: #6C7086;
+    font-style: italic;
+  }
+  
+  /* Keywords: let, const, function, return */
+  .highlight .k,
+  .highlight .kd,
+  .highlight .kp {
+    color: #FF4C60;
+    font-weight: bold;
+  }
+  
+  /* Strings: "Hello", 'World' */
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2 {
+    color: #FFB627;
+  }
+  
+  /* Function names and definitions */
+  .highlight .nf {
+    color: #FFD37A;
+    font-weight: bold;
+  }
+  
+  /* Built-ins: console, window, etc. */
+  .highlight .nb {
+    color: #9e00dc;
+  }
+  
+  /* Variable names, generic identifiers */
+  .highlight .nx {
+    color: #ffffff;
+  }
+  
+  /* Numbers, literals */
+  .highlight .m,
+  .highlight .mi {
+    color: #FFAC33;
+  }
+  
+  /* Operators and punctuation */
+  .highlight .o,
+  .highlight .p {
+    color: #FFB627;
+  }
+  
+  /* Errors and invalid tokens */
+  .highlight .err {
+    background: #FF4C60;
+    color: #0A0F29;
+    padding: 0 0.25em;
+    border-radius: 0.25rem;
+  }
+  
+  /* Line numbers (optional) */
+  .highlight .lineno {
+    color: #444A73;
+    border-right: 1px solid #333;
+    padding-right: 1em;
+    margin-right: 1em;
+    user-select: none;
+  }
+  
