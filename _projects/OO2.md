@@ -15,6 +15,7 @@ icons:
   - JavaScript
 repositories:
   - name: Oscilloscope-Online-V2
+best: 1
 
 uPlot:
   name: uPlot

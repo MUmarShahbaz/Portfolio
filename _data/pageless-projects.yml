@@ -1,0 +1,17 @@
+-  title: Robotic Arm
+   image: /assets/img/Projects/RBA/RBA.jpg
+   description: A robotic arm that can be controlled using a desktop application, allowing for precise movements in with angular accuracy
+   icons:
+     - Arduino
+   best: 1
+-  title: Yellow Rammer
+   image: /assets/img/Projects/YR/YR.png
+   description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
+   icons:
+     - Arduino
+   best: 2
+-  title:  Line Follower
+   image: /assets/img/Projects/LFR/LFR.jpg
+   description: An updated version of the web-based oscilloscope used to interface with microcontrollers to capture, visualize, and analyze real-time signals using dynamic inputs, Timescale, and Logarithmic scales
+   icons:
+     - Arduino
