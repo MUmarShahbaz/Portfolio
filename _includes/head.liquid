@@ -17,6 +17,7 @@
 
     <!-- JS Insertion -->
     <script src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
+    <script src="{{ '/assets/scripts/theme.js' | relative_url }}"></script>
 
     {% for jsFile in include.js %}
         <script defer src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
