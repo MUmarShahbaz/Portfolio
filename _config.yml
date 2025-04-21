@@ -15,7 +15,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-imagemagick
-  - jekyll-minifier
+  #- jekyll-minifier
+  #- jekyll-terser
 
 imagemagick:
   enabled: true
