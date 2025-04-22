@@ -22,7 +22,7 @@ uPlot:
   author: leeoniya
 ---
 
-{% include figure.liquid path="/assets/img/Projects/OO2/Live Plot.gif" max-width="1000px" class="rounded-corners" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Live Plot.gif" max-width="1000px" class="rounded-corners" alt="Live Plotting example" %}
 
 <a href="https://mumarshahbaz.github.io/Oscilloscope-Online-V2" class="button" style="font-size: 30px; height: auto; padding: 10px" target="_blank">Open Oscilloscope Online V2</a>
 
@@ -68,7 +68,7 @@ uPlot:
   Zoom in and explore plots dynamically with a responsive, interactive graphing interface.
 
 ### Example of Interactivity
-{% include figure.liquid path="/assets/img/Projects/OO2/Zoom.gif" max-width="1000px" class="rounded-corners" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Zoom.gif" max-width="1000px" class="rounded-corners" alt="Interacting with the graph example" %}
 
 <hr class="spacer">
 
@@ -86,7 +86,7 @@ The plotter supports three distinct modes to fit a variety of use cases, ranging
   Treats the first value in each data packet as the timestamp (typically in milliseconds). Ideal for high-precision plots—especially when using functions like `millis()` in Arduino-based applications. This mode offers the most reliable timing accuracy for microcontroller data.
 
 ### Example of Time Scale feature
-{% include figure.liquid path="/assets/img/Projects/OO2/Time Scale.gif" max-width="1000px" class="rounded-corners" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Time Scale.gif" max-width="1000px" class="rounded-corners" alt="Plotting with timescale example" %}
 
 <hr class="spacer">
 
@@ -143,7 +143,7 @@ You can customize parameters such as baud rate, break/CLS characters, plot types
 
 A built-in **Help** section is also provided to explain the purpose and functionality of each setting—perfect for new users or quick reference.
 
-{% include figure.liquid path="/assets/img/Projects/OO2/setup.png" max-width="1000px" class="rounded-corners" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/setup.png" max-width="1000px" class="rounded-corners" alt="Setup Page" %}
 
 <hr class="spacer">
 
@@ -154,7 +154,7 @@ The application supports both **Light** and **Dark** themes to suit different en
 You can toggle between themes anytime.  
 Your selected theme is automatically applied across all pages for a consistent visual experience.
 
-{% include figure.liquid path="/assets/img/Projects/OO2/Light - Dark Mode.gif" max-width="1000px" class="rounded-corners" %}
+{% include figure.liquid path="/assets/img/Projects/OO2/Light - Dark Mode.gif" max-width="1000px" class="rounded-corners" alt="Themes" %}
 
 <hr class="spacer">
 
@@ -176,6 +176,6 @@ To ensure full functionality, your browser must support the following:
 ## Made with uPlot
 <div class="center-element row">
 {% include repo-card.liquid repo=page.uPlot %}
-{% include figure.liquid path="https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg" max-width="300px" class="rounded-corners white-bg no-shadow black-border" %}
+<img src="https://raw.githubusercontent.com/leeoniya/uPlot/1c147324e32c0a6db65b069062632bbd330c0799/uPlot.svg" width="300px" class="rounded-corners white-bg no-shadow black-border">
 </div>
 <br class="spacer">

@@ -5,5 +5,5 @@
   href="https://github.com/{% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.data.github.username }}{% endif %}/{{ include.repo.name }}"
   rel="external nofollow noopener"
   target="_blank">
-  {% include figure.liquid path=src alt=alt class="no-shadow" width="400px" %}
+  <img src="{{ src }}" alt="{{ alt }}" class="no-shadow" loading="lazy" width="400px">
 </a>

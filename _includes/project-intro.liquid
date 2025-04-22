@@ -1,6 +1,7 @@
 <div class="project-intro">
     <div class="project-img">
-        {%  include figure.liquid path=include.img class="rounded-corners" max-width="250px" %}
+        {%  assign altText = include.title |  append: ' Icon' %}
+        {%  include figure.liquid path=include.img class="rounded-corners" max-width="250px" sizes="250px" alt=altText %}
     </div>
     <hr class="project-vertical-hr">
     <div class="project-content">
