@@ -58,7 +58,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
 <h1 class="heading uppercase">Programming Languages</h1>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
-        <img width="80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
+        <img style="width: 80px; height: 80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>
 
@@ -67,7 +67,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
 <h1 class="heading uppercase right-text">Tools</h1>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.tools %}
-        <img width="80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
+        <img style="width: 80px; height: 80px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>
 

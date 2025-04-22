@@ -8,7 +8,9 @@
         <div class="title-with-element primary">
             <h1 class="capitalize inline no-margin">{{ include.title }}</h1>
             {% if include.icons %}
-                {% include tech-icons.liquid icons=include.icons class="element" icon-width="50px" %}
+                <div class="center-element row element">
+                    {% include tech-icons.liquid icons=include.icons icon-width="50px" %}
+                </div>
             {% endif %}
         </div>
         <br class="big-spacer">
