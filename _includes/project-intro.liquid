@@ -1,7 +1,7 @@
 <div class="project-intro">
     <div class="project-img">
         {%  assign altText = include.title |  append: ' Icon' %}
-        {%  include figure.liquid path=include.img class="rounded-corners" max-width="250px" sizes="250px" alt=altText %}
+        <img src="{{ include.img |  split: '.' |  first | relative_url }}-480.webp" width="250px" height="250px" loading="lazy" class="rounded-corners" alt="{{ altText }}" onerror="this.onerror=null; this.src='{{ include.img | relative_url }}';" >
     </div>
     <hr class="project-vertical-hr">
     <div class="project-content">

@@ -7,7 +7,11 @@ nav-order: 2
 
 <br class="spacer">
 
-{% include figure.liquid path="/assets/img/Home/profile_picture.jpg" loading="eager" class="circle" width="300px" sizes="300px" %}
+{% assign prof_pic = "/assets/img/Home/profile_picture.jpg" %}
+<div class="center-element">
+<img src="{{ prof_pic | split: '.' | first | relative_url }}-480.webp" width="300px" height="300px" loading="eager" class="circle" alt="Profile Picture" onerror="this.onerror=null; this.src='{{ prof_pic | relative_url }}';" >
+</div>
+
 
 <h1 class="heading center-text uppercase">M. Umar Shahbaz</h1>
 

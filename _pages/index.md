@@ -7,8 +7,10 @@ js:
   - carousel
 ---
 <br class="spacer">
+
+{% assign icon_pic = "/assets/img/icon.png" %}
 <div class="center-element">
-{% include figure.liquid path="/assets/img/icon.png" loading="eager" class="circle" width="300px" alt="MUS Icon" sizes="300px" %}
+<img src="{{ icon_pic | split: '.' | first | relative_url }}-480.webp" width="300px" height="300px" loading="eager" class="circle" alt="MUS Icon" onerror="this.onerror=null; this.src='{{ icon_pic | relative_url }}';" >
 </div>
 
 <h1 class="heading center-text uppercase">MUS Archives</h1>
