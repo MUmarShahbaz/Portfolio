@@ -49,9 +49,9 @@ js:
 <h2 class="heading uppercase">Tech Stack</h2>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
-      <img width="50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
+      <img style="width: 50px; height: 50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
     {% for icon in site.data.tech.tools %}
-      <img width="50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
+      <img style="width: 50px; height: 50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
     {% endfor %}
 </div>
