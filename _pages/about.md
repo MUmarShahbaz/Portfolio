@@ -7,7 +7,7 @@ nav-order: 2
 
 <br class="spacer">
 
-{% include figure.liquid path="/assets/img/Home/profile_picture.jpg" loading="eager" class="circle img-center-h" width="300px" zoomable=true %}
+{% include figure.liquid path="/assets/img/Home/profile_picture.jpg" loading="eager" class="circle" width="300px" sizes="300px" %}
 
 <h1 class="heading center-text uppercase">M. Umar Shahbaz</h1>
 
