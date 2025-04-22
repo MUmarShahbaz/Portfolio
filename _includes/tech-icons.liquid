@@ -4,6 +4,6 @@
     {% if object == nil %}
         {%  assign object = site.data.tech.tools| where: "name", icon |  first %}
     {% endif %}
-    <img width="{{ include.icon-width }}" src="{{ object.path }}" alt="{{ icon }}" class="icon no-shadow no-padding" title="{{ icon }}">
+    <img width="{{ include.icon-width }}" height="{{ include.icon-width }}" src="{{ object.path }}" alt="{{ icon }}" class="icon no-shadow no-padding" title="{{ icon }}">
 {% endfor %}
 </div>

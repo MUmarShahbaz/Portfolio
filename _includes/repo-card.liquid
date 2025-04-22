@@ -1,9 +1,11 @@
 {% capture src %}https://github-readme-stats.vercel.app/api/pin/?username={% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.data.github.username }}{% endif %}&amp;repo={{ include.repo.name }}&amp;theme=default&amp;show_owner=false&amp;description_lines_count=3{% endcapture %}
 {% capture alt %}{% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.github_username }}{% endif %}/{{ include.repo.name }}{% endcapture %}
 
+<div class="center-element row">
 <a
   href="https://github.com/{% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.data.github.username }}{% endif %}/{{ include.repo.name }}"
   rel="external nofollow noopener"
   target="_blank">
   <img src="{{ src }}" alt="{{ alt }}" class="no-shadow" loading="lazy" width="400px">
 </a>
+</div>
