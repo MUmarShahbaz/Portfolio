@@ -15,7 +15,7 @@ js:
 
 <h1 class="heading center-text uppercase">MUS Archives</h1>
 <br class="spacer">
-<h3 class="heading uppercase">Publications</h3>
+<h2 class="heading uppercase">Publications</h2>
 <div class="carousel">
   <div class="track">
   {% assign Papers = site.data.publications | sort: "year" %}
@@ -30,7 +30,7 @@ js:
   <button class="button prev-button"><</button>
   <button class="button next-button">></button>
 </div>
-<h3 class="heading uppercase">Best Projects</h3>
+<h2 class="heading uppercase">Best Projects</h2>
 <div class="carousel">
   <div class="track">
   {% assign Best_Projects = site.projects | where_exp: "project", "project.best" | sort: "best" %}
@@ -46,7 +46,7 @@ js:
   <button class="button next-button">></button>
 </div>
 
-<h3 class="heading uppercase">Tech Stack</h3>
+<h2 class="heading uppercase">Tech Stack</h2>
 <div class="center-element row p-margins icons">
     {% for icon in site.data.tech.languages %}
       <img width="50px" src="{{ icon.path }}" alt="{{ icon.name }}" class="icon no-shadow no-padding" title="{{ icon.name }}" loading="lazy">
