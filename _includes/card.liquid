@@ -2,7 +2,7 @@
     {% if include.img %}
         {% assign loading = include.loading |  default: "lazy" %}
         {% assign altText = include.title |  append: ' Icon' %}
-        {% include figure.liquid path=include.img loading=loading class="card-img" alt=altText sizes="350px" %}
+        <img src="{{ include.img |  split: '.' |  first | relative_url }}-480.webp" width="350px" height="350px" loading="{{ loading }}" class="card-img" alt="{{ altText }}" onerror="this.onerror=null; this.src='{{ include.img | relative_url }}';" >
     {% endif %}
     <div class="card-body">
         <h2 class="primary center-text">{{ include.title }}</h2>
