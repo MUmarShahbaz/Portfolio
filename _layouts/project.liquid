@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="{{ page.title }}">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{%  for keyword in page.keywords %} {{ keyword }},{% endfor %}">
+    <meta name="author" content="{{ site.author }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.img }}">
+    <meta property="og:url" content="{{ page.Link }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.img }}">
+
+    <link rel="stylesheet" href="/assets/style/master.css">
+    <link rel="stylesheet" href="/assets/style/elements.css">
+    <link rel="stylesheet" href="/assets/style/project.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/media/icon.png">
+    <script defer src="/assets/scripts/nav.js"></script>
+    {% if page.slideshow %}
+      <script defer src="/assets/scripts/slideshow.js"></script>
+    {% endif %}
+    {% if page.model3d %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    {% endif %}
+
+    <title>{{ page.title }}</title>
+  </head>
+
+  <body>
+    {% include navigation-bar.liquid %}
+    <div id="main-outer">
+      <div class="mainPage">
+        {% include elements/project_intro.liquid img=page.img title=page.title icons=page.icons grade=page.grade
+ description=page.description category=page.category %}
+        <hr>
+        {% if page.repository %}
+          <div class="card-container">
+            {% for repo in page.repository %}
+              {% include elements/repo_card.liquid repo=repo %}
+            {% endfor %}
+          </div>
+          <hr>
+        {% endif %}
+        {{ content }}
+        {% if page.related_projects %}
+          <br><br><br>
+          <hr>
+          <h1>Relevant Projects</h1>
+          <div class="card-container" id="related-projects">
+            {% for projectName in page.related_projects %}
+              {% assign project = site.projects | where: "title", projectName | first %}
+              {% include elements/card.liquid link=project.Link target="_self" img=project.img title=project.title
+ grade=project.grade %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% include footer.liquid %}
+  </body>
+
+</html>

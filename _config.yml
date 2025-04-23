@@ -1,0 +1,35 @@
+title: M. Umar Shahbaz - Student Programmer & Developer
+keywords: [Portfolio, Student, Developer, Programmer, GitHub, Muhammad, Umar, Shahbaz, MUS, MUmarShahbaz, KingHowler, Jekyll, Projects, Publications]
+author: M. Umar Shahbaz
+email: m.umarshahbaz.2007@gmail.com
+img: assets/media/Home/profile_picture.jpg
+url: https://m-umar.me
+description: >-
+  I've spent the past 7 years as a developer, building programs across a range of languages and experimenting with
+  different fields in tech. I'm passionate about open-source projects and love the idea of sharing knowledge to create
+  better tools for everyone. Outside of coding, I have a deep curiosity for physics, especially quantum mechanics and
+  the decades-long search for the elusive Graviton. I'm always excited to tackle new challenges, whether it's in tech or
+  exploring the mysteries of the universe.
+github_username:  MUmarShahbaz
+
+collections:
+  projects:
+    output: true
+  publications:
+    output: true
+  dec:
+    output: true
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+sass:
+  style: expanded
+  sourcemap: never
+
+exclude: 
+  - .github/
+  - LICENSE
+  - README.md

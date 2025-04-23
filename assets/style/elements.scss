@@ -1,0 +1,246 @@
+---
+---
+
+@import 'colors';
+
+.heading {
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color ;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    .card {
+        overflow: hidden;
+        width: 300px;
+        border-radius: 10px;
+        background-color: $bg;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+
+            h2 {
+                color: $primary-color;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 1.5em;
+                color: $card-primary;
+            }
+    
+            h4 {
+                color: $card-primary;
+            }
+    
+            p {
+                margin: 10px 0;
+                color: $card-extra;
+            }
+    
+            ul {
+                margin: 10px 0;
+                text-align: left;
+                color: $card-extra;
+            }
+        }
+
+        .redirect {
+            margin: 0px;
+            padding: 5px;
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+            width: calc(100% - 13.2px);
+            text-decoration: none;
+            text-align: center;
+            color: $primary-color;
+        }
+    }
+
+    .card:hover {
+        .Grade {
+            color: $accent-color;
+        }
+
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .Link {
+        position: relative;
+        padding-bottom: 40px;
+    
+        a {
+            text-decoration: none;
+        }
+    
+        .viewMore {
+            position: absolute;
+            bottom: 10px;
+            margin: 0px 10px;
+            border: 2px solid #66b3ff;
+            border-radius: 5px;
+            padding: 5px;
+            width: calc(100% - 40px);
+            text-decoration: none;
+            text-align: center;
+            color: $primary-color;
+        }
+    }
+    
+    .card:hover {
+        .redirect {
+            color: $accent-color;
+            border: 2px solid $accent-color;
+        }
+    }
+    .Link:hover {
+        .viewMore {
+            color: $accent-color;
+            border: 2px solid $accent-color;
+        }
+    }
+}
+
+.sub-heading {
+    display: block;
+    margin: 5%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5%;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        border: 1px solid black;
+        padding: 8px;
+        background-color: black;
+        text-align: left;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #dedede;
+    }
+}
+
+.break {
+    display: block;
+    border-bottom: 2px solid $primary-color;
+    margin: 5px 10%;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: calc(80vw *(8/16));
+    overflow: hidden;
+
+    .text-overlay {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+
+        img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .active{
+        opacity: 1;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+        border-radius: 5px;
+    }
+
+    .nav-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+      
+      .prev-btn {
+        left: 10px;
+    }
+      
+      .next-btn {
+        right: 10px;
+    }
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .slideshow-container {
+        height: 100vw;
+    }
+}

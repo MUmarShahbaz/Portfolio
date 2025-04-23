@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include head.liquid title="Home" slideshow="True" %}
+  </head>
+
+  <body>
+    {% include navigation-bar.liquid %}
+    <div id="main-outer">
+      <div class="mainPage">
+        {% include elements/image.liquid src="/assets/media/Home/profile_picture.jpg" max-width="300px" max-height="300px"
+ radius = "150px" %}
+        {% include elements/heading.liquid text=site.author align="center" %}
+        {{ content }}
+      </div>
+      <div class="slideshow-container overlay">
+        {% include elements/slideshow/overlay.liquid title="GreenScope" description="Archive for environmental data with
+                it's own custom mini weather station" %}
+        {% include elements/slideshow/slide.liquid state="active" data-title="GreenScope" data-description="Archive for
+                environmental data with it's own custom mini weather station" img="/assets/media/Projects/GS/Mind Map.png" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="SkySpectrum" data-description="Custom Wireless
+                Communication Device: RF Transmitter and Universal Receiver"
+ img="https://raw.githubusercontent.com/MUmarShahbaz/RC-Transmitter-and-Receiver/refs/heads/main/PCBs/Discontinued/RC%20Transmitter/images/RC%20Transmitter%203D.png"
+        %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Oscilloscope Online V2" data-description="An online
+                webapp for research work and experimentation" img="/assets/media/Projects/OO2/live plot.gif" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Oscilloscope-Online" data-description="An online
+                webapp for research work and experimentation" img="/assets/media/Projects/OO/OO-S1.png" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Arduino Language Support" data-description="A VS
+                Code extension that declares Arduino as a new language" img="/assets/media/Projects/ALS/ALS-S2.png" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Attendance System" data-description="An ESP-based
+                RFID attendance marking system" img="/assets/media/Projects/ATS/ATS.jpg" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Graph Plotter" data-description="A custom library
+                to plot line graphs on Processing IDE" img="/assets/media/Projects/GP/GP-S1.png" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Arduino Toolbox" data-description="A utility tool
+                that helps in the development and calibration of robotic arms" img="/assets/media/Projects/ATB/ATB-S1.png" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Raw Computer Memory" data-description="Computer
+                Memory made from raw hardware" img="/assets/media/Projects/MU/MU.jpg" %}
+        {% include elements/slideshow/slide.liquid state="" data-title="Laser Security System" data-description="A
+                security system designed using raw electronics and hardware. No microcontrollers used"
+ img="/assets/media/Projects/LSS/LSS.jpg" %}
+      </div>
+      <div class="mainPage">
+        {% include vip.liquid %}
+        {% include nav-box.liquid %}
+      </div>
+    </div>
+    {% include footer.liquid %}
+  </body>
+
+</html>
