@@ -17,7 +17,9 @@ js:
   {% assign Pageless_Best_Projects = site.data.pageless-projects | where_exp: "project", "project.best" | sort: "best" %}
   {% for project in Best_Projects %}
     {% capture body %}
-      {% include tech-icons.liquid icons=project.icons icon-width="50px" %}
+      <div class="center-element row">
+        {% include tech-icons.liquid icons=project.icons icon-width="50px" %}
+      </div>
       <p style="font-size: small;">{{ project.description }}</p>
     {% endcapture %}
     {% include card.liquid img=project.image title=project.title body=body link=project.url loading="eager" %}
