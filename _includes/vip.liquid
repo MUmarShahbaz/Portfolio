@@ -1,0 +1,13 @@
+{% assign sorted_projects = site.projects | sort: "vip" %}
+{% include elements/heading.liquid text="MUST SEE!!!!!" align="center" %}
+<h3 style="text-align:center">ORDERED FROM BEST TO GREAT</h3>
+<hr>
+{% for project in sorted_projects %}
+  {% if project.vip %}
+    <div class="vip-projects">
+      {% include elements/project_intro.liquid img=project.img title=project.title icons=project.icons grade=project.grade
+ description=project.description category=project.category %}
+    </div>
+    <hr>
+  {% endif %}
+{% endfor %}

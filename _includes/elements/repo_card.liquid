@@ -1,0 +1,12 @@
+<a
+  {% if include.id %}
+  id="{{ include.id }}"
+  {% endif %}
+  href="https://github.com/{% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.github_username }}{% endif %}/{{ include.repo.name }}"
+  rel="external nofollow noopener"
+  target="_blank">
+  <img
+    style="width: 100%; height: auto;"
+    alt="{% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.github_username }}{% endif %}/{{ include.repo.name }}"
+    src="https://github-readme-stats.vercel.app/api/pin/?username={% if include.repo.author %}{{ include.repo.author }}{% else %}{{ site.github_username }}{% endif %}&amp;repo={{ include.repo.name }}&amp;theme=default&amp;show_owner=false&amp;description_lines_count=3">
+</a>

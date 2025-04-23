@@ -1,0 +1,99 @@
+--- 
+---
+@import 'colors';
+
+.Intro {
+    display: flex;
+    margin: 0 auto;
+
+    .Icon {
+        margin: auto;
+        padding-right: 20px;
+    }
+    .vertical-hr {
+        display: inline-block;
+        margin: 20px 20px;
+    }
+
+    .Info {
+        width: 100%;
+        align-items: center;
+
+        .Title {
+            display: inline;
+        }
+
+        .TechIconsBox {
+            display: block;
+            gap: 10px;
+            margin-bottom: 10px;
+            float: right;
+
+            .TechIcon {
+                display: inline;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+
+        .Grade {
+            color: $primary-color;
+        }
+
+        .Category {
+            vertical-align: middle;
+            height: 30px;
+            padding: 17px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .Intro {
+        display: block;
+
+        .vertical-hr {
+            display: none;
+        }
+
+        .Info {
+            padding: 0;
+
+            .Title {
+                display: block;
+                text-align: center;
+            }
+
+            .TechIconsBox {
+                float: none;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+
+                .TechIcon {
+                    display: flex;
+                }
+            }
+
+            .Grade {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .Intro {
+        .vertical-hr {
+            display: none;
+        }
+
+        .Info {
+            .TechIconsBox {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+}

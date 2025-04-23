@@ -1,0 +1,28 @@
+<div class="Intro">
+  {% if include.img %}
+    <div class="Icon">
+      {% include elements/image.liquid src=include.img max-height="300px" max-width="300px" radius="15px" %}
+    </div>
+    <hr class="vertical-hr">
+  {% endif %}
+
+  <div class="Info">
+    <h1 class="Title">{{ include.title }}</h1>
+    <div class="TechIconsBox">
+      {% for icon in include.icons %}
+        <div class="TechIcon">
+          {% include elements/tech-icon.liquid site=icon.site file=icon.file %}
+        </div>
+      {% endfor %}
+    </div>
+    <h2 class="Grade">Difficulty: {{ include.grade }}</h2>
+    <p>{{ include.description }}</p>
+    <p class="sub-heading Category">
+      <strong>{{ include.category }}</strong>
+    </p>
+    {% if project.Link %}
+      {% assign linkText = "View " | append: project.title %}
+      {% include elements/redirect_button.liquid link=project.Link text=linkText width="700px" text-size="1.5em" %}
+    {% endif %}
+  </div>
+</div>

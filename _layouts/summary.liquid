@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include elements/heading.liquid align="left" text="Projects" %}
+
+<div>
+  {% include elements/redirect_button.liquid link="catalogue" text="Switch to Catalogue View" width="500px"
+ id="catalogue-view" %}
+</div>
+
+<hr>
+
+{% for category in page.display_categories %}
+  {% assign categorized_projects = site.projects | where: "category", category %}
+  {% assign sorted_projects = categorized_projects | sort: "importance" %}
+  {% for project in sorted_projects %}
+    {% include elements/project_intro.liquid img=project.img title=project.title icons=project.icons grade=project.grade
+ description=project.description category=project.category %}
+    <hr>
+  {% endfor %}
+{% endfor %}

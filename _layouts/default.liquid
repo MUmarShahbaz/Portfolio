@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.liquid title=page.title slideshow=page.slideshow model3d=page.model3d mtl=page.mtl obj=page.obj %}
+  </head>
+  <body>
+    {% include navigation-bar.liquid %}
+    <div id="main-outer">
+      <div class="mainPage">
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.liquid %}
+  </body>
+</html>

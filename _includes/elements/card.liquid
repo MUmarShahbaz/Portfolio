@@ -1,0 +1,46 @@
+{% if include.link %}
+  <div
+    class="card Link"
+    {% if include.id %}
+    id="{{ include.id }}"
+    {% endif %}>
+    <a href="{{ include.link }}" target="{{ include.target }}">
+      {% if include.img %}
+        <img src="{{ include.img }}" class="card-image">
+      {% endif %}
+      <div class="card-body">
+        <h3>{{ include.title }}</h3>
+        {% if include.grade %}
+          <h2 class="Grade">{{ include.grade }}</h2>
+        {% else %}
+          <p>{{ include.description }}</p>
+          {% if include.html %}
+            {{ include.html | raw }}
+          {% endif %}
+        {% endif %}
+      </div>
+      <p class="viewMore">More Information</p>
+    </a>
+  </div>
+{% else %}
+  <div
+    class="card"
+    {% if include.id %}
+    id="{{ include.id }}"
+    {% endif %}>
+    {% if include.img %}
+      <img src="{{ include.img }}" class="card-image">
+    {% endif %}
+    <div class="card-body">
+      <h3>{{ include.title }}</h3>
+      {% if include.grade %}
+        <h2 class="Grade">{{ include.grade }}</h2>
+      {% else %}
+        <p>{{ include.description }}</p>
+      {% endif %}
+      {% if include.html %}
+        {{ include.html | raw }}
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
