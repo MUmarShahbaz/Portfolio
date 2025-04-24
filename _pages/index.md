@@ -13,7 +13,7 @@ js:
 <img src="{{ icon_pic | split: '.' | first | relative_url }}-480.webp" width="300px" height="300px" loading="eager" class="circle" alt="MUS Icon" onerror="this.onerror=null; this.src='{{ icon_pic | relative_url }}';" >
 </div>
 
-<h1 class="heading center-text uppercase">MUS Archives</h1>
+<h1 class="heading center-text uppercase">MUS - M. Umar Shahbaz</h1>
 <br class="spacer">
 <h2 class="heading uppercase">Publications</h2>
 <div class="carousel">

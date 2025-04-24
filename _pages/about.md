@@ -13,7 +13,7 @@ nav-order: 2
 </div>
 
 
-<h1 class="heading center-text uppercase">M. Umar Shahbaz</h1>
+<h1 class="heading center-text uppercase">Muhammad Umar Shahbaz</h1>
 
 I’m your friendly neighborhood programmer! My origin story is one of passion and hard work.
 
