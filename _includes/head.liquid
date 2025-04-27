@@ -12,14 +12,22 @@
     <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
     {% for cssFile in include.css %}
-        <link rel="stylesheet" href="{{ '/assets/css/' | append: cssFile | append: '.css' | relative_url }}">
+        {% if cssFile contains 'http' %}
+            <link rel="stylesheet" href="{{ cssFile }}">
+        {% else %}
+            <link rel="stylesheet" href="{{ '/assets/css/' | append: cssFile | append: '.css' | relative_url }}">
+        {% endif %}
     {% endfor %}
 
     <!-- JS Insertion -->
     <script defer src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
 
     {% for jsFile in include.js %}
-        <script defer src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
+        {% if jsFile contains 'http' %}
+            <script defer src="{{ jsFile }}"></script>
+        {% else %}
+            <script defer src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
+        {% endif %}
     {% endfor %}
 
     <!-- Meta and Feed -->
