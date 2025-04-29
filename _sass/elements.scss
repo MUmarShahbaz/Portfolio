@@ -1,4 +1,4 @@
-@import "text", "card", "carousel";
+@import "text", "card", "carousel", "slideshow";
 
 .button {
     display: flex;
@@ -146,6 +146,13 @@
     max-width: 1000px;
     max-height: 600px;
     margin: auto;
+}
+
+.center-self {
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 800px) {
