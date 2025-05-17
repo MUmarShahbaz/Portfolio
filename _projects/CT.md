@@ -72,8 +72,10 @@ Used to count every single type of move you have ever made throughout your game 
   Generates a report for your latest N games, using -1 will generate report for all games
 - **JSON**  
   Outputs a JSON file containing the move counts
-- **HTML**  
-  Generates an HTML file and opens it automatically when the program ends
+- **RESULTS**  
+  Generates an HTML file displaying the counts and opens it automatically when the program ends
+- **BRILLIANT**  
+  Generates an HTML file storing links to every brilliant move found
 
 ## Example Output
 {% include figure.liquid path="/assets/img/Projects/CT/Moves.png" max-width="400px" class="rounded-corners" alt="Distribution Graph" %}
