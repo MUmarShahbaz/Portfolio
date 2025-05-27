@@ -8,13 +8,13 @@ js:
 
 title: Arduino Language Support
 image: /assets/img/Projects/ALS/ALS.jpeg
-description: A VS Code extension that creates an isolated environment for .ino and .cpp files. Prevents conflicts with C++ linters and extensions while providing Arduino-specific syntax highlighting and two custom themes. 4.1K Installs in 7 months.
+description: A VS Code extension which isolates .ino and .cpp files. Prevents conflicts with C++ linters and extensions without along with two custom themes. 4.1K Installs in 7 months.
 
 icons:
   - Visual Studio Code
 repositories:
   - name: Arduino-Language-Support
-best: 2
+best: 4
 ---
 <img src="https://img.shields.io/visual-studio-marketplace/d/MUmarShahbaz.als?style=for-the-badge&label=Installs&labelColor=%2300f&color=%23000" style="width: 80%; max-width: 300px; height: auto;" class="rounded-corners center-self">
 

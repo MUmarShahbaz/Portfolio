@@ -21,7 +21,7 @@ icons:
   - EasyEDA
 repositories:
   - name: SkySpectrum
-best: 3
+best: 5
 ---
 
 <h1 class="heading uppercase">Overview</h1>

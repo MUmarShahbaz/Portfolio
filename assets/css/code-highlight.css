@@ -21,7 +21,9 @@
   /* Keywords: let, const, function, return */
   .highlight .k,
   .highlight .kd,
-  .highlight .kp {
+  .highlight .kn,
+  .highlight .kp, 
+  .highlight .nb {
     color: #FF4C60;
     font-weight: bold;
   }
@@ -29,19 +31,16 @@
   /* Strings: "Hello", 'World' */
   .highlight .s,
   .highlight .s1,
-  .highlight .s2 {
+  .highlight .s2,
+  .highlight .sh {
     color: #FFB627;
   }
   
   /* Function names and definitions */
-  .highlight .nf {
+  .highlight .nf,
+  .highlight .nc {
     color: #FFD37A;
     font-weight: bold;
-  }
-  
-  /* Built-ins: console, window, etc. */
-  .highlight .nb {
-    color: #9e00dc;
   }
   
   /* Variable names, generic identifiers */

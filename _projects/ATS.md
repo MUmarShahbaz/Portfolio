@@ -14,5 +14,5 @@ icons:
   - MySQL
 repositories:
   - name: NodeMCU-Attendance-system
-best: 4
+best: 6
 ---

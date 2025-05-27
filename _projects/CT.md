@@ -16,7 +16,7 @@ repositories:
   - name: Chess-ReviewerBots
   - name: Chess-Analyzer
   - name: Chess-Move-Counter
-best: 0
+best: 2
 ---
 
 <br class="big-spacer">
