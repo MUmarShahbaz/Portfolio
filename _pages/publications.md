@@ -16,7 +16,7 @@ js:
       <p class="center-text bold-text">{{ paper.year }}</p>
       <p style="font-size: small;">{{ paper.description }}</p>
     {% endcapture %}
-    {% include card.liquid img=paper.image title=paper.name body=body link=paper.url target="_self" loading="eager" %}
+    {% include card.liquid img=paper.image title=paper.name body=body link=paper.url link_Text="Read paper" target="_self" loading="eager" %}
   {% endfor %}
   </div>
   <button class="button prev-button"><</button>
@@ -32,7 +32,7 @@ js:
       <p class="center-text bold-text">{{ paper.year }}</p>
       <p style="font-size: small;">{{ paper.description }}</p>
     {% endcapture %}
-    {% include card.liquid img=paper.image title=paper.name body=body link=paper.url target="_self" loading="eager" %}
+    {% include card.liquid img=paper.image title=paper.name body=body link=paper.url link_Text="Read article" target="_self" loading="eager" %}
   {% endfor %}
   </div>
   <button class="button prev-button"><</button>

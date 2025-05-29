@@ -4,6 +4,7 @@ layout: project
 css:
   - project
   - code-highlight
+  - table
 
 title: TreeCrypt
 image: /assets/img/Projects/TC/TC.png
@@ -16,7 +17,9 @@ repositories:
 best: 1
 ---
 
-# Basic Info
+<a href="https://pypi.org/project/TreeCrypt/" class="button">View Package</a>
+
+<hr class="spacer">
 
 - Creates a random structure of nodes pointing to one another and converts them into an array.
 - Maps each letter into a set of directions to a node which contains the equivalent letter inside it.
@@ -24,7 +27,6 @@ best: 1
 
 ## Requirements
 - Runs on Python 3.10+
-
 
 ## Detailed Working
 - A tree of nodes is generated based on a set of rules.
@@ -41,7 +43,39 @@ best: 1
 - The special character "`|`" is used to represent whitespace.
   - Regardless of the number of spaces in the input, all contiguous whitespace is encoded as a single "`|`".
 
-# How to use
+# How to use on Terminal
+
+| Command Name   | Terminal                             |
+|:---------------|:-------------------------------------|
+| Help           | `python -m treecrypt -h`             |
+| Version        | `python -m treecrypt -v`             |
+| Key Generation | `python -m treecrypt keygen {args}`  |
+| Encryption     | `python -m treecrypt encrypt {args}` |
+| Decryption     | `python -m treecrypt decrypt {args}` |
+
+## Key Generation arguments
+
+| Argument Name | Terminal  | Type    | Value                                            | Required |
+|:--------------|:---------:|:-------:|:----------------------------------------------------|:-----:|
+| Key           | `-k`      | String  | File Path to output the encryption key              | True  |
+| Dictionary    | `-d`      | String  | File Path to output the encryption dictionary       | True  |
+| Depth         | `--depth` | Integer | Key Generator depth                                 | True  |
+| Min           | `--min`   | Integer | Minimum distance between connected nodes            | False |
+| Max           | `--max`   | Integer | Maximum distance between connected nodes            | False |
+| Charset       | `-c`      | String  | File path to a python list of the charset           | False |
+| Live Print    | `-l`      | Flag    | no_Value, Prints the number of nodes generated live | False |
+
+## Encryption/Decryption arguments
+
+| Argument Name | Terminal | Type   | Value                                           | Required     |
+|:--------------|:--------:|:------:|:------------------------------------------------|:------------:|
+| Key           | `-k`     | String | File Path to the encryption key                 | True         |
+| Dictionary    | `-d`     | String | File Path to the encryption dictionary          | True         |
+| Input         | `-i`     | String | Input plain text to encrypt/decrypt             | `-i` or `-f` |
+| File          | `-f`     | String | File path to plain text file to encrypt/decrypt | `-i` or `-f` |
+| Output        | `-o`     | String | File path to store results                      | False        |
+
+# How to use in Code
 
 ## 0. Install
 Install it by simply running
@@ -53,7 +87,7 @@ pip install treecrypt
 
 Inside your python code add the line
 ```python
-from TreeCrypt import KeyMaker, Crypter
+from treecrypt import KeyMaker, Crypter
 ```
 
 This will import the key generator and the crypt-maker as classes and these can be used to do the encryption
@@ -68,6 +102,16 @@ The charset used must be a list of characters which are exactly one letter and a
 ```python
 customCharset = ['A' , 'B', 'C', ....]
 myKeyMaker = KeyMaker(customCharset)
+```
+
+If you don't give any parameters then the following is used:
+```python
+DefaultCharset = [
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+  '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+  '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', ':', ';', '"', "'", ',', '.', '?', '/'
+]
 ```
 
 Then generate the key using
@@ -94,6 +138,12 @@ def Export(self, keyFile="key.txt", dictFile="dict.txt"):
 # You can ignore the parameters as they have defaults
 ```
 
+You can also get them directly inside the code using
+```python
+Key = myKeyMaker.GetKey()
+Dictionary = myKeyMaker.Dictionary()
+```
+
 The parameters are the filenames of the exported key and dictionary.
 
 ## 4. Create a crypter and Import the key
@@ -110,6 +160,15 @@ myCrypter.Import("KEY1.txt", "DICT1.txt")
 def Import(self, keyFile="key.txt", dictFile="dict.txt"):
 # Import uses same format as Export of KeyMaker
 # You can ignore the parameters if the inputs have the default file names
+```
+
+Additionally, if you only have the key and no dictionary then just do:
+
+```python
+import ast
+with open('KEY1.txt') as f:
+  # Use ast literal eval
+  myCrypter.SetKey(ast.literal_eval(f.readline()))
 ```
 
 ## 5. Start Crypting!!

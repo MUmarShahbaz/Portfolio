@@ -37,7 +37,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
             <h3>{{ school.degree }}</h3>
             <h4>{{ school.field_of_study }}</h4>
         {% endcapture %}
-        {%  include card.liquid img=school.img title=school.name body=body link=school.link target="_blank" %}
+        {%  include card.liquid img=school.img title=school.name body=body link=school.link link_Text="Visit website" target="_blank" %}
     {% endfor %}
 </div>
 
@@ -49,7 +49,7 @@ Needless to say, I'm not a fast learner. I'm a faster learner.
         {%  capture body %}
             <p style="font-size: small;">{{ affiliate.description }}</p>
         {% endcapture %}
-        {%  include card.liquid img=affiliate.img title=affiliate.name body=body link=affiliate.link target="_blank" %}
+        {%  include card.liquid img=affiliate.img title=affiliate.name body=body link=affiliate.link link_Text="Visit website" target="_blank" %}
     {% endfor %}
 </div>
 

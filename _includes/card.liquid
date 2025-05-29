@@ -8,5 +8,5 @@
         <h2 class="primary center-text">{{ include.title }}</h2>
         {{ include.body }}
     </div>
-    {% if include.link %}<p class="read-more center-text">Read more</p></a>{% endif %}
+    {% if include.link %}<p class="read-more center-text">{% if include.link_Text %}{{ include.link_Text }}{%  else %}Read more{% endif %}</p></a>{% endif %}
 </div>
