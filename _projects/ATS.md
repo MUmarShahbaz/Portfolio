@@ -1,8 +1,10 @@
 ---
 permalink: /projects/Attendance-System
 layout: project
-css:
-  - project
+assets:
+  files:
+   - css/project.css
+   - scripts/slideshow.js
 
 title: Attendance System
 image: /assets/img/Projects/ATS/ATS.jpg

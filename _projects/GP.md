@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Graph-Plotter
 layout: project
-css:
-  - project
+assets:
+  files:
+   - css/project.css
 
 title: Graph Plotter
 image: /assets/img/Projects/GP/GP.png

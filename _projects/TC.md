@@ -1,10 +1,11 @@
 ---
 permalink: /projects/TreeCrypt
 layout: project
-css:
-  - project
-  - code-highlight
-  - table
+assets:
+  files:
+   - css/project.css
+   - css/code-highlight.css
+   - css/table.css
 
 title: TreeCrypt
 image: /assets/img/Projects/TC/TC.png

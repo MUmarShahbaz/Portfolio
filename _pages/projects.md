@@ -4,10 +4,10 @@ layout: default
 title: Projects
 nav-order: 4
 project-intros: true
-css:
-  - project
-js:
-  - carousel
+assets:
+  files:
+   - css/project.css
+   - scripts/carousel.js
 ---
 
 <h1 class="heading uppercase">Prominent Projects</h1>
