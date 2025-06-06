@@ -15,7 +15,6 @@ icons:
   - Python
 repositories:
   - name: TreeCrypt
-best: 1
 ---
 
 <a href="https://pypi.org/project/TreeCrypt/" class="button">View Package</a>

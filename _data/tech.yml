@@ -10,6 +10,8 @@ languages:
     path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg
   - name: PHP
     path: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg
+  - name: Ruby
+    path: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg
 
   # Web Languages & Markup
   - name: HTML5
