@@ -3,8 +3,9 @@ permalink: /
 layout: default
 title: Home
 nav-order: 1
-js:
-  - carousel
+assets:
+  files:
+   - carousel.js
 ---
 <br class="spacer">
 

@@ -17,6 +17,7 @@ plugins:
   - jekyll-imagemagick
   - jekyll-minifier
   - jekyll-terser
+  - jekyll_dynamic_assets
 
 imagemagick:
   enabled: true
@@ -52,3 +53,15 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
+
+assets:
+  source:
+    css: /css
+  master:
+   - main.css::preload-css
+   - main.css::noscript-css
+   - nav.js
+  formats:
+    js: <script defer src="%s"></script>
+    preload-css: <link rel="preload" href="%s" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    noscript-css: <noscript><link rel="stylesheet" href="%s"></noscript>

@@ -1,10 +1,10 @@
 ---
 permalink: /projects/Arduino-Language-Support
 layout: project
-css:
-  - project
-js:
-  - slideshow
+assets:
+  files:
+   - project.css
+   - slideshow.js
 
 title: Arduino Language Support
 image: /assets/img/Projects/ALS/ALS.jpeg

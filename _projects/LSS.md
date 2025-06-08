@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Laser-Security-System
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: Laser Security System
 image: /assets/img/Projects/LSS/LSS.jpg

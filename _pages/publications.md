@@ -3,8 +3,9 @@ permalink: /publications/
 layout: default
 title: Publications
 nav-order: 5
-js:
-  - carousel
+assets:
+  files:
+   - carousel.js
 ---
 <br class="spacer">
 <h1 class="heading uppercase">Research Papers</h1>

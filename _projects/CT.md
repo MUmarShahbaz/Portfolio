@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Chess-Tools
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: Chess Tools
 image: /assets/img/Projects/CT/CT.png

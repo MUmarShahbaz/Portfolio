@@ -7,30 +7,8 @@
     <link rel="apple-touch-icon" href="{{ site.logo | relative_url }}">
     <link rel="icon" type="image/png" href="{{ site.logo | relative_url }}">
 
-    <!-- CSS Insertion -->
-    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
-
-    {% for cssFile in include.css %}
-        {% if cssFile contains 'http' %}
-            <link rel="stylesheet" href="{{ cssFile }}">
-        {% else %}
-            <link rel="stylesheet" href="{{ '/assets/css/' | append: cssFile | append: '.css' | relative_url }}">
-        {% endif %}
-    {% endfor %}
-
-    <!-- JS Insertion -->
-    <script defer src="{{ '/assets/scripts/nav.js' | relative_url }}"></script>
-
-    {% for jsFile in include.js %}
-        {% if jsFile contains 'http' %}
-            <script defer src="{{ jsFile }}"></script>
-        {% else %}
-            <script defer src="{{ '/assets/scripts/' | append: jsFile | append: '.js' | relative_url }}"></script>
-        {% endif %}
-    {% endfor %}
-
-    <!-- Meta and Feed -->
+    <!-- Assets, SEO, and Feed -->
+    {% assets %}
     {% feed_meta %}
     {% seo %}
 

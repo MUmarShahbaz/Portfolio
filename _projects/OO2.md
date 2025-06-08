@@ -1,9 +1,10 @@
 ---
 permalink: /projects/Oscilloscope-Online-2
 layout: project
-css:
-  - project
-  - code-highlight
+assets:
+  files:
+   - project.css
+   - code-highlight.css
 
 title: Oscilloscope Online 2
 image: /assets/img/Projects/OO2/OO2.png

@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Memory-Unit
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: Memory Unit
 image: /assets/img/Projects/MU/MU.jpg

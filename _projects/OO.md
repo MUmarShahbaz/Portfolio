@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Oscilloscope-Online
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: Oscilloscope Online
 image: /assets/img/Projects/OO/OO.png

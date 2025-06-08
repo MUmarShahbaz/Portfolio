@@ -1,8 +1,9 @@
 ---
 permalink: /projects/RGB-Mouse-Controller
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: RGB Mouse Controller
 image: /assets/img/Projects/RGBC/RGBC.png

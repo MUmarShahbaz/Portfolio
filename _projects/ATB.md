@@ -1,8 +1,9 @@
 ---
 permalink: /projects/Arduino-Toolbox
 layout: project
-css:
-  - project
+assets:
+  files:
+   - project.css
 
 title: Arduino Toolbox
 image: /assets/img/Projects/ATB/ATB.png

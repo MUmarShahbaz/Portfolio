@@ -1,15 +1,15 @@
 ---
 permalink: /projects/SkySpectrum
 layout: project
-css:
-  - project
-  - table
-js:
-  - 3dmodel
-  - https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
-  - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js
-  - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js
-  - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js
+assets:
+  files:
+   - project.css
+   - table.css
+   - 3dmodel.js
+   - https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
+   - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js
+   - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js
+   - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js
 
 title: SkySpectrum
 image: /assets/img/Projects/SS/SS.png
