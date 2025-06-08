@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
   const progressbar = document.getElementById("live-progress");
 
   menu.addEventListener("click", function() {
-    links.style.top = links.style.top === "82px" ? "-711px" : "82px";
+    links.style.top = window.getComputedStyle(links).top === "82px" ? "-711px" : "82px";
   });
 
   this.window.addEventListener("scroll", function() {
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", function() {
         element.style.top = "-80px"; });
       progressbars.forEach(function(element) {
         element.style.top = "0px"; });
+      links.style.top = "-711px"
     } else if (currentScroll < lastScroll - 30 || currentScroll == 0) {
       navBG.forEach(function(element) {
         element.style.top = "0"; });

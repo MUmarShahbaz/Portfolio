@@ -5,7 +5,6 @@ assets:
   files:
    - project.css
    - code-highlight.css
-   - slideshow.js
 
 title: Jekyll Dynamic Assets
 image: /assets/img/Projects/JDA/JDA.png
