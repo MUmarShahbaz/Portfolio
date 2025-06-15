@@ -1,0 +1,12 @@
+<footer class="bg-dark text-light py-4 mt-auto border-top shadow-sm">
+  <div class="container text-center">
+    <div class="mb-2">
+        {% for page in site.pages %}
+          <a href="{{ page.url }}" class="text-light text-decoration-none mx-2">{{ page.title }}</a>
+        {% endfor %}
+    </div>
+    <div class="small">
+      &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
+    </div>
+  </div>
+</footer>
