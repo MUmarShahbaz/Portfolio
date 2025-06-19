@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Arduino-Language-Support
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - slideshow.js

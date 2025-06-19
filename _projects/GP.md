@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Graph-Plotter
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 

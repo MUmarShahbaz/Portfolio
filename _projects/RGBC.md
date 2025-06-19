@@ -1,7 +1,7 @@
 ---
 permalink: /projects/RGB-Mouse-Controller
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 

@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Chess-Tools
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 

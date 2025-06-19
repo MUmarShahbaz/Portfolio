@@ -54,7 +54,7 @@ terser:
   compress:
     drop_console: true
 
-assets:
+dynamic_assets:
   source:
     css: /css
   master:

@@ -4,7 +4,7 @@ layout: default
 title: Projects
 nav-order: 4
 project-intros: true
-assets:
+dynamic_assets:
   files:
    - project.css
    - carousel.js

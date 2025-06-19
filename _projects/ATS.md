@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Attendance-System
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - slideshow.js

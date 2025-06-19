@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Laser-Security-System
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 

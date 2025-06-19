@@ -1,7 +1,7 @@
 ---
 permalink: /projects/jekyll_dynamic_assets
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - code-highlight.css
@@ -33,7 +33,7 @@ Jekyll_Dynamic_Assets is a powerful Jekyll plugin for dynamic, flexible, and DRY
 - Use asset presets for reusable asset groups
 - Pre-defined and overrideable formats and sources for common assets
 - Auto, Select, and Inline formats and sources
-- Liquid tag `{% assets %}` for easy asset injection in templates and includes
+- Liquid tag `{% raw %}{% assets %}{% endraw %}` for easy asset injection in templates and includes
 - Error reporting for missing presets and formats
 - Absolute/relative URL support
 - Supports all head assets: CSS, JS, module JS, fonts, icons, JSON, etc.

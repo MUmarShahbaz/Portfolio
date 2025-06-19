@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Oscilloscope-Online-2
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - code-highlight.css

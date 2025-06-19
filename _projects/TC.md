@@ -1,7 +1,7 @@
 ---
 permalink: /projects/TreeCrypt
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - code-highlight.css

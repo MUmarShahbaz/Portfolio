@@ -3,7 +3,7 @@ permalink: /publications/
 layout: default
 title: Publications
 nav-order: 5
-assets:
+dynamic_assets:
   files:
    - carousel.js
 ---

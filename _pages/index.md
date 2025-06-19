@@ -3,7 +3,7 @@ permalink: /
 layout: default
 title: Home
 nav-order: 1
-assets:
+dynamic_assets:
   files:
    - carousel.js
 ---

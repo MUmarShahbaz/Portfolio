@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Memory-Unit
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 

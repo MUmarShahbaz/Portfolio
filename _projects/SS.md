@@ -1,7 +1,7 @@
 ---
 permalink: /projects/SkySpectrum
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
    - table.css

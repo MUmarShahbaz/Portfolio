@@ -1,7 +1,7 @@
 ---
 permalink: /projects/Arduino-Toolbox
 layout: project
-assets:
+dynamic_assets:
   files:
    - project.css
 
