@@ -1,0 +1,11 @@
+.navbar {
+    .active {
+        color: var(--bs-secondary) !important;
+    }
+    .disabled {
+        color: var(--bs-gray-800) !important;
+    }
+    .nav-link:hover {
+        color: var(--bs-gray-600) !important;
+    }
+}
