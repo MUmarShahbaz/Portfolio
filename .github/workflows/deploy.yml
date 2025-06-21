@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - bootstrap
   workflow_dispatch:
 
 permissions:
@@ -15,6 +16,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
@@ -33,3 +36,33 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          clean: true
+
+
+  deploy_bootstrap:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          ref: bootstrap
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: Install and Build 🔧
+        run: |
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+      - name: Purge unused CSS 🧹
+        run: |
+            npm install -g purgecss
+            purgecss -c purgecss.config.js
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          clean: false
+          target-folder: preview
