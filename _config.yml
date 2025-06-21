@@ -42,9 +42,11 @@ exclude:
 
 dynamic_assets:
   source:
+    font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/
     bootstrap: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist
   master:
    - bootstrap<</js/bootstrap.bundle.min.js::defer-js
+   - font_awesome<<css/all.min.css
    - master.css
   formats:
     defer-js: <script defer src="%s"></script>

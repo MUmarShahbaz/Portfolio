@@ -1,0 +1,40 @@
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+      <!-- Brand Column -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold">{{ site.title }}</h5>
+        <p>{{ site.description }}</p>
+      </div>
+
+      <!-- Links Column -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          {% for this_page in site.pages %}
+            <li>
+              <a href="{{ this_page.url }}" class="text-white text-decoration-none">{{ this_page.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Social Column -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold">Follow Me</h5>
+        <div class="d-flex gap-3 mt-2">
+          {% for social in site.data.socials %}
+            <a href="{{ social[1] }}" class="text-white">
+              <i class="fab fa-lg fa-{{ social[0] }}"></i>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="text-center mt-4 border-top pt-3">
+    <p class="mb-0">&copy; 2025 {{ site.author }}. All rights reserved.</p>
+  </div>
+</footer>
