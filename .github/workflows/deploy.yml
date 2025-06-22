@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - bootstrap
   workflow_dispatch:
 
 permissions:
