@@ -30,7 +30,8 @@ nav-box-bg:
     <h1 class="display-3 text-center text-white p-5">Check out my Hackatime!!</h1>
     <div class="row justify-content-center flex-fill">
         <div class="col-md-8 col-lg-6 align-self-center">
-            <p class="text-center fs-3 text-white"><span id="duration"></span></p>
+            <p class="text-center fs-3 text-white"><span id="total_duration"></span></p>
+            <div class="row"><div class="col-sm-6"><p class="text-center fs-3 text-white">Total : <span id="coding_duration"></span></p></div><div class="col-sm-6"><p class="text-center fs-3 text-white"> Avg : <span id="avg"></span></p></div></div>
             <img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=6834&api_domain=hackatime.hackclub.com&theme=default&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8"
                 class="image-fluid w-100 h-auto">
         </div>
@@ -82,19 +83,27 @@ nav-box-bg:
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        function show_duration() {
-            const Started_at = new Date('2025-06-17T12:36:34+05:00').getTime()
-            const duration = Date.now() - Started_at;
-            const seconds = Math.floor((duration / 1000) % 60);
-            const minutes = Math.floor((duration / (1000 * 60)) % 60);
-            const hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-            const days = Math.floor(duration / (1000 * 60 * 60 * 24));
+    document.addEventListener('DOMContentLoaded', async () => {
+        const targetUrl = 'https://hackatime.hackclub.com/api/v1/users/6834/stats';
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+
+        const response = await fetch(proxyUrl);
+        if (!response.ok) throw new Error('Failed to fetch');
+        const hackatime = await response.json();
+
+        function show_durations() {
+            const total_duration = (Date.now() - new Date(hackatime.data.start).getTime()) / 1000;
+            const seconds = (dur) => Math.floor(dur % 60);
+            const minutes = (dur) => Math.floor((dur / 60) % 60);
+            const hours = (dur) => Math.floor((dur / (60 * 60)) % 24);
+            const days = (dur) => Math.floor(dur / (60 * 60 * 24));
             const pad = (num) => String(num).padStart(2, '0');
 
-            document.getElementById('duration').innerText = `${days} days, ${pad(hours)} hrs, ${pad(minutes)} mins and ${pad(seconds)} secs`;
+            document.getElementById('total_duration').innerText = `${days(total_duration)} days ${pad(hours(total_duration))} hrs ${pad(minutes(total_duration))} mins ${pad(seconds(total_duration))} secs`;
+            document.getElementById('coding_duration').innerText = hackatime.data.human_readable_total;
+            document.getElementById('avg').innerText = hackatime.data.human_readable_daily_average;
         }
-        show_duration()
-        setInterval(show_duration, 500);
+        show_durations();
+        setInterval(show_durations, 500);
     });
 </script>
