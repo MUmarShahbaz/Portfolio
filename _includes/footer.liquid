@@ -11,9 +11,10 @@
       <div class="col-md-4 mb-4">
         <h5 class="text-uppercase fw-bold">Quick Links</h5>
         <ul class="list-unstyled">
-          {% for this_page in site.pages %}
+          {% assign sorted_pages = site.navbar_pages | sort: 'nav-order' %}
+          {% for this_page in sorted_pages %}
             <li>
-              <a href="{{ this_page.url }}" class="text-white text-decoration-none">{{ this_page.title }}</a>
+              <a href="{{ this_page.url | absolute_url }}" class="text-white text-decoration-none">{{ this_page.title }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -22,7 +23,7 @@
       <!-- Social Column -->
       <div class="col-md-4 mb-4">
         <h5 class="text-uppercase fw-bold">Follow Me</h5>
-        <div class="d-flex gap-3 mt-2">
+        <div class="d-flex gap-3 mt-2 justify-content-center justify-content-md-start">
           {% for social in site.data.socials %}
             <a href="{{ social[1] }}" class="text-white">
               <i class="fab fa-lg fa-{{ social[0] }}"></i>

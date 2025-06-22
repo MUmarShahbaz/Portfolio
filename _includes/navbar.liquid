@@ -23,7 +23,7 @@
 
       <!-- Navbar URLs -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {% assign sorted_pages = site.pages | sort: 'nav-order' %}
+        {% assign sorted_pages = site.navbar_pages | sort: 'nav-order' %}
 
         <!-- For each page -->
         {% for this_page in sorted_pages %}
@@ -47,7 +47,7 @@
                 {% for drp_section in this_page.sections %}
                   {% for drp_link in drp_section[1] %}
                     <li>
-                      <a class="dropdown-item text-black" href="{{ this_page.url | append: '#' | append: drp_link.id }}">{{ drp_link.name }}</a>
+                      <a class="dropdown-item text-black" href="{{ this_page.url | absolute_url | append: '#' | append: drp_link.id }}">{{ drp_link.name }}</a>
                     </li>
                   {% endfor %}
                   {% unless forloop.last %}

@@ -6,7 +6,7 @@ author: M. Umar Shahbaz
 logo: /assets/img/icon.png
 
 collections:
-  pages:
+  navbar_pages:
     output: true
   projects:
     output: true
