@@ -83,15 +83,23 @@ nav-box-bg:
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-        const targetUrl = 'https://hackatime.hackclub.com/api/v1/users/6834/stats';
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
-
-        const response = await fetch(proxyUrl);
+    let hackatime = null;
+    const fetch_data = async () => {
+        const response = await fetch('https://hackatime.hackclub.com/api/v1/users/6834/stats');
         if (!response.ok) throw new Error('Failed to fetch');
-        const hackatime = await response.json();
+        hackatime = await response.json();
+    }
 
+    fetch_data();
+    
+    document.addEventListener('DOMContentLoaded', async () => {
         function show_durations() {
+            if (hackatime === null) {
+                document.getElementById('total_duration').innerText = "loading";
+                document.getElementById('coding_duration').innerText = "loading";
+                document.getElementById('avg').innerText = "loading";
+                return;
+            }
             const total_duration = (Date.now() - new Date(hackatime.data.start).getTime()) / 1000;
             const seconds = (dur) => Math.floor(dur % 60);
             const minutes = (dur) => Math.floor((dur / 60) % 60);
