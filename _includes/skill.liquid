@@ -1,0 +1,12 @@
+<div class="card h-100 border-0 shadow">
+  <div class="card-body text-center p-4">
+    {% for icon in include.icons %}
+      {% assign this_icon = site.data.icons[icon] %}
+      <div class="text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="background-color: {{ this_icon.color }}; width: 60px; height: 60px;">
+        <i class="{{ this_icon.class }} fa-2x"></i>
+      </div>
+    {% endfor %}
+    <h5 class="card-title">{{ include.title }}</h5>
+    <p class="lead text-muted">{{ include.subtitle }}</p>
+  </div>
+</div>

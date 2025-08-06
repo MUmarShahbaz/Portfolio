@@ -12,7 +12,7 @@ nav-box-bg:
   more: https://m-umar.me/assets/img/Projects/MU/MU-480.webp
 ---
 
-<div class="container-fluid">
+<header class="container-fluid">
     <div class="row full-page d-flex justify-content-center">
         <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 p-lg-3">
             <img class="img-fluid rounded-circle m-5 m-md-0" src="assets/img/profile_picture.jpg">
@@ -25,8 +25,10 @@ nav-box-bg:
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid full-page d-flex flex-column pb-5" style="background-color: var(--bs-gray-800)">
+</header>
+
+<!-- Hackatime -->
+<section class="container-fluid full-page d-flex flex-column pb-5" style="background-color: var(--bs-gray-800)">
     <h1 class="display-3 text-center text-white p-5">Check out my Hackatime!!</h1>
     <div class="row justify-content-center flex-fill">
         <div class="col-md-8 col-lg-6 align-self-center">
@@ -36,9 +38,55 @@ nav-box-bg:
                 class="image-fluid w-100 h-auto">
         </div>
     </div>
-</div>
+</section>
 
-<div class="container-fluid my-5 d-flex justify-content-center flex-column" style="min-height: calc(100vh - 10rem);">
+<!-- Skills -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="display-5 fw-bold">Skills and Tools</h2>
+        <p class="lead text-muted">LEVE Stack (<b>L</b>iterally
+          <b>EVE</b>rything)</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        {% assign mern = "MongoDB,Express,React,NodeJS" | split: "," %}
+        {% include skill.liquid title="MERN Stack" subtitle="Web Development (WIP)" icons=mern %}
+      </div>
+
+      <div class="col-md-4">
+        {% assign git_github = "Git,GitHub" | split: "," %}
+        {% include skill.liquid title="Git & GitHub" subtitle="Collaboration" icons=git_github %}
+      </div>
+
+      <div class="col-md-4">
+        {% assign js_ts = "JavaScript,TypeScript" | split: "," %}
+        {% include skill.liquid title="JavaScript & TypeScript" subtitle="JS" icons=js_ts %}
+      </div>
+
+      <div class="col-md-4">
+        {% assign unity_blender = "Unity,Blender" | split: "," %}
+        {% include skill.liquid title="Unity & Blender" subtitle="Game Development (WIP)" icons=unity_blender %}
+      </div>
+
+      <div class="col-md-4">
+        {% assign arduino = "Arduino" | split: "," %}
+        {% include skill.liquid title="Arduino" subtitle="Robotics" icons=arduino %}
+      </div>
+
+      <div class="col-md-4">
+        {% assign languages = "CPlusPlus,CSharp,Python,Ruby" | split: "," %}
+        {% include skill.liquid title="C++, C#, Python & Ruby" subtitle="Other Languages" icons=languages %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- More Pages-->
+<section class="container-fluid my-5 d-flex justify-content-center flex-column" style="min-height: calc(100vh - 10rem);">
     <div class="row g-3 w-100">
         <h1 class="display-3 p-5">Check out other pages!</h1>
         <div class="col-md-6">
@@ -80,7 +128,7 @@ nav-box-bg:
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <script>
     let hackatime = null;

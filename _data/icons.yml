@@ -1,0 +1,45 @@
+MongoDB:
+  class: devicon-mongodb-plain
+  color: '#4DB33D'
+Express:
+  class: devicon-express-original
+  color: '#303030'
+React:
+  class: fab fa-react
+  color: '#61DAFB'
+NodeJS:
+  class: fab fa-node-js
+  color: '#3C873A'
+Git:
+  class: devicon-git-plain
+  color: '#F1502F'
+GitHub:
+  class: fab fa-github
+  color: '#181717'
+JavaScript:
+  class: fab fa-js
+  color: '#f7df1e'
+TypeScript:
+  class: devicon-typescript-plain
+  color: '#3178c6'
+Unity:
+  class: devicon-unity-plain
+  color: '#000000'
+Blender:
+  class: devicon-blender-original
+  color: '#f5792a'
+Arduino:
+  class: devicon-arduino-plain
+  color: '#00979D'
+CPlusPlus:
+  class: devicon-cplusplus-plain
+  color: '#00599C'
+CSharp:
+  class: devicon-csharp-plain
+  color: '#68217A'
+Python:
+  class: devicon-python-plain
+  color: '#3776AB'
+Ruby:
+  class: devicon-ruby-plain
+  color: '#701516'
