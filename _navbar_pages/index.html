@@ -100,16 +100,21 @@ nav-box-bg:
                 document.getElementById('avg').innerText = "loading";
                 return;
             }
-            const total_duration = (Date.now() - new Date(hackatime.data.start).getTime()) / 1000;
+            
             const seconds = (dur) => Math.floor(dur % 60);
             const minutes = (dur) => Math.floor((dur / 60) % 60);
             const hours = (dur) => Math.floor((dur / (60 * 60)) % 24);
             const days = (dur) => Math.floor(dur / (60 * 60 * 24));
             const pad = (num) => String(num).padStart(2, '0');
 
+            // Manually update start time, Hackatime API broke for some reason
+            hackatime.data.start = '2025-06-17T12:36:34Z';
+            const total_duration = (Date.now() - new Date(hackatime.data.start).getTime()) / 1000;
+            const avg_duration = hackatime.data.total_seconds / days(total_duration);
+
             document.getElementById('total_duration').innerText = `${days(total_duration)} days ${pad(hours(total_duration))} hrs ${pad(minutes(total_duration))} mins ${pad(seconds(total_duration))} secs`;
             document.getElementById('coding_duration').innerText = hackatime.data.human_readable_total;
-            document.getElementById('avg').innerText = hackatime.data.human_readable_daily_average;
+            document.getElementById('avg').innerText = `${hours(avg_duration)}h ${minutes(avg_duration)}m ${seconds(avg_duration)}s`;
         }
         show_durations();
         setInterval(show_durations, 500);
