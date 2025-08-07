@@ -14,55 +14,88 @@ sections:
 
 <div class="container-fluid p-5">
   {% if prominent.size > 0 %}
-    <h1 id="prominent" class="display-2" data-aos="fade-right">Prominent</h1>
-    <div class="container-fluid"><div class="row d-flex">
+  <h1 id="prominent" class="display-2" data-aos="fade-right">Prominent</h1>
+  <div class="container-fluid">
+    <div class="row d-flex">
       {% for project in prominent %}
-        <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
         {% capture this_other %}
-          <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
+        {% for icon in project.icons %}
+        {% assign this_icon = site.data.icons[icon] %}
+        {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+            class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description other=this_other AOS="fade-up" %}
-        </div>
+        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        other=this_other AOS="fade-up" %}
+      </div>
       {% endfor %}
-    </div></div>
+    </div>
+  </div>
   {% endif %}
 
   {% if wip.size > 0 %}
-    <h1 id="wip" class="display-2" data-aos="fade-right">Works in Progress</h1>
-    <div class="container-fluid"><div class="row d-flex">
+  <h1 id="wip" class="display-2" data-aos="fade-right">Works in Progress</h1>
+  <div class="container-fluid">
+    <div class="row d-flex">
       {% for project in wip %}
-        <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
         {% capture this_other %}
-          <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
+        {% for icon in project.icons %}
+        {% assign this_icon = site.data.icons[icon] %}
+        {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+            class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description other=this_other AOS="fade-up" %}
-        </div>
+        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        other=this_other AOS="fade-up" %}
+      </div>
       {% endfor %}
-    </div></div>
+    </div>
+  </div>
   {% endif %}
 
   {% if planned.size > 0 %}
-    <h1 id="planned" class="display-2" data-aos="fade-right">Planned</h1>
-    <div class="container-fluid"><div class="row d-flex">
+  <h1 id="planned" class="display-2" data-aos="fade-right">Planned</h1>
+  <div class="container-fluid">
+    <div class="row d-flex">
       {% for project in planned %}
-        <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
         {% capture this_other %}
-          <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
+        {% for icon in project.icons %}
+        {% assign this_icon = site.data.icons[icon] %}
+        {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+            class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description other=this_other AOS="fade-up" %}
-        </div>
+        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        other=this_other AOS="fade-up" %}
+      </div>
       {% endfor %}
-    </div></div>
+    </div>
+  </div>
   {% endif %}
 
   {% if archived.size > 0 %}
-    <h1 id="archived" class="display-2" data-aos="fade-right">Archived</h1>
-    <div class="container-fluid"><div class="row d-flex">
+  <h1 id="archived" class="display-2" data-aos="fade-right">Archived</h1>
+  <div class="container-fluid">
+    <div class="row d-flex">
       {% for project in archived %}
-        <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description AOS="fade-up" %}
-        </div>
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+        {% capture this_other %}
+        {% for icon in project.icons %}
+        {% assign this_icon = site.data.icons[icon] %}
+        {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        {% endcapture %}
+        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        other=this_other AOS="fade-up" %}
+      </div>
       {% endfor %}
-    </div></div>
+    </div>
+  </div>
   {% endif %}
 </div>

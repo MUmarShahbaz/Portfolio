@@ -1,0 +1,7 @@
+- title: Robotic Arm
+  description: Made using an Arduino Uno. Controlled over Serial communication via a custom WinForms app.
+  image: https://m-umar.me/assets/img/Projects/RBA/RBA-480.webp
+  prefrence: 1
+  icons:
+   - Arduino
+   - CSharp
