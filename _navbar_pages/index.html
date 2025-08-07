@@ -14,10 +14,10 @@ nav-box-bg:
 
 <header class="container-fluid">
     <div class="row full-page d-flex justify-content-center">
-        <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 p-lg-3">
+        <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 p-lg-3" data-aos="fade-right">
             <img class="img-fluid rounded-circle m-5 m-md-0" src="assets/img/profile_picture.jpg">
         </div>
-        <div class="col-md-6 col-lg-5 d-flex flex-column justify-content-center p-2">
+        <div class="col-md-6 col-lg-5 d-flex flex-column justify-content-center p-2" data-aos="fade-left">
             <div>
                 <h1 class="display-5 display-lg-4 text-center text-md-start">M. Umar Shahbaz</h1>
                 <p>I'm a student from Pakistan with experience in C++, Python, JavaScript, and Ruby. I enjoy the
@@ -29,13 +29,13 @@ nav-box-bg:
 
 <!-- Hackatime -->
 <section class="container-fluid full-page d-flex flex-column pb-5" style="background-color: var(--bs-gray-800)">
-    <h1 class="display-3 text-center text-white p-5">Check out my Hackatime!!</h1>
+    <h1 class="display-3 text-center text-white p-5" data-aos="zoom-out">Check out my Hackatime!!</h1>
     <div class="row justify-content-center flex-fill">
         <div class="col-md-8 col-lg-6 align-self-center">
-            <p class="text-center fs-3 text-white"><span id="total_duration"></span></p>
-            <div class="row"><div class="col-sm-6"><p class="text-center fs-3 text-white">Total : <span id="coding_duration"></span></p></div><div class="col-sm-6"><p class="text-center fs-3 text-white"> Avg : <span id="avg"></span></p></div></div>
+            <p class="text-center fs-3 text-white" data-aos="flip-up"><span id="total_duration"></span></p>
+            <div class="row"><div class="col-sm-6"><p class="text-center fs-3 text-white" data-aos="flip-up">Total : <span id="coding_duration"></span></p></div><div class="col-sm-6"><p class="text-center fs-3 text-white" data-aos="flip-up"> Avg : <span id="avg"></span></p></div></div>
             <img src="https://github-readme-stats.hackclub.dev/api/wakatime?username=6834&api_domain=hackatime.hackclub.com&theme=default&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8"
-                class="image-fluid w-100 h-auto">
+                class="image-fluid w-100 h-auto" data-aos="flip-up">
         </div>
     </div>
 </section>
@@ -45,39 +45,39 @@ nav-box-bg:
   <div class="container">
     <div class="row text-center mb-5">
       <div class="col-12">
-        <h2 class="display-5 fw-bold">Skills and Tools</h2>
-        <p class="lead text-muted">LEVE Stack (<b>L</b>iterally
+        <h2 class="display-5 fw-bold" data-aos="fade-up">Skills and Tools</h2>
+        <p class="lead text-muted" data-aos="fade-up">LEVE Stack (<b>L</b>iterally
           <b>EVE</b>rything)</p>
       </div>
     </div>
 
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign mern = "MongoDB,Express,React,NodeJS" | split: "," %}
         {% include skill.liquid title="MERN Stack" subtitle="Web Development (WIP)" icons=mern %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign git_github = "Git,GitHub" | split: "," %}
         {% include skill.liquid title="Git & GitHub" subtitle="Collaboration" icons=git_github %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign js_ts = "JavaScript,TypeScript" | split: "," %}
         {% include skill.liquid title="JavaScript & TypeScript" subtitle="JS" icons=js_ts %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign unity_blender = "Unity,Blender" | split: "," %}
         {% include skill.liquid title="Unity & Blender" subtitle="Game Development (WIP)" icons=unity_blender %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign arduino = "Arduino" | split: "," %}
         {% include skill.liquid title="Arduino" subtitle="Robotics" icons=arduino %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         {% assign languages = "CPlusPlus,CSharp,Python,Ruby" | split: "," %}
         {% include skill.liquid title="C++, C#, Python & Ruby" subtitle="Other Languages" icons=languages %}
       </div>
@@ -88,15 +88,15 @@ nav-box-bg:
 <!-- More Pages-->
 <section class="container-fluid my-5 d-flex justify-content-center flex-column" style="min-height: calc(100vh - 10rem);">
     <div class="row g-3 w-100">
-        <h1 class="display-3 p-5">Check out other pages!</h1>
+        <h1 class="display-3 p-5" data-aos="fade-up">Check out other pages!</h1>
         <div class="col-md-6">
             <div class="row g-3 h-100">
-                <div class="col-12" style="aspect-ratio: 2/1">
+                <div class="col-12" style="aspect-ratio: 2/1" data-aos="fade-up">
                     <a href="{{ '/projects/' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded" style="background-image: url('{{ page.nav-box-bg.projects }}')"><p class="text-white align-self-end fw-bold fs-2 fs-md-1 px-5">Projects</p></div>
                     </a>
                 </div>
-                <div class="col-12" style="aspect-ratio: 2/1">
+                <div class="col-12" style="aspect-ratio: 2/1" data-aos="fade-up">
                     <a href="{{ '/research/' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded" style="background-image: url('{{ page.nav-box-bg.research }}')"><p class="text-white align-self-end fw-bold fs-2 fs-md-1 px-5">Research</p></div>
                     </a>
@@ -105,22 +105,22 @@ nav-box-bg:
         </div>        
         <div class="col-md-6">
             <div class="row g-3 h-100">
-                <div class="col-6" style="aspect-ratio: 1/1">
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
                     <a href="{{ '/education.html' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ page.nav-box-bg.education }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Education</p></div>
                     </a>
                 </div>
-                <div class="col-6" style="aspect-ratio: 1/1">
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
                     <a href="{{ '/resume.html' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ page.nav-box-bg.resume }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Resume</p></div>
                     </a>
                 </div>
-                <div class="col-6" style="aspect-ratio: 1/1">
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
                     <a href="{{ '/content/' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ page.nav-box-bg.content }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Content</p></div>
                     </a>
                 </div>
-                <div class="col-6" style="aspect-ratio: 1/1">
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
                     <a href="{{ '/more.html' | absolute_url }}" class="text-decoration-none">
                     <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ page.nav-box-bg.more }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">More...</p></div>
                     </a>

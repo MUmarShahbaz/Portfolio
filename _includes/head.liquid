@@ -11,12 +11,13 @@
     {% feed_meta %}
     {% seo %}
 
-    <!-- Prevent FOUC -->
+    <!-- Prevent FOUC and init AOS -->
     <style>html{visibility: hidden;opacity:0;}</style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.style.visibility = 'visible';
             document.documentElement.style.opacity = 1;
+            AOS.init();
         });
     </script>
 </head>
