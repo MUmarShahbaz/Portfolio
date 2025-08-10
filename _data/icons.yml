@@ -1,3 +1,6 @@
+#==========================
+#       TOOL STACK
+#==========================
 MongoDB:
   class: devicon-mongodb-plain
   color: '#4DB33D'
@@ -43,3 +46,19 @@ Python:
 Ruby:
   class: devicon-ruby-plain
   color: '#701516'
+
+#==========================
+#     GENERAL ICONS
+#==========================
+Education:
+  class: fas fa-graduation-cap
+  color: '#2E86C1'
+Job:
+  class: fas fa-briefcase
+  color: '#27AE60'
+Award:
+  class: fas fa-certificate
+  color: '#F1C40F'
+User:
+  class: fas fa-user-tie
+  color: '#8E44AD'

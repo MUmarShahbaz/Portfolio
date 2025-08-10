@@ -1,0 +1,9 @@
+<div class="timeline-element{% if include.right %} timeline-element-right{% endif %}">
+    <div class="timeline-card" data-aos="{% if include.right %}fade-left{% else %}fade-right{% endif %}">
+      {{ include.card }}
+    </div>
+    <div class="timeline-dot" data-aos="fade-in">
+        {{ include.dot }}
+    </div>
+    <div class="timeline-empty"></div>
+</div>
