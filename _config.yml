@@ -3,7 +3,7 @@ baseurl: "/preview"
 title: MUS
 description: The Archives of M. Umar Shahbaz
 author: M. Umar Shahbaz
-logo: /assets/img/icon.png
+logo: /assets/img/original/icon.png
 
 collections:
   navbar_pages:
@@ -44,6 +44,13 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
+
+picture:
+  source: "assets/img/original"
+  output: "assets/img/"
+  suppress_warnings: true
+  relative: false
+  fast_build: true
 
 exclude:
   - .jekyll-cache/

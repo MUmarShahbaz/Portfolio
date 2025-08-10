@@ -1,0 +1,3 @@
+presets:
+  medium:
+    widths: [300, 450, 600]
