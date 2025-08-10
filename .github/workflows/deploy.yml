@@ -22,6 +22,8 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: JPT Dependencies
+        run: sudo apt-get update && sudo apt-get install --yes libjpeg-dev webp libpng-dev libavif-dev libheif-dev libopenjpip7 imagemagick libvips-tools build-essential
       - name: Install and Build 🔧
         run: |
           export JEKYLL_ENV=production
