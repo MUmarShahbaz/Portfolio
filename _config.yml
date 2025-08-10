@@ -18,6 +18,7 @@ plugins:
   - jekyll-minifier
   - jekyll-terser
   - jekyll_dynamic_assets
+  - jekyll_picture_tag
 
 markdown: kramdown
 highlighter: rouge
