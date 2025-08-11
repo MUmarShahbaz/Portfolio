@@ -1,0 +1,37 @@
+---
+layout: none
+---
+[
+{% assign all_items = "" %}
+{% assign project_count = site.projects | size %}
+{% assign post_count = site.posts | size %}
+{% assign total_count = project_count | plus: post_count %}
+{% assign index = 0 %}
+
+{% for project in site.projects %}
+  {
+    "type": "project",
+    "title": {{ project.title | jsonify }},
+    "description": {{ project.description | jsonify }},
+    "image": {{ project.image | jsonify }},
+    "prefrence": {{ project.prefrence | jsonify }},
+    "icons": {{ project.icons | jsonify }},
+    "category": {{ project.category | jsonify }},
+    "url": {{ project.url | relative_url | jsonify }},
+    "content": {{ project.content | strip_html | normalize_whitespace | jsonify }}
+  }{% assign index = index | plus: 1 %}{% if index < total_count %},{% endif %}
+{% endfor %}
+
+{% for post in site.posts %}
+  {
+    "type": "post",
+    "title": {{ post.title | jsonify }},
+    "description": {{ post.excerpt | strip_html | normalize_whitespace | jsonify }},
+    "image": {{ post.image | default: "" | jsonify }},
+    "category": "post",
+    "url": {{ post.url | relative_url | jsonify }},
+    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    "content": {{ post.content | strip_html | normalize_whitespace | jsonify }}
+  }{% assign index = index | plus: 1 %}{% if index < total_count %},{% endif %}
+{% endfor %}
+]

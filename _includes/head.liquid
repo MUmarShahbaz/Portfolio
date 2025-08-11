@@ -11,13 +11,49 @@
     {% feed_meta %}
     {% seo %}
 
-    <!-- Prevent FOUC and init AOS -->
+    <!-- Prevent FOUC, init AOS and init Fuse.js -->
     <style>html{visibility: hidden;opacity:0;}</style>
     <script>
+        window.siteSearch = null;
         document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.style.visibility = 'visible';
             document.documentElement.style.opacity = 1;
             AOS.init();
+
+            fetch('{{ "/search.json" | absolute_url }}')
+            .then(res => res.json())
+            .then(data => {
+                window.siteSearch = new Fuse(data, {
+                keys: [
+                    { name: 'title', weight: 0.5 },
+                    { name: 'description', weight: 0.3 },
+                    { name: 'content', weight: 0.2 }
+                ],
+                threshold: 0.3,
+                ignoreLocation: true
+                });
+            });
+
+            function runSearch(query) {
+            const resultsContainer = document.getElementById('results-container');
+            resultsContainer.innerHTML = '';
+
+            if (!window.siteSearch || !query.trim()) return;
+
+            const results = window.siteSearch.search(query);
+
+            results.forEach(r => {
+                const item = r.item; // from search.json
+                const li = document.createElement('li');
+                li.className = 'list-group-item list-group-item-action px-3 py-2';
+                li.innerHTML = `<a href="${item.url}" class="text-decoration-none d-block text-dark">${item.title}</a>`;
+                resultsContainer.appendChild(li);
+            });
+            }
+
+            document.getElementById('search-input').addEventListener('input', function () {
+            runSearch(this.value);
+            });
         });
     </script>
 </head>

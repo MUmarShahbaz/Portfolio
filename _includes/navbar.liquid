@@ -75,12 +75,13 @@
       <!-- Search Bar -->
       <form class="d-flex" role="search">
         <input
+          id="search-input"
           class="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search" />
-        <button class="btn btn-secondary" type="submit">Search</button>
       </form>
+      <ul id="results-container" class="list-group position-absolute shadow w-100 w-lg-25" style="z-index:1050; max-height:300px; overflow-y:auto; top:100%; left:0; min-width:300px; width:auto;"></ul>
     </div>
   </div>
 </nav>

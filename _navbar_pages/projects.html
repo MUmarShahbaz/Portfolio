@@ -19,7 +19,7 @@ container_classes: container-fluid p-5
   <div class="container-fluid">
     <div class="row d-flex">
       {% for project in prominent %}
-      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
         {% capture this_other %}
         {% for icon in project.icons %}
         {% assign this_icon = site.data.icons[icon] %}
@@ -43,7 +43,7 @@ container_classes: container-fluid p-5
   <div class="container-fluid">
     <div class="row d-flex">
       {% for project in wip %}
-      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
         {% capture this_other %}
         {% for icon in project.icons %}
         {% assign this_icon = site.data.icons[icon] %}
@@ -67,7 +67,7 @@ container_classes: container-fluid p-5
   <div class="container-fluid">
     <div class="row d-flex">
       {% for project in planned %}
-      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
         {% capture this_other %}
         {% for icon in project.icons %}
         {% assign this_icon = site.data.icons[icon] %}
@@ -91,7 +91,7 @@ container_classes: container-fluid p-5
   <div class="container-fluid">
     <div class="row d-flex">
       {% for project in archived %}
-      <div class="col-12 col-md-6 col-lg-4 align-self-stretch">
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
         {% capture this_other %}
         {% for icon in project.icons %}
         {% assign this_icon = site.data.icons[icon] %}
