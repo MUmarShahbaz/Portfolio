@@ -3,4 +3,7 @@ layout: default
 permalink: /resume.html
 title: Resume
 nav-order: 6
+container_classes: container
 ---
+{% assign resume = "assets/pdf/Muhammad Umar Shahbaz - Resume.pdf" | absolute_url %}
+{% include pdf.liquid pdf=resume %}
