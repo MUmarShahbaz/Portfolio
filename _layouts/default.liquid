@@ -3,7 +3,7 @@
   {% include head.liquid %}
   <body>
     {% include navbar.liquid %}
-    <div id="body">{{ page.content }}</div>
+    <main class="{{ page.container_classes }}">{{ page.content }}</main>
     {% include footer.liquid %}
   </body>
 </html>

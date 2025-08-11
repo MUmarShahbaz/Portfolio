@@ -3,10 +3,11 @@ layout: default
 permalink: /more.html
 title: More
 nav-order: 7
+container_classes: container p-5 full-page
 ---
-<div class="containter p-5 full-page">
-  {% assign root_pages = site.pages | where_exp: 'this_page', 'this_page.title' %}
-  {% if root_pages.size > 0 %}
+{% assign root_pages = site.pages | where_exp: 'this_page', 'this_page.title' %}
+{% if root_pages.size > 0 %}
+  <section>
     <h2>Root</h2>
     <ul>
       {% for this_page in root_pages %}
@@ -15,10 +16,12 @@ nav-order: 7
         </li>
       {% endfor %}
     </ul>
-  {% endif %}
-  {% for collection in site.collections %}
-    {% if collection.docs.size > 0 %}
-      {% unless collection.label == 'navbar_pages' %}
+  </section>
+{% endif %}
+{% for collection in site.collections %}
+  {% if collection.docs.size > 0 %}
+    {% unless collection.label == 'navbar_pages' %}
+      <section>
         <h2>{{ collection.label | capitalize }}</h2>
         <ul>
           {% for doc in collection.docs %}
@@ -27,7 +30,7 @@ nav-order: 7
             </li>
           {% endfor %}
         </ul>
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-</div>
+      </section>
+    {% endunless %}
+  {% endif %}
+{% endfor %}

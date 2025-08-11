@@ -3,40 +3,41 @@ layout: default
 permalink: /timeline.html
 title: Timeline
 nav-order: 2
+
+container_classes: timeline-container container-fluid
+dynamic_assets:
+  files: timeline.css
 ---
-{% include timeline/style.liquid %}
 {% assign events = site.data.timeline | sort: 'date' %}
 
-{% capture timeline %}
-  {% for this_event in events %}
-    {% capture body %}
-      <p>{{ this_event.date | date: "%B %d, %Y" }}</p>
-      <p class="card-text text-start" style="text-align: justify !important">{{ this_event.description }}</p>
-    {% endcapture %}
+<div class="timeline-line"></div>
 
-    {%  capture this_card %}
-      {%  include card.liquid
-        title=this_event.title
-        other=body
-      %}
-    {% endcapture %}
+{% for this_event in events %}
+  {% capture body %}
+    <p>{{ this_event.date | date: "%B %d, %Y" }}</p>
+    <p class="card-text text-start" style="text-align: justify !important">{{ this_event.description }}</p>
+  {% endcapture %}
 
-    {%  capture this_dot %}
-      {%  if this_event.dot.class %}
-        {% include icon.liquid icon=this_event.dot %}
-      {% else %}
-        {%  assign dot = site.data.icons[this_event.dot] %}
-        {% include icon.liquid icon=dot %}
-      {% endif %}
-    {% endcapture %}
+  {%  capture this_card %}
+    {%  include card.liquid
+      title=this_event.title
+      other=body
+    %}
+  {% endcapture %}
 
-    {% assign is_even = forloop.index0 | modulo: 2 %}
-    {%  if is_even == 0 %}
-      {% include timeline/element.liquid card=this_card dot=this_dot %}
+  {%  capture this_dot %}
+    {%  if this_event.dot.class %}
+      {% include icon.liquid icon=this_event.dot %}
     {% else %}
-      {% include timeline/element.liquid card=this_card dot=this_dot right='true' %}
+      {%  assign dot = site.data.icons[this_event.dot] %}
+      {% include icon.liquid icon=dot %}
     {% endif %}
-  {% endfor %}
-{% endcapture %}
+  {% endcapture %}
 
-{%  include timeline/container.liquid items=timeline %}
+  {% assign is_even = forloop.index0 | modulo: 2 %}
+  {%  if is_even == 0 %}
+    {% include timeline_element.liquid card=this_card dot=this_dot %}
+  {% else %}
+    {% include timeline_element.liquid card=this_card dot=this_dot right='true' %}
+  {% endif %}
+{% endfor %}

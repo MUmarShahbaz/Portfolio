@@ -5,6 +5,7 @@ title: Projects
 nav-order: 3
 sections:
   section1: [{ name: Prominent, id: prominent }, { name: Work in progress, id: wip }, {name: Planned, id: planned }, {name: Archived, id: archived }]
+container_classes: container-fluid p-5
 ---
 
 {% assign prominent = site.projects | where_exp: 'project', 'project.category == "prominent"' | sort: 'prefrence' %}
@@ -12,8 +13,8 @@ sections:
 {% assign planned = site.projects | where_exp: 'project', 'project.category == "planned"' | sort: 'prefrence' %}
 {% assign archived = site.data.archived_projects | sort: 'prefrence' %}
 
-<div class="container-fluid p-5">
-  {% if prominent.size > 0 %}
+{% if prominent.size > 0 %}
+<section>
   <h1 id="prominent" class="display-2" data-aos="fade-right">Prominent</h1>
   <div class="container-fluid">
     <div class="row d-flex">
@@ -33,9 +34,11 @@ sections:
       {% endfor %}
     </div>
   </div>
-  {% endif %}
+</section>
+{% endif %}
 
-  {% if wip.size > 0 %}
+{% if wip.size > 0 %}
+<section>
   <h1 id="wip" class="display-2" data-aos="fade-right">Works in Progress</h1>
   <div class="container-fluid">
     <div class="row d-flex">
@@ -55,9 +58,11 @@ sections:
       {% endfor %}
     </div>
   </div>
-  {% endif %}
+</section>
+{% endif %}
 
-  {% if planned.size > 0 %}
+{% if planned.size > 0 %}
+<section>
   <h1 id="planned" class="display-2" data-aos="fade-right">Planned</h1>
   <div class="container-fluid">
     <div class="row d-flex">
@@ -77,9 +82,11 @@ sections:
       {% endfor %}
     </div>
   </div>
-  {% endif %}
+</section>
+{% endif %}
 
-  {% if archived.size > 0 %}
+{% if archived.size > 0 %}
+<section>
   <h1 id="archived" class="display-2" data-aos="fade-right">Archived</h1>
   <div class="container-fluid">
     <div class="row d-flex">
@@ -97,5 +104,5 @@ sections:
       {% endfor %}
     </div>
   </div>
-  {% endif %}
-</div>
+</section>
+{% endif %}
