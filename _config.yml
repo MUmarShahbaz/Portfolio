@@ -3,6 +3,7 @@ baseurl: "/preview"
 title: MUS
 description: The Archives of M. Umar Shahbaz
 author: M. Umar Shahbaz
+image: /assets/img/original/icon.png
 logo: /assets/img/original/icon.png
 
 collections:

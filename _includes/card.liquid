@@ -1,9 +1,6 @@
 <div class="card shadow h-100 position-relative" {% if include.AOS %}data-aos="{{ include.AOS }}"{% endif %}>
   {% if include.img %}
-    <img
-      src="{{ include.img }}"
-      class="card-img-top"
-      alt="{{ include.alt }}">
+    {% picture medium {{ include.img }} --parent class="card-img-top" --alt {{ include.alt }} %}
   {% endif %}
   <div class="card-body text-center p-4" style="padding-bottom: 60px !important">
     <h6 class="card-title display-5 fs-1">{{ include.title }}</h6>
