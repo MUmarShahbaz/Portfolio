@@ -62,3 +62,6 @@ Award:
 User:
   class: fas fa-user-tie
   color: '#8E44AD'
+Microchip:
+  class: fas fa-microchip
+  color: '#000000'
