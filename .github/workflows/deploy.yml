@@ -31,7 +31,7 @@ jobs:
       - name: Purge unused CSS 🧹
         run: |
             npm install -g purgecss
-            purgecss -c purgecss.config.js
+            purgecss --content './_site/**/*.html' './_site/**/*.js' --css './_site/assets/styles/*.css' --output './_site/assets/styles/'
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

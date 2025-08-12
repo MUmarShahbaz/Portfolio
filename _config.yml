@@ -59,9 +59,11 @@ exclude:
   - .github/
   - .jekyll-cache/
   - .vscode/
+  - docker_build/
+  - .dockerignore
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - purgecss.config.js
 
 dynamic_assets:
   absolute: true
