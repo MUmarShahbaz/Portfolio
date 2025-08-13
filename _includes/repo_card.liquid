@@ -1,0 +1,6 @@
+{% assign owner = include.repo | split: '/' | first %}
+{% assign repo = include.repo | split: '/' | last %}
+
+<div class="repo-card shadow" data-aos="{{ include.AOS }}">
+  <img class="w-100 h-auto" src="https://github-readme-stats.vercel.app/api/pin/?username={{ owner }}&repo={{ repo }}" alt="{{ repo }} GitHub Repo Card" />
+</div>

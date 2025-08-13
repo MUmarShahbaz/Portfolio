@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="border shadow-lg rounded-5 row p-5 mb-5 overflow-hidden">
+    <div class="col-md-4" data-aos="fade-right">
+        {% picture medium {{ page.image }} --parent class="w-100 h-auto rounded" --alt {{ include.alt }} %}
+    </div>
+    <div class="col-md-8 text-center d-flex justify-content-center flex-column" data-aos="fade-left">
+        <h1 class="display-1">{{ page.title }}</h1>
+        <p class="lead">{{ page.description }}</p>
+        <div>
+            {% for icon in page.icons %}
+                {% assign this_icon = site.data.icons[icon] %}
+                {% include icon.liquid icon=this_icon %}
+            {% endfor %}
+        </div>
+    </div>
+</header>
+
+{% if page.icons or page.repository %}
+<section class="my-5">
+    <h2 class="display-2 text-center" data-aos="fade-up">Tech Stack</h2>
+    {% if page.icons %}
+        <div class="row d-flex justify-content-center my-4">
+            {% for icon in page.icons %}
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-2">
+                    {% assign this_icon = site.data.icons[icon] %}
+                    {% include icon_full.liquid icon=this_icon name=icon AOS="fade-up" %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if page.repository %}
+        <div class="d-flex justify-content-center">
+            {% include repo_card.liquid repo=page.repository AOS="fade-up" %}
+        </div>
+    {% endif %}
+</section>
+{% endif %}
+
+{{ content }}

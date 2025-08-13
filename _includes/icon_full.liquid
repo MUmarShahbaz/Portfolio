@@ -1,0 +1,6 @@
+<div class="card shadow p-3 position-relative text-center d-flex flex-collumn align-items-center" {% if include.AOS %}data-aos="{{ include.AOS }}"{% endif %}>
+    {% include icon.liquid icon=include.icon %}
+  <div class="card-body">
+    <p class="card-text text-start lead">{{ include.name }}</p>
+  </div>
+</div>
