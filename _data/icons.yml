@@ -8,7 +8,7 @@ Express:
   class: devicon-express-original
   color: '#303030'
 React:
-  class: fab fa-react
+  class: devicon-react-original
   color: '#61DAFB'
 NodeJS:
   class: fab fa-node-js
@@ -17,10 +17,19 @@ Git:
   class: devicon-git-plain
   color: '#F1502F'
 GitHub:
-  class: fab fa-github
+  class: devicon-github-original
   color: '#181717'
+Docker:
+  class: devicon-docker-plain
+  color: '#1D63ED'
+Actions:
+  class: devicon-githubactions-plain
+  color: '#2088FF'
+Ubuntu:
+  class: devicon-ubuntu-plain
+  color: '#E95420'
 JavaScript:
-  class: fab fa-js
+  class: devicon-javascript-plain
   color: '#f7df1e'
 TypeScript:
   class: devicon-typescript-plain

@@ -1,0 +1,45 @@
+- title: MERN Stack
+  subtitle: Web Development (WIP)
+  icons:
+    - MongoDB
+    - Express
+    - React
+    - NodeJS
+
+- title: Git & GitHub
+  subtitle: Collaboration
+  icons:
+    - Git
+    - GitHub
+
+- title: Docker, Actions & Ubuntu
+  subtitle: DevOps
+  icons:
+    - Docker
+    - Actions
+    - Ubuntu
+
+- title: JavaScript & TypeScript
+  subtitle: JS
+  icons:
+    - JavaScript
+    - TypeScript
+
+- title: Arduino
+  subtitle: Robotics
+  icons:
+    - Arduino
+
+- title: C++, C#, Python & Ruby
+  subtitle: Other Languages
+  icons:
+    - CPlusPlus
+    - CSharp
+    - Python
+    - Ruby
+
+- title: Unity & Blender
+  subtitle: Game Development (WIP)
+  icons:
+    - Unity
+    - Blender

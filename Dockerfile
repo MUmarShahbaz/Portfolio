@@ -21,9 +21,8 @@ WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
+RUN npm install -g purgecss
 
 COPY . .
-
-RUN npm install -g purgecss
 
 CMD ["sh", "-c", "JEKYLL_ENV=production bundle exec jekyll build && purgecss --content './_site/**/*.html' './_site/**/*.js' --css './_site/assets/styles/*.css' --output './_site/assets/styles/'"]

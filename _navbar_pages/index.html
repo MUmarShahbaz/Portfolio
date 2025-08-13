@@ -52,35 +52,11 @@ nav-box-bg:
     </div>
 
     <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign mern = "MongoDB,Express,React,NodeJS" | split: "," %}
-        {% include skill.liquid title="MERN Stack" subtitle="Web Development (WIP)" icons=mern %}
-      </div>
-
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign git_github = "Git,GitHub" | split: "," %}
-        {% include skill.liquid title="Git & GitHub" subtitle="Collaboration" icons=git_github %}
-      </div>
-
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign js_ts = "JavaScript,TypeScript" | split: "," %}
-        {% include skill.liquid title="JavaScript & TypeScript" subtitle="JS" icons=js_ts %}
-      </div>
-
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign unity_blender = "Unity,Blender" | split: "," %}
-        {% include skill.liquid title="Unity & Blender" subtitle="Game Development (WIP)" icons=unity_blender %}
-      </div>
-
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign arduino = "Arduino" | split: "," %}
-        {% include skill.liquid title="Arduino" subtitle="Robotics" icons=arduino %}
-      </div>
-
-      <div class="col-md-4" data-aos="fade-up">
-        {% assign languages = "CPlusPlus,CSharp,Python,Ruby" | split: "," %}
-        {% include skill.liquid title="C++, C#, Python & Ruby" subtitle="Other Languages" icons=languages %}
-      </div>
+        {% for skill in site.data.skills %}
+            <div class="col-md-4" data-aos="fade-up">
+                {% include skill.liquid title=skill.title subtitle=skill.subtitle icons=skill.icons %}
+            </div>
+        {% endfor %}
     </div>
   </div>
 </section>
