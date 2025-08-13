@@ -61,6 +61,25 @@ nav-box-bg:
   </div>
 </section>
 
+<!-- SoM Website Info Redirect -->
+<section class="py-5 container border">
+    <h2 class="display-5 fw-bold text-center" data-aos="fade-up">For SoM reviewers!</h2>
+    <p class="lead text-muted text-center mb-5" data-aos="fade-up">Read more about the technical part of this website before voting</p>
+    {% capture this_other %}
+        {% assign this_icons = "Bootstrap,Jekyll,Docker,Actions" | split: "," %}
+        {% for icon in this_icons %}
+            {% assign this_icon = site.data.icons[icon] %}
+            {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+            class="btn btn-primary text-white w-75" href="{{ '/projects/MUS.html' | absolute_url }}">Read More</a></div>
+    {% endcapture %}
+    <div class="row d-flex justify-content-center"><div class="col-4">
+    {% include card.liquid img="icon.png" alt="MUS" title="MUS" p="Portfolio website of M. Umar Shahbaz"
+        other=this_other AOS="fade-up" %}
+    </div></div>
+</section>
+
 <!-- More Pages-->
 <section class="container-fluid my-5 d-flex justify-content-center flex-column" style="min-height: calc(100vh - 10rem);">
     <div class="row g-3 w-100">

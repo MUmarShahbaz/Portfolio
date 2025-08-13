@@ -55,6 +55,12 @@ Python:
 Ruby:
   class: devicon-ruby-plain
   color: '#701516'
+Bootstrap:
+  class: devicon-bootstrap-plain
+  color: '#7952B3'
+Jekyll:
+  class: devicon-jekyll-plain
+  color: '#CC0000'
 
 #==========================
 #     GENERAL ICONS
