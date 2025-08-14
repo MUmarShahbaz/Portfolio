@@ -6,15 +6,15 @@ nav-order: 7
 container_classes: container p-5 full-page
 ---
 {% assign root_pages = site.pages | where_exp: 'this_page', 'this_page.title' %}
-{% if root_pages.size > 0 %}
+{% if root_pages.size > 1 %}
   <section>
     <h2>Root</h2>
     <ul>
-      {% for this_page in root_pages %}
+      {% for this_page in root_pages %}{% unless this_page.title == "Search Results" %}
         <li>
           <a href="{{ this_page.url | absolute_url }}">{{ this_page.title }}</a>
         </li>
-      {% endfor %}
+      {% endunless %}{% endfor %}
     </ul>
   </section>
 {% endif %}
