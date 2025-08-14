@@ -207,3 +207,34 @@
 .highlight .il {
   color: #009999;
 } /* Literal.Number.Integer.Long */
+
+/* Container */
+/* Code block container (light mode) */
+.highlight {
+  background-color: #f6f8fa; /* GitHub-like light grey */
+  padding: 1em;
+  border-radius: 6px;
+  border: 1px solid #d0d7de; /* subtle border */
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+/* The actual <pre> element */
+.highlight pre {
+  margin: 0;
+  background: transparent;
+  color: #24292e; /* GitHub dark grey text */
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding-bottom: 1.5em;
+}
+
+/* Optional: scrollbar styling for overflow */
+.highlight pre::-webkit-scrollbar {
+  height: 8px;
+}
+.highlight pre::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
