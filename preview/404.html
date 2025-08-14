@@ -1,1 +1,45 @@
-<style type="text/css" media="screen">.container{margin:10px auto;max-width:600px;text-align:center}h1{margin:30px 0;font-size:4em;line-height:1;letter-spacing:-1px}</style> <div class="container"> <h1>404</h1> <p><strong>Page not found :(</strong></p> <p>The requested page could not be found.</p> </div>
+<!DOCTYPE html> <html lang="en"> <head> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta charset="utf-8"> <link rel="apple-touch-icon" href="https://m-umar.me/preview/assets/img/original/icon.png"> <link rel="icon" type="image/png" href="https://m-umar.me/preview/assets/img/original/icon.png"> <link rel="stylesheet" href="https://m-umar.me/preview/assets/styles/master.css"> <script defer src="https://m-umar.me/preview/assets/scripts/aos.min.js"></script> <script defer src="https://m-umar.me/preview/assets/scripts/bootstrap.min.js"></script> <script defer src="https://m-umar.me/preview/assets/scripts/fuse.min.js"></script> <link type="application/atom+xml" rel="alternate" href="https://m-umar.me/preview/feed.xml" title="MUS"/> <title>MUS | The Archives of M. Umar Shahbaz</title> <meta name="generator" content="Jekyll v4.4.1"/> <meta property="og:title" content="MUS"/> <meta name="author" content="M. Umar Shahbaz"/> <meta property="og:locale" content="en_US"/> <meta name="description" content="The Archives of M. Umar Shahbaz"/> <meta property="og:description" content="The Archives of M. Umar Shahbaz"/> <link rel="canonical" href="https://m-umar.me/preview/404.html"/> <meta property="og:url" content="https://m-umar.me/preview/404.html"/> <meta property="og:site_name" content="MUS"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary"/> <meta property="twitter:title" content="MUS"/> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"M. Umar Shahbaz"},"description":"The Archives of M. Umar Shahbaz","headline":"MUS","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://m-umar.me/preview/assets/img/original/icon.png"},"name":"M. Umar Shahbaz"},"url":"https://m-umar.me/preview/404.html"}</script> <style>html{visibility:hidden;opacity:0}</style> <script>
+        window.siteSearch = null;
+
+        function runSearch(query) {
+            if (!window.siteSearch || !query.trim()) return null;
+            return window.siteSearch.search(query);
+        }
+
+        async function create_search() {
+            await fetch('https://m-umar.me/preview/search.json')
+            .then(res => res.json())
+            .then(data => {
+                window.siteSearch = new Fuse(data, {
+                keys: [
+                    { name: 'title', weight: 0.5 },
+                    { name: 'description', weight: 0.3 },
+                    { name: 'content', weight: 0.2 }
+                ],
+                threshold: 0.3,
+                ignoreLocation: true
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.style.visibility = 'visible';
+            document.documentElement.style.opacity = 1;
+            AOS.init();
+            create_search();
+
+            document.getElementById('search-input').addEventListener('input', function () {
+                const results = runSearch(this.value);
+                const resultsContainer = document.getElementById('results-container');
+                resultsContainer.innerHTML = '';
+                results.forEach(r => {
+                    const item = r.item; // from search.json
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item list-group-item-action px-3 py-2';
+                    li.innerHTML = `<a href="${item.url}" class="text-decoration-none d-block text-dark">${item.title}</a>`;
+                    resultsContainer.appendChild(li);
+                });
+            });
+        });
+    </script> </head> <body> <nav class="navbar navbar-expand-lg bg-black"> <div class="container-fluid"> <a class="navbar-brand" href="https://m-umar.me/preview/"> <span class="fw-bolder text-white">MUS</span> </a> <button class="navbar-toggler bg-white p-1 rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/">Home</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/timeline.html">Timeline</a> </li> <li class="nav-item dropdown"> <a class="nav-link text-white dropdown-toggle" href="https://m-umar.me/preview/projects/" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a> <ul class="dropdown-menu" aria-labelledby="navbarDropdown3"> <li> <a class="dropdown-item text-black" href="https://m-umar.me/preview/projects/#prominent">Prominent</a> </li> <li> <a class="dropdown-item text-black" href="https://m-umar.me/preview/projects/#wip">Work in progress</a> </li> <li> <a class="dropdown-item text-black" href="https://m-umar.me/preview/projects/#planned">Planned</a> </li> <li> <a class="dropdown-item text-black" href="https://m-umar.me/preview/projects/#archived">Archived</a> </li> </ul> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/research/">Research</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/content/">Content</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/resume.html">Resume</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://m-umar.me/preview/more.html">More</a> </li> </ul> <form class="d-flex" role="search" action="https://m-umar.me/preview/search.html"> <input id="search-input" name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> </form> <ul id="results-container" class="list-group position-absolute shadow w-100 w-lg-25" style="z-index:1050; max-height:300px; overflow-y:auto; top:100%; left:0; min-width:300px; width:auto;"></ul> </div> </div> </nav> <main class=""><style type="text/css" media="screen">.container{margin:10px auto;max-width:600px;text-align:center}h1{margin:30px 0;font-size:4em;line-height:1;letter-spacing:-1px}</style> <div class="container full-page h-100 d-flex flex-column justify-content-center"> <h1>404</h1> <p><strong>Page not found :(</strong></p> <p>The requested page could not be found.</p> </div> </main> <footer class="bg-dark text-white pt-5 pb-4"> <div class="container text-md-start text-center"> <div class="row"> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">MUS</h5> <p>The Archives of M. Umar Shahbaz</p> </div> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">Quick Links</h5> <ul class="list-unstyled"> <li> <a href="https://m-umar.me/preview/" class="text-white text-decoration-none">Home</a> </li> <li> <a href="https://m-umar.me/preview/timeline.html" class="text-white text-decoration-none">Timeline</a> </li> <li> <a href="https://m-umar.me/preview/projects/" class="text-white text-decoration-none">Projects</a> </li> <li> <a href="https://m-umar.me/preview/research/" class="text-white text-decoration-none">Research</a> </li> <li> <a href="https://m-umar.me/preview/content/" class="text-white text-decoration-none">Content</a> </li> <li> <a href="https://m-umar.me/preview/resume.html" class="text-white text-decoration-none">Resume</a> </li> <li> <a href="https://m-umar.me/preview/more.html" class="text-white text-decoration-none">More</a> </li> </ul> </div> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">Follow Me</h5> <div class="d-flex gap-3 mt-2 justify-content-center justify-content-md-start"> <a href="https://github.com/MUmarShahbaz" class="text-white fs-4"> <i class="fa-lg fab fa-github"></i> </a> <a href="https://www.linkedin.com/in/m-umar-shahbaz" class="text-white fs-4"> <i class="fa-lg fab fa-linkedin"></i> </a> <a href="https://m-umar.me/preview/feed.xml" class="text-white fs-4"> <i class="fa-lg fas fa-rss"></i> </a> </div> </div> </div> </div> <div class="text-center mt-4 border-top pt-3"> <p class="mb-0">&copy; 2025 M. Umar Shahbaz. All rights reserved.</p> </div> </footer> </body> </html>
