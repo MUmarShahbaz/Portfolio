@@ -1,0 +1,51 @@
+---
+layout: default
+permalink: /search.html
+title: Search Results
+container_classes: container p-5
+---
+
+<h1 class="display-1">Search Results</h1>
+<p class="muted">Showing results for "<span id="show_for"></span>"</p>
+<section id="show_result"></section>
+<script defer>
+    const query = (new URLSearchParams(window.location.search)).get('q');
+    document.addEventListener('DOMContentLoaded', async function () {
+        document.getElementById('show_for').innerText = query;
+        if (!window.siteSearch) { await create_search(); }
+        const results = runSearch(query);
+        console.log(results);
+        results.forEach(element => {
+            const item = element.item || element;
+            const this_result_card = document.createElement('div');
+            this_result_card.setAttribute('data-aos', 'fade-up');
+            this_result_card.classList.add('card', 'shadow', 'h-100', 'position-relative', 'mb-4');
+            let imageHtml = '';
+            if (item.image) {
+                imageHtml = `<img src='assets/img/original/${item.image}' class='card-img-top' alt='${item.title}' style='max-height:200px;object-fit:cover;'>`;
+            }
+            let iconsHtml = '';
+                            if (Array.isArray(item.icons) && item.icons.length > 0) {
+                                    iconsHtml = `<div class='mb-2 d-flex justify-content-center flex-wrap gap-2'>` + item.icons.map(icon => `
+                                        <span class='badge bg-gradient text-dark border border-1 border-secondary rounded-pill px-3 py-2 shadow-sm' style='font-size:1rem; letter-spacing:0.5px;'>${icon}</span>
+                                    `).join('') + `</div>`;
+                            }
+            let typeBadge = '';
+            if (item.type || item.category) {
+                const typeText = (item.type || item.category).toString().replace(/\b\w/g, c => c.toUpperCase());
+                typeBadge = `<span class='badge bg-success text-white border border-1 border-dark rounded-pill position-absolute top-0 end-0 m-2 px-3 py-2 shadow-sm' style='font-size:1rem; letter-spacing:0.5px;'>${typeText}</span>`;
+            }
+            this_result_card.innerHTML = `
+        ${imageHtml}
+        ${typeBadge}
+        <div class="card-body text-center p-4" style="padding-bottom: 60px !important">
+          <h6 class="card-title display-5 fs-1">${item.title}</h6>
+          ${iconsHtml}
+          <p class="card-text text-start" style="text-align: justify !important">${item.description || ''}</p>
+          <a href="${item.url || item.link}" class="btn btn-primary mt-3 text-white">View</a>
+        </div>
+      `;
+            document.getElementById('show_result').appendChild(this_result_card);
+        });
+    });
+</script>

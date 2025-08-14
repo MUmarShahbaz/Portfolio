@@ -73,9 +73,10 @@
       </ul>
 
       <!-- Search Bar -->
-      <form class="d-flex" role="search">
+      <form class="d-flex" role="search" action="{{ 'search.html' | absolute_url }}">
         <input
           id="search-input"
+          name="q"
           class="form-control me-2"
           type="search"
           placeholder="Search"
