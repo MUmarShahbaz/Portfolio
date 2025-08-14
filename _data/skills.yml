@@ -25,10 +25,11 @@
     - JavaScript
     - TypeScript
 
-- title: Arduino
+- title: Arduino & TTL
   subtitle: Robotics
   icons:
     - Arduino
+    - Microchip
 
 - title: C++, C#, Python & Ruby
   subtitle: Other Languages
