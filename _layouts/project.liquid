@@ -9,12 +9,6 @@ layout: default
     <div class="col-md-8 text-center d-flex justify-content-center flex-column" data-aos="fade-left">
         <h1 class="display-1">{{ page.title }}</h1>
         <p class="lead">{{ page.description }}</p>
-        <div>
-            {% for icon in page.icons %}
-                {% assign this_icon = site.data.icons[icon] %}
-                {% include icon.liquid icon=this_icon %}
-            {% endfor %}
-        </div>
     </div>
 </header>
 
