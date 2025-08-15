@@ -25,4 +25,4 @@ RUN npm install -g purgecss
 
 COPY . .
 
-CMD ["sh", "-c", "JEKYLL_ENV=production bundle exec jekyll build && purgecss --content './_site/**/*.html' './_site/**/*.js' --css './_site/assets/styles/*.css' --output './_site/assets/styles/'"]
+CMD ["sh", "-c", "JEKYLL_ENV=production bundle exec jekyll build"]

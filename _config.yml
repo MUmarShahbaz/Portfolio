@@ -20,6 +20,7 @@ plugins:
   - jekyll-terser
   - jekyll_dynamic_assets
   - jekyll_picture_tag
+  - jekyll-purge-css
 
 markdown: kramdown
 highlighter: rouge
@@ -52,6 +53,11 @@ picture:
   suppress_warnings: true
   relative: false
   fast_build: true
+
+PurgeCSS:
+  content: [./_site/**/*.html, ./_site/**/*.js]
+  css: [./_site/assets/styles/*.css]
+  output: ./_site/assets/styles/
 
 exclude:
   - .bundle/

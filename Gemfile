@@ -13,5 +13,6 @@ group :jekyll_plugins do
   gem 'jekyll-minifier'
   gem 'jekyll_dynamic_assets'
   gem 'jekyll_picture_tag'
+  gem 'jekyll-purge-css', :git => "https://github.com/MUmarShahbaz/jekyll-purge-css.git"
   gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
 end

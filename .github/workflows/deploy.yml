@@ -24,14 +24,12 @@ jobs:
           bundler-cache: true
       - name: JPT Dependencies
         run: sudo apt-get update && sudo apt-get install --yes libjpeg-dev webp libpng-dev libavif-dev libheif-dev libopenjpip7 imagemagick libvips-tools build-essential
+      - name: JPC Dependencies
+        run: npm install -g purgecss
       - name: Install and Build 🔧
         run: |
           export JEKYLL_ENV=production
           bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-            npm install -g purgecss
-            purgecss --content './_site/**/*.html' './_site/**/*.js' --css './_site/assets/styles/*.css' --output './_site/assets/styles/'
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/MUmarShahbaz/jekyll-purge-css.git
+  revision: d0dcb8b507663872ef720e52314c03598627f5bc
+  specs:
+    jekyll-purge-css (0.1.0)
+      jekyll (>= 3.0, < 5.0)
+
+GIT
   remote: https://github.com/RobertoJBeltran/jekyll-terser.git
   revision: 1085bf66d692799af09fe39f8162a1e6e42a3cc4
   specs:
@@ -135,6 +142,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-minifier
+  jekyll-purge-css!
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-terser!
