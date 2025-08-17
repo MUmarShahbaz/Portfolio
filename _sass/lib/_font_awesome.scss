@@ -8753,6 +8753,10 @@
     content: "\f3f6"
 }
 
+.fa-gravatar:before {
+    content: "\2fa1f"
+}
+
 :host,
 :root {
     --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free"
@@ -8820,7 +8824,8 @@
 @font-face {
     font-family: "FontAwesome";
     font-display: block;
-    src: url(../webfonts/fa-brands-400.woff2) format("woff2"), url(../webfonts/fa-brands-400.ttf) format("truetype")
+    src: url(../webfonts/fa-brands-400.woff2) format("woff2"), url(../webfonts/fa-brands-400.ttf) format("truetype");
+    unicode-range: u+2fa1f
 }
 
 @font-face {
