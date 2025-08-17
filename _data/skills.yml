@@ -6,11 +6,12 @@
     - React
     - NodeJS
 
-- title: Git & GitHub
+- title: Git, GitHub & GitKraken
   subtitle: Collaboration
   icons:
     - Git
     - GitHub
+    - GitKraken
 
 - title: Docker, Actions & Ubuntu
   subtitle: DevOps

@@ -19,6 +19,9 @@ Git:
 GitHub:
   class: devicon-github-original
   color: '#181717'
+GitKraken:
+  class: fab fa-gitkraken
+  color: '#128379'
 Docker:
   class: devicon-docker-plain
   color: '#1D63ED'
