@@ -1,6 +1,7 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-.vscode
-docker_build
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+.vscode/
+docker_build/
+temp/
