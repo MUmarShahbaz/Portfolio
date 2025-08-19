@@ -9,6 +9,7 @@ layout: default
     <div class="col-md-8 text-center d-flex justify-content-center flex-column" data-aos="fade-left">
         <h1 class="display-1">{{ page.title }}</h1>
         <p class="lead">{{ page.description }}</p>
+        {% share_bar intro %}
     </div>
 </header>
 
@@ -33,6 +34,11 @@ layout: default
 </section>
 {% endif %}
 <hr class="my-5">
-<section>
+<section aria-label="Content">
     {{ content }}
+</section>
+<hr class="my-5">
+<section aria-label="Share this page">
+    <p class="display-5 mb-5">Share this page</p>
+    {% share_bar end %}
 </section>
