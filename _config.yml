@@ -130,12 +130,6 @@ kramdown:
       line_numbers: false
       start_line: 1
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-
 #======================================================================
 #                              Include/Exclude
 #======================================================================
