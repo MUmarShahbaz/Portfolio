@@ -3,33 +3,43 @@ module Jekyll
 
         def initialize(tag_name, markup, tokens)
             super
-            @args = markup.strip.split(/\s+/)
         end
 
         def render(context)
+            # Get Config
             @site = context.registers[:site]
             @all_presets = @site.config['share-presets']
             @page = context.registers[:page]
 
-            preset_key = @args.shift
-            if (@args.length == 0)
+            # Get Args
+            rendered_markup = Liquid::Template.parse(@markup).render(context)
+            args = rendered_markup.strip.split(/\s+/)
+
+            # Parse Args
+            preset_key = args.shift
+            if (args.length == 0)
                 url = "#{@site.config['url']}#{@site.config['baseurl']}#{@page['url']}"
             else
-                liquid_input = Liquid::Template.parse(@args.join(" "))
+                liquid_input = Liquid::Template.parse(args.join(" "))
                 url = liquid_input.render!(context)
             end
 
+            # Create a list of icons that will redirect to the sharing page
             create_share(preset_key, url)
         end
 
         def create_share(preset_key, url)
+            # Get Preset info
             preset = @all_presets[preset_key]
             share_class = preset['class']
+            
+            # Create list of Icons
             children = ""
             for site in preset['sites']
                 children << create_button(share_class, site, url)
             end
 
+            # Place icons inside a nav
             "<nav class=\"#{preset['class']}\">#{children}</nav>"
         end
 
