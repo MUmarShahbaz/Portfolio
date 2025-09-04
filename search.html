@@ -8,6 +8,7 @@ container_classes: container p-5
 <h1 class="display-1">Search Results</h1>
 <p class="muted">Showing results for "<span id="show_for"></span>"</p>
 <section id="show_result"></section>
+{% include navbox.liquid %}
 <script defer>
     const query = (new URLSearchParams(window.location.search)).get('q');
     document.addEventListener('DOMContentLoaded', async function () {

@@ -1,0 +1,43 @@
+<section class="container-fluid my-5 d-flex justify-content-center flex-column" style="min-height: calc(100vh - 10rem);">
+    <div class="row g-3 w-100">
+        <h1 class="display-3 p-5" data-aos="fade-up">Check out other pages!</h1>
+        <div class="col-md-6">
+            <div class="row g-3 h-100">
+                <div class="col-12" style="aspect-ratio: 2/1" data-aos="fade-up">
+                    <a href="{{ '/projects/' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded" style="background-image: url('{{ site.data.navbox.bg.projects }}')"><p class="text-white align-self-end fw-bold fs-2 fs-md-1 px-5">Projects</p></div>
+                    </a>
+                </div>
+                <div class="col-12" style="aspect-ratio: 2/1" data-aos="fade-up">
+                    <a href="{{ '/research/' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded" style="background-image: url('{{ site.data.navbox.bg.research }}')"><p class="text-white align-self-end fw-bold fs-2 fs-md-1 px-5">Research</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>        
+        <div class="col-md-6">
+            <div class="row g-3 h-100">
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
+                    <a href="{{ '/timeline.html' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ site.data.navbox.bg.timeline }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Timeline</p></div>
+                    </a>
+                </div>
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
+                    <a href="{{ '/resume.html' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ site.data.navbox.bg.resume }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Resume</p></div>
+                    </a>
+                </div>
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
+                    <a href="{{ '/content/' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ site.data.navbox.bg.content }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">Content</p></div>
+                    </a>
+                </div>
+                <div class="col-6" style="aspect-ratio: 1/1" data-aos="fade-up">
+                    <a href="{{ '/more.html' | absolute_url }}" class="text-decoration-none">
+                    <div class="w-100 h-100 d-flex nav-box-card rounded justify-content-center" style="background-image: url('{{ site.data.navbox.bg.more }}')"><p class="text-white align-self-center fw-bold fs-2 fs-md-1">More...</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
