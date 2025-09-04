@@ -80,18 +80,24 @@ These schemas are processed by Liquid templates to produce HTML automatically.
 ### 1. Social Links (`_data/socials.yml`)
 **Schema:**  
 {% highlight yaml %}
-<icon_key>: <url>
+- name: <title>
+  icon: <css class>
+  url: <url to profile>
 {% endhighlight %}
 
 **Example:**  
 {% highlight yaml %}
-fab.github: https://github.com/USERNAME
-fab.linkedin: https://www.linkedin.com/in/USERNAME
-fas.rss: https://example.com/feed.xml
+- name: GitHub
+  icon: fa-lg fab fa-github
+  url: https://github.com/USERNAME
+
+- name: LinkedIn
+  icon: fa-lg fab fa-linkedin-in
+  url: https://www.linkedin.com/in/USERNAME
 {% endhighlight %}
 
 **Usage:**  
-Populates footer social icons dynamically, mapping each Font Awesome icon key to its corresponding URL.
+Populates footer social icons dynamically, creating an icon for each social.
 
 ---
 
@@ -133,12 +139,33 @@ repository: <github_owner/repository>
 icons:
   - <icon_key>
   - <icon_key>
-permalink: /projects/<slug>
+permalink: /projects/<filename>
 layout: project
-category: prominent | wip | planned
+category: <prominent | wip | planned>
 container_classes: <css_classes>
 ---
 <page_content>
+{% endhighlight %}
+
+**Example:**  
+{% highlight yaml %}
+---
+title: MUS
+description: Portfolio website of M. Umar Shahbaz
+image: icon.png
+prefrence: 1
+repository: MUmarShahbaz/Portfolio
+icons:
+   - Bootstrap
+   - Jekyll
+   - Docker
+   - Actions
+permalink: /projects/MUS.html
+layout: project
+category: wip
+container_classes: container py-5
+---
+Some Markdown content. This content will automatically be parsed into HTML and Style will be applied to it appropriately.
 {% endhighlight %}
 
 **Usage:**  
