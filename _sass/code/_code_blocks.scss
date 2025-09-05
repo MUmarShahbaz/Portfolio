@@ -1,0 +1,55 @@
+@import "light";
+@import "dark";
+
+/* Colors */
+/* Light Mode */
+.highlight {
+  background-color: #f6f8fa; /* Background color */
+  border: 1px solid #d0d7de; /* Border color */
+
+  pre {
+    color: #24292e; /* Default Text color */
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.1); /* Scrollbar color */
+    }
+  }
+}
+
+/* Dark Mode */
+[data-bs-theme="dark"] .highlight {
+  background-color: #272822; /* Background color */
+  border: 1px solid #3e3e3e; /* Border color */
+  
+  pre {
+    color: #f8f8f2; /* Default Text color */
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15); /* Scrollbar color */
+    }
+  }
+}
+
+/* Fixed */
+.highlight {
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+
+  pre {
+    background: transparent;
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    padding-bottom: 1.5em;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px;
+  }
+}

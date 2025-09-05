@@ -14,3 +14,9 @@ main {
 .full-page {
     min-height: 100vh;
 }
+
+[data-bs-theme="dark"] .bg-dark,
+[data-bs-theme="dark"] .bg-dark-black,
+[data-bs-theme="dark"] .card {
+    background-color: var(--bs-black) !important;
+}

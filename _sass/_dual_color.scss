@@ -1,0 +1,23 @@
+.dual-color-container {
+    position: relative;
+
+    .dual-color-dark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+[data-bs-theme="dark"] .dual-color-container {
+    .dual-color-light {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dual-color-dark {
+        opacity: 1;
+        visibility: visible;
+    }
+}

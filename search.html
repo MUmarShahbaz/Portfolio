@@ -28,7 +28,7 @@ container_classes: container p-5
             let iconsHtml = '';
                             if (Array.isArray(item.icons) && item.icons.length > 0) {
                                     iconsHtml = `<div class='mb-2 d-flex justify-content-center flex-wrap gap-2'>` + item.icons.map(icon => `
-                                        <span class='badge bg-gradient text-dark border border-1 border-secondary rounded-pill px-3 py-2 shadow-sm' style='font-size:1rem; letter-spacing:0.5px;'>${icon}</span>
+                                        <span class='badge text-body border border-1 border-secondary rounded-pill px-3 py-2 shadow-sm' style='font-size:1rem; letter-spacing:0.5px;'>${icon}</span>
                                     `).join('') + `</div>`;
                             }
             let typeBadge = '';

@@ -99,3 +99,10 @@
         }
     }
 }
+
+[data-bs-theme="dark"] {
+    .intro .intro-anchor,
+    .end .end-anchor {
+        color: #dee2e6;
+    }
+}

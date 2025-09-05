@@ -37,6 +37,10 @@
             });
         }
 
+        function set_theme(theme) {
+            document.body.setAttribute('data-bs-theme', theme);
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.style.visibility = 'visible';
             document.documentElement.style.opacity = 1;
@@ -51,10 +55,56 @@
                     const item = r.item; // from search.json
                     const li = document.createElement('li');
                     li.className = 'list-group-item list-group-item-action px-3 py-2';
-                    li.innerHTML = `<a href="${item.url}" class="text-decoration-none d-block text-dark">${item.title}</a>`;
+                    li.innerHTML = `<a href="${item.url}" class="text-decoration-none d-block text-body">${item.title}</a>`;
                     resultsContainer.appendChild(li);
                 });
             });
         });
     </script>
+    <script>
+    const themes = ["system", "light", "dark"];
+    let currentThemeIndex = 0;
+
+    function applyTheme(theme) {
+      if (theme === "system") {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.body.setAttribute("data-bs-theme", prefersDark ? "dark" : "light");
+        document.getElementById("theme-sun").style.display  = "none";
+        document.getElementById("theme-moon").style.display = "none";
+        document.getElementById("theme-gear").style.display = "block";
+      } else if (theme === "light") {
+        document.body.setAttribute("data-bs-theme", "light");
+        document.getElementById("theme-sun").style.display  = "block";
+        document.getElementById("theme-moon").style.display = "none";
+        document.getElementById("theme-gear").style.display = "none";
+      } else {
+        document.body.setAttribute("data-bs-theme", "dark");
+        document.getElementById("theme-sun").style.display  = "none";
+        document.getElementById("theme-moon").style.display = "block";
+        document.getElementById("theme-gear").style.display = "none";
+      }
+    }
+
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme") || "system";
+      currentThemeIndex = themes.indexOf(savedTheme);
+      applyTheme(savedTheme);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const newTheme = themes[currentThemeIndex];
+            localStorage.setItem("theme", newTheme);
+            applyTheme(newTheme);
+        });
+        loadTheme();
+    });
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+      if (localStorage.getItem("theme") === "system") {
+        applyTheme("system");
+      }
+    });
+  </script>
 </head>
