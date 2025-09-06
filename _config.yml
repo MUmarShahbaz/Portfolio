@@ -145,3 +145,4 @@ exclude:
   - Dockerfile
   - Gemfile
   - Gemfile.lock
+  - README.md
