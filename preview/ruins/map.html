@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Clickable Buttons</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #409ed4;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background: url('map.png') no-repeat center top;
+            background-size: auto 150vh;
+
+            .container {
+                position: relative;
+                width: 100%;
+                left: 50%;
+                height: 100%;
+            }
+        }
+
+        .map-btn {
+            text-align: center;
+            position: absolute;
+            padding: 10px 1.2em;
+            width: auto;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #222;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .map-btn:hover {
+            background: rgba(200, 200, 255, 0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/scenes/57/" class="map-btn" style="left: -120px; top: 475px;">Ghost Rave</a>
+        <a href="/scenes/81/" class="map-btn" style="left: 55px; top: 450px;">Boom Boom Tomb</a>
+        <a href="/scenes/36/" class="map-btn" style="left: -6x; top: 298px;">The Sea of Glub</a>
+        <a href="/scenes/77/" class="map-btn" style="left: -230px; top: 385px;">Weird Red Bumpy Area</a>
+    </div>
+</body>
+
+</html>
