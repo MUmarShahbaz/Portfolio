@@ -1,30 +1,94 @@
-<!DOCTYPE html> <html lang="en-US"> <head> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta charset="utf-8"> <meta name="theme-color" content="#FF4C60"> <link rel="apple-touch-icon" href="/assets/img/icon.png"> <link rel="icon" type="image/png" href="/assets/img/icon.png"> <link rel="preload" href="/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> <noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript> <script defer src="/assets/scripts/nav.js"></script> <link type="application/atom+xml" rel="alternate" href="https://m-umar.me/feed.xml" title="MUS"/> <title>404 | MUS</title> <meta name="generator" content="Jekyll v4.4.1"/> <meta property="og:title" content="404"/> <meta name="author" content="M. Umar Shahbaz"/> <meta property="og:locale" content="en_US"/> <meta name="description" content="The Archives of M. Umar Shahbaz"/> <meta property="og:description" content="The Archives of M. Umar Shahbaz"/> <link rel="canonical" href="https://m-umar.me/404.html"/> <meta property="og:url" content="https://m-umar.me/404.html"/> <meta property="og:site_name" content="MUS"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary"/> <meta property="twitter:title" content="404"/> <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"M. Umar Shahbaz"},"description":"The Archives of M. Umar Shahbaz","headline":"404","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://m-umar.me/assets/img/icon.png"},"name":"M. Umar Shahbaz"},"url":"https://m-umar.me/404.html"}</script> <style>html{visibility:hidden;opacity:0}</style> <script>
+<!DOCTYPE html> <html lang="en"> <head> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta charset="utf-8"> <link rel="apple-touch-icon" href="https://mumarshahbaz.com/assets/img/original/icon.png"> <link rel="icon" type="image/png" href="https://mumarshahbaz.com/assets/img/original/icon.png"> <link rel="stylesheet" href="https://mumarshahbaz.com/assets/styles/master.css"> <script defer src="https://mumarshahbaz.com/assets/scripts/aos.min.js"></script> <script defer src="https://mumarshahbaz.com/assets/scripts/bootstrap.min.js"></script> <script defer src="https://mumarshahbaz.com/assets/scripts/fuse.min.js"></script> <link type="application/atom+xml" rel="alternate" href="https://mumarshahbaz.com/feed.xml" title="MUS"/> <title>MUS | The Archives of M. Umar Shahbaz</title> <meta name="generator" content="Jekyll v4.4.1"/> <meta property="og:title" content="MUS"/> <meta name="author" content="M. Umar Shahbaz"/> <meta property="og:locale" content="en_US"/> <meta name="description" content="The Archives of M. Umar Shahbaz"/> <meta property="og:description" content="The Archives of M. Umar Shahbaz"/> <link rel="canonical" href="https://mumarshahbaz.com/404.html"/> <meta property="og:url" content="https://mumarshahbaz.com/404.html"/> <meta property="og:site_name" content="MUS"/> <meta property="og:type" content="website"/> <meta name="twitter:card" content="summary"/> <meta property="twitter:title" content="MUS"/> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"M. Umar Shahbaz"},"description":"The Archives of M. Umar Shahbaz","headline":"MUS","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mumarshahbaz.com/assets/img/original/icon.png"},"name":"M. Umar Shahbaz"},"url":"https://mumarshahbaz.com/404.html"}</script> <style>html{visibility:hidden;opacity:0}</style> <script>
+        window.siteSearch = null;
+
+        function runSearch(query) {
+            if (!window.siteSearch || !query.trim()) return null;
+            return window.siteSearch.search(query);
+        }
+
+        async function create_search() {
+            await fetch('https://mumarshahbaz.com/search.json')
+            .then(res => res.json())
+            .then(data => {
+                window.siteSearch = new Fuse(data, {
+                keys: [
+                    { name: 'title', weight: 0.5 },
+                    { name: 'description', weight: 0.3 },
+                    { name: 'content', weight: 0.2 }
+                ],
+                threshold: 0.3,
+                ignoreLocation: true
+                });
+            });
+        }
+
+        function set_theme(theme) {
+            document.body.setAttribute('data-bs-theme', theme);
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.style.visibility = 'visible';
             document.documentElement.style.opacity = 1;
+            AOS.init();
+            create_search();
+
+            document.getElementById('search-input').addEventListener('input', function () {
+                const results = runSearch(this.value);
+                const resultsContainer = document.getElementById('results-container');
+                resultsContainer.innerHTML = '';
+                results.forEach(r => {
+                    const item = r.item; // from search.json
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item list-group-item-action px-3 py-2';
+                    li.innerHTML = `<a href="${item.url}" class="text-decoration-none d-block text-body">${item.title}</a>`;
+                    resultsContainer.appendChild(li);
+                });
+            });
         });
-    </script> </head> <body> <div id="nav-bar"> <div id="menu-bg"> <button id="menu">☰</button> </div> <nav id="nav-links"> <a href="/">Home</a> <a href="/about/">About</a> <a href="/github/">GitHub</a> <a href="/projects/">Projects</a> <a href="/publications/">Publications</a> <a href="/resume/">Resume</a> </nav> <div class="progress" id="live-progress"></div> <div class="progress" style="width: 100%; background-color: #272626; z-index: 999;"></div> </div> <div id="body"><div class="center-element column" style="min-height: 100vh"> <h1 class="center-text primary" style="font-size: 100px">Error 404</h1> <h2 class="center-text secondary">Well, this is awkward!</h2> </div> </div> <div id="foot"> <div id="foot-bar"></div> <div id="foot-content"> <div id="foot-main"> <h1 class="heading primary">MUS</h1> <p class="subheading">The Archives of M. Umar Shahbaz</p> </div> <div id="foot-socials"> <h2 class="primary" style="margin: 30px 0;">Socials</h2> <a href="https://github.com/MUmarShahbaz" target="_blank" class="center-element row" style="justify-content: left; margin: 10px 0;"> <img src="https://icons.iconarchive.com/icons/bokehlicia/captiva/256/web-github-icon.png" alt="GitHub" class="no-shadow" style="width: 30px; height: 30px;"> <p style="margin: 0 10px;">MUmarShahbaz</p> </a> <br class="spacer"> </div> </div> <hr style="margin-top: 0; margin-bottom: 0"> <div style="width: 90%;"> <p>&copy; 2025 MUS. All rights reserved.</p></div> </div> <button class="button" id="theme-selector" title="Toggle Theme"> <svg style="display: block;" id="sun-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" viewBox="0 0 24 24"> <path d="M 12 0 C 11.4 0 11 0.4 11 1 L 11 2 C 11 2.6 11.4 3 12 3 C 12.6 3 13 2.6 13 2 L 13 1 C 13 0.4 12.6 0 12 0 z M 4.1992188 3.1992188 C 3.9492188 3.1992187 3.7 3.3 3.5 3.5 C 3.1 3.9 3.1 4.5003906 3.5 4.9003906 L 4.1992188 5.5996094 C 4.5992187 5.9996094 5.1996094 5.9996094 5.5996094 5.5996094 C 5.9996094 5.1996094 5.9996094 4.5992188 5.5996094 4.1992188 L 4.9003906 3.5 C 4.7003906 3.3 4.4492188 3.1992188 4.1992188 3.1992188 z M 19.800781 3.1992188 C 19.550781 3.1992188 19.299609 3.3 19.099609 3.5 L 18.400391 4.1992188 C 18.000391 4.5992187 18.000391 5.1996094 18.400391 5.5996094 C 18.800391 5.9996094 19.400781 5.9996094 19.800781 5.5996094 L 20.5 4.9003906 C 20.9 4.5003906 20.9 3.9 20.5 3.5 C 20.3 3.3 20.050781 3.1992188 19.800781 3.1992188 z M 12 5 A 7 7 0 0 0 5 12 A 7 7 0 0 0 12 19 A 7 7 0 0 0 19 12 A 7 7 0 0 0 12 5 z M 1 11 C 0.4 11 0 11.4 0 12 C 0 12.6 0.4 13 1 13 L 2 13 C 2.6 13 3 12.6 3 12 C 3 11.4 2.6 11 2 11 L 1 11 z M 22 11 C 21.4 11 21 11.4 21 12 C 21 12.6 21.4 13 22 13 L 23 13 C 23.6 13 24 12.6 24 12 C 24 11.4 23.6 11 23 11 L 22 11 z M 4.9003906 18.099609 C 4.6503906 18.099609 4.3992188 18.200391 4.1992188 18.400391 L 3.5 19.099609 C 3.1 19.499609 3.1 20.1 3.5 20.5 C 3.9 20.9 4.5003906 20.9 4.9003906 20.5 L 5.5996094 19.800781 C 5.9996094 19.400781 5.9996094 18.800391 5.5996094 18.400391 C 5.3996094 18.200391 5.1503906 18.099609 4.9003906 18.099609 z M 19.099609 18.099609 C 18.849609 18.099609 18.600391 18.200391 18.400391 18.400391 C 18.000391 18.800391 18.000391 19.400781 18.400391 19.800781 L 19.099609 20.5 C 19.499609 20.9 20.1 20.9 20.5 20.5 C 20.9 20.1 20.9 19.499609 20.5 19.099609 L 19.800781 18.400391 C 19.600781 18.200391 19.349609 18.099609 19.099609 18.099609 z M 12 21 C 11.4 21 11 21.4 11 22 L 11 23 C 11 23.6 11.4 24 12 24 C 12.6 24 13 23.6 13 23 L 13 22 C 13 21.4 12.6 21 12 21 z"> </path> </svg> <svg style="display: none;" id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.56 122.88"> <path class="cls-1" d="M121.85,87.3A64.31,64.31,0,1,1,36.88.4c2.94-1.37,5.92.91,4.47,4.47a56.29,56.29,0,0,0,75.75,77.4l.49-.27a3.41,3.41,0,0,1,4.61,4.61l-.35.69ZM92.46,74.67H92A16.11,16.11,0,0,0,76.2,58.93v-.52a15.08,15.08,0,0,0,11-4.72,15.19,15.19,0,0,0,4.72-11h.51a15.12,15.12,0,0,0,4.72,11,15.12,15.12,0,0,0,11,4.72v.51A16.13,16.13,0,0,0,92.46,74.67Zm10.09-46.59h-.27a7.94,7.94,0,0,0-2.49-5.81A7.94,7.94,0,0,0,94,19.78v-.27A7.94,7.94,0,0,0,99.79,17a8,8,0,0,0,2.49-5.8h.27A8,8,0,0,0,105,17a8,8,0,0,0,5.81,2.49v.27A8,8,0,0,0,105,22.27a7.94,7.94,0,0,0-2.49,5.81Zm-41.5,8h-.41a12.06,12.06,0,0,0-3.78-8.82A12.06,12.06,0,0,0,48,23.5v-.41a12.07,12.07,0,0,0,8.82-3.78,12.09,12.09,0,0,0,3.78-8.82h.41a12.08,12.08,0,0,0,3.77,8.82,12.09,12.09,0,0,0,8.83,3.78v.41a12.09,12.09,0,0,0-8.83,3.78,12.08,12.08,0,0,0-3.77,8.82Z"/> </svg> </button> </body> <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      const sun = document.getElementById("sun-icon");
-      const moon = document.getElementById("moon-icon");
-      const toggle = document.getElementById("theme-selector");
+    </script> <script>
+    const themes = ["system", "light", "dark"];
+    let currentThemeIndex = 0;
 
-      const storedTheme = localStorage.getItem("theme") || "light";
-      setTheme(storedTheme);
-
-      function setTheme(theme) {
-        document.documentElement.setAttribute("data-theme", theme);
-        sun.style.display = theme === "light" ? "block" : "none";
-        moon.style.display = theme === "dark" ? "block" : "none";
-        localStorage.setItem("theme", theme);
+    function applyTheme(theme) {
+      if (theme === "system") {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.body.setAttribute("data-bs-theme", prefersDark ? "dark" : "light");
+        document.getElementById("theme-sun").style.display  = "none";
+        document.getElementById("theme-moon").style.display = "none";
+        document.getElementById("theme-gear").style.display = "block";
+      } else if (theme === "light") {
+        document.body.setAttribute("data-bs-theme", "light");
+        document.getElementById("theme-sun").style.display  = "block";
+        document.getElementById("theme-moon").style.display = "none";
+        document.getElementById("theme-gear").style.display = "none";
+      } else {
+        document.body.setAttribute("data-bs-theme", "dark");
+        document.getElementById("theme-sun").style.display  = "none";
+        document.getElementById("theme-moon").style.display = "block";
+        document.getElementById("theme-gear").style.display = "none";
       }
-      function toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-      }
+    }
 
-      toggle.addEventListener("click", toggleTheme);
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme") || "system";
+      currentThemeIndex = themes.indexOf(savedTheme);
+      applyTheme(savedTheme);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const newTheme = themes[currentThemeIndex];
+            localStorage.setItem("theme", newTheme);
+            applyTheme(newTheme);
+        });
+        loadTheme();
     });
-  </script> </html>
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+      if (localStorage.getItem("theme") === "system") {
+        applyTheme("system");
+      }
+    });
+  </script> </head> <body> <nav class="navbar navbar-expand-lg bg-black"> <div class="container-fluid"> <a class="navbar-brand" href="https://mumarshahbaz.com/"> <span class="fw-bolder text-white">MUS</span> </a> <button class="navbar-toggler text-white p-1 rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars fa-lg"></i> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/">Home</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/timeline.html">Timeline</a> </li> <li class="nav-item dropdown"> <a class="nav-link text-white dropdown-toggle" href="https://mumarshahbaz.com/projects/" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a> <ul class="dropdown-menu" aria-labelledby="navbarDropdown3"> <li> <a class="dropdown-item" href="https://mumarshahbaz.com/projects/#prominent">Prominent</a> </li> <li> <a class="dropdown-item" href="https://mumarshahbaz.com/projects/#wip">Work in progress</a> </li> <li> <a class="dropdown-item" href="https://mumarshahbaz.com/projects/#planned">Planned</a> </li> <li> <a class="dropdown-item" href="https://mumarshahbaz.com/projects/#archived">Archived</a> </li> </ul> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/research/">Research</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/content/">Content</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/resume.html">Resume</a> </li> <li class="nav-item"> <a class="nav-link text-white" href="https://mumarshahbaz.com/more.html">More</a> </li> </ul> <button class="btn text-white p-0" id="theme-toggle" style="aspect-ratio: 1/1; height: 40px; width: 40px"> <i class="fas fa-sun fa-lg m-auto" id="theme-sun"></i> <i class="fas fa-moon fa-lg m-auto" id="theme-moon"></i> <i class="fas fa-gear fa-lg m-auto" id="theme-gear"></i> </button> <form class="d-flex" role="search" action="https://mumarshahbaz.com/search.html"> <input id="search-input" name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> </form> <ul id="results-container" class="list-group position-absolute shadow w-100 w-lg-25" style="z-index:1050; max-height:300px; overflow-y:auto; top:100%; left:0; min-width:300px; width:auto;"></ul> </div> </div> </nav> <main class=""><style type="text/css" media="screen">.container{margin:10px auto;max-width:600px;text-align:center}h1{margin:30px 0;font-size:4em;line-height:1;letter-spacing:-1px}</style> <div class="container full-page h-100 d-flex flex-column justify-content-center"> <h1>404</h1> <p><strong>Page not found :(</strong></p> <p>The requested page could not be found.</p> </div> </main> <footer class="bg-dark text-white pt-5 pb-4"> <div class="container text-md-start text-center"> <div class="row"> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">MUS</h5> <p>The Archives of M. Umar Shahbaz</p> </div> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">Quick Links</h5> <ul class="list-unstyled"> <li> <a href="https://mumarshahbaz.com/" class="text-white text-decoration-none">Home</a> </li> <li> <a href="https://mumarshahbaz.com/timeline.html" class="text-white text-decoration-none">Timeline</a> </li> <li> <a href="https://mumarshahbaz.com/projects/" class="text-white text-decoration-none">Projects</a> </li> <li> <a href="https://mumarshahbaz.com/research/" class="text-white text-decoration-none">Research</a> </li> <li> <a href="https://mumarshahbaz.com/content/" class="text-white text-decoration-none">Content</a> </li> <li> <a href="https://mumarshahbaz.com/resume.html" class="text-white text-decoration-none">Resume</a> </li> <li> <a href="https://mumarshahbaz.com/more.html" class="text-white text-decoration-none">More</a> </li> </ul> </div> <div class="col-md-4 mb-4"> <h5 class="text-uppercase fw-bold">Follow Me</h5> <div class="d-flex gap-3 mt-2 justify-content-center justify-content-md-start"> <a href="https://github.com/MUmarShahbaz" title="GitHub" class="text-white fs-4"> <i class="fa-lg fab fa-github"></i> </a> <a href="https://www.linkedin.com/in/m-umar-shahbaz" title="LinkedIn" class="text-white fs-4"> <i class="fa-lg fab fa-linkedin-in"></i> </a> <a href="https://gravatar.com/mumarshahbaz" title="Gravatar" class="text-white fs-4"> <i class="fa-lg fab fa-gravatar"></i> </a> <a href="https://m-umar.me/preview/feed.xml" title="RSS Feed" class="text-white fs-4"> <i class="fa-lg fas fa-rss"></i> </a> </div> </div> </div> </div> <div class="text-center mt-4 border-top pt-3"> <p class="mb-0">&copy; 2025 M. Umar Shahbaz. All rights reserved.</p> </div> </footer> </body> </html>

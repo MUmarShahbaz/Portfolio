@@ -1,5 +1,0 @@
-/* Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md). */
-/* Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.                  */
-/* The above copyright notice and this permission notice shall be         */
-/* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   */
-const POST_THRESHOLD_S=.1;class GodotPositionReportingProcessor extends AudioWorkletProcessor{constructor(...t){super(...t),this.lastPostTime=currentTime,this.position=0,this.ended=!1,this.port.onmessage=t=>{"ended"===t?.data?.type&&(this.ended=!0)}}process(t,s,o){if(this.ended)return!1;if(t.length>0){const s=t[0];s.length>0&&(this.position+=s[0].length)}return currentTime-this.lastPostTime>POST_THRESHOLD_S&&(this.lastPostTime=currentTime,this.port.postMessage({type:"position",data:this.position})),!0}}registerProcessor("godot-position-reporting-processor",GodotPositionReportingProcessor);
