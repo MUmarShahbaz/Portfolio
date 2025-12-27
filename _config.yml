@@ -141,6 +141,7 @@ exclude:
   - .jekyll-cache/
   - .vscode/
   - docker_build/
+  - temp/
   - .dockerignore
   - Dockerfile
   - Gemfile

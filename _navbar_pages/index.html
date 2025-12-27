@@ -54,23 +54,26 @@ nav-order: 1
   </div>
 </section>
 
-<!-- SoM Website Info Redirect -->
+<!-- Featured Project -->
 <section class="py-5 container border">
-    <h2 class="display-5 fw-bold text-center" data-aos="fade-up">For SoM reviewers!</h2>
-    <p class="lead text-muted text-center mb-5" data-aos="fade-up">Read more about the technical part of this website before voting</p>
-    {% capture this_other %}
-        {% assign this_icons = "Bootstrap,Jekyll,Docker,Actions" | split: "," %}
-        {% for icon in this_icons %}
-            {% assign this_icon = site.data.icons[icon] %}
-            {% include icon.liquid icon=this_icon %}
-        {% endfor %}
-        <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
-            class="btn btn-primary text-white w-75" href="{{ '/projects/MUS.html' | absolute_url }}">Read More</a></div>
-    {% endcapture %}
-    <div class="row d-flex justify-content-center"><div class="col-12 col-sm-8 col-md-6 col-lg-4">
-    {% include card.liquid img="icon.png" alt="MUS" title="MUS" p="Portfolio website of M. Umar Shahbaz"
-        other=this_other AOS="fade-up" %}
-    </div></div>
+    <h2 class="display-5 fw-bold text-center" data-aos="fade-up">Featured Project</h2>
+    <p class="lead text-muted text-center mb-5" data-aos="fade-up">Read more about my best project till date.</p>
+    {% for this_project in site.projects %}
+        {% if this_project.featured %}
+            {% capture this_other %}
+                {% for icon in this_project.icons %}
+                    {% assign this_icon = site.data.icons[icon] %}
+                    {% include icon.liquid icon=this_icon %}
+                {% endfor %}
+                <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+                    class="btn btn-primary text-white w-75" href="{{ this_project.url | absolute_url }}">Read More</a></div>
+            {% endcapture %}
+            <div class="row d-flex justify-content-center"><div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            {% include card.liquid img=this_project.image alt=this_project.title title=this_project.title p=this_project.description
+                other=this_other AOS="fade-up" %}
+            </div></div>
+        {% endif %}
+    {% endfor %}
 </section>
 
 <!-- More Pages-->

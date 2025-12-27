@@ -1,0 +1,27 @@
+{
+	"files.exclude": {
+		// Excess
+		"_data/" : true,
+		"_plugins/" : true,
+		"_sass/" : true,
+		".bundle/" : true,
+		".github/" : true,
+		".jekyll-cache/" : true,
+		"docker_build/" : true,
+		"CNAME" : true,
+		"Gemfile.lock" : true,
+		"README.md" : true,
+		"search.json" : true,
+
+		// Temporarily Invisible
+		"_includes/" : true,
+		"_layouts/" : true,
+		"_navbar_pages/" : true,
+		"404.html" : true,
+		"embed.html" : true,
+		"search.html" : true
+	},
+	"files.associations": {
+		"*.html" : "liquid"
+	}
+}

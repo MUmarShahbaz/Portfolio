@@ -13,7 +13,7 @@ layout: default
     </div>
 </header>
 
-{% if page.icons or page.repository %}
+{% if page.icons or page.repository or page.external_refrence %}
 <section class="my-5">
     <h2 class="display-2 text-center" data-aos="fade-up">Tech Stack</h2>
     {% if page.icons %}
@@ -29,6 +29,13 @@ layout: default
     {% if page.repository %}
         <div class="d-flex justify-content-center">
             {% include repo_card.liquid repo=page.repository AOS="fade-up" %}
+        </div>
+    {% endif %}
+    {% if page.external_refrence %}
+        <div class="d-flex justify-content-center w-100 my-4">
+            <a class="btn btn-primary text-white w-75" href="{{ page.external_refrence.url }}" target="_blank">
+                {{ page.external_refrence.text }}
+            </a>
         </div>
     {% endif %}
 </section>
