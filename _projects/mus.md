@@ -1,4 +1,5 @@
 ---
+fmContentType: project
 title: MUS
 description: Portfolio website of M. Umar Shahbaz
 image: /img/original/icon.png
