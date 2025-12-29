@@ -1,7 +1,7 @@
 ---
 title: Oscilloscope Online
 description: Advanced Web Serial Plotter with automation. Use any cheap MCU as a Digital Oscilloscope.
-image: projects/oscilloscope-online/icon.png
+image: /img/original/projects/oscilloscope-online/icon.png
 prefrence: 1
 featured: true
 repository: MUmarShahbaz/Oscilloscope-Online-V2

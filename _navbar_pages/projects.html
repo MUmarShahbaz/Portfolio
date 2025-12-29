@@ -28,7 +28,8 @@ container_classes: container-fluid p-5
         <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
             class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        {% assign logo = project.image | remove: '/img/original/' %}
+        {% include card.liquid img=logo alt=project.title title=project.title p=project.description
         other=this_other AOS="fade-up" %}
       </div>
       {% endfor %}
@@ -52,7 +53,8 @@ container_classes: container-fluid p-5
         <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
             class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        {% assign logo = project.image | remove: '/img/original/' %}
+        {% include card.liquid img=logo alt=project.title title=project.title p=project.description
         other=this_other AOS="fade-up" %}
       </div>
       {% endfor %}
@@ -76,7 +78,8 @@ container_classes: container-fluid p-5
         <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
             class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        {% assign logo = project.image | remove: '/img/original/' %}
+        {% include card.liquid img=logo alt=project.title title=project.title p=project.description
         other=this_other AOS="fade-up" %}
       </div>
       {% endfor %}
@@ -98,7 +101,8 @@ container_classes: container-fluid p-5
         {% include icon.liquid icon=this_icon %}
         {% endfor %}
         {% endcapture %}
-        {% include card.liquid img=project.image alt=project.title title=project.title p=project.description
+        {% assign logo = project.image | remove: '/img/original/' %}
+        {% include card.liquid img=logo alt=project.title title=project.title p=project.description
         other=this_other AOS="fade-up" %}
       </div>
       {% endfor %}

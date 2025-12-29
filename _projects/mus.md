@@ -1,7 +1,7 @@
 ---
 title: MUS
 description: Portfolio website of M. Umar Shahbaz
-image: icon.png
+image: /img/original/icon.png
 prefrence: 2
 repository: MUmarShahbaz/Portfolio
 icons:

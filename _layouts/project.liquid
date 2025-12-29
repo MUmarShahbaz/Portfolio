@@ -4,7 +4,7 @@ layout: default
 
 <header class="bg-dark-black border shadow-lg rounded-5 row p-5 mb-5 overflow-hidden">
     <div class="col-md-4" data-aos="fade-right">
-        {% picture medium {{ page.image }} --parent class="w-100 h-auto rounded" --alt {{ include.alt }} %}
+        {% picture medium {{ page.image |  remove: '/img/original/'  }} --parent class="w-100 h-auto rounded" --alt {{ include.alt }} %}
     </div>
     <div class="col-md-8 text-center d-flex justify-content-center flex-column" data-aos="fade-left">
         <h1 class="display-1">{{ page.title }}</h1>
