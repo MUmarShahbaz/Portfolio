@@ -198,5 +198,130 @@
       "title": "Projects",
       "path": "[[workspace]]/_projects"
     }
+  ],
+  "frontMatter.data.files": [
+    {
+      "id": "timeline",
+      "title": "Timeline",
+      "file": "[[workspace]]/_data/timeline.yml",
+      "fileType": "yaml",
+      "singleEntry": false,
+      "schema": {
+        "type": "object",
+        "required": ["title", "date", "description", "dot"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Event Title"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Date"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "dot": {
+            "type": "string",
+            "title": "Icon"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "archived_projects",
+      "title": "Archived Projects",
+      "file": "[[workspace]]/_data/archived_projects.yml",
+      "fileType": "yaml",
+      "singleEntry": false,
+      "schema": {
+        "type": "object",
+        "required": ["title", "description", "image", "prefrence", "icons"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Project Title"
+          },
+          "description": {
+            "type": "string",
+            "title": "Project Description"
+          },
+          "image": {
+            "type": "string",
+            "title": "Logo path"
+          },
+          "prefrence": {
+            "type": "number",
+            "title": "Order Prefrence"
+          },
+          "icons": {
+            "type": "array",
+            "title": "Toolset",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "skills",
+      "title": "Skills",
+      "file": "[[workspace]]/_data/skills.yml",
+      "fileType": "yaml",
+      "singleEntry": false,
+      "schema": {
+        "type": "object",
+        "required": ["title", "subtitle", "icons"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subtitle": {
+            "type": "string",
+            "title": "Subtitle"
+          },
+          "icons": {
+            "type": "array",
+            "title": "Toolset",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "socials",
+      "title": "Socials",
+      "file": "[[workspace]]/_data/socials.yml",
+      "fileType": "yaml",
+      "singleEntry": false,
+      "schema": {
+        "type": "object",
+        "required": ["name", "url", "icon"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL"
+          },
+          "icon": {
+            "type": "string",
+            "title": "Icon Class"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
   ]
 }
