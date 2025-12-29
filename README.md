@@ -2,7 +2,7 @@
 
 This is the source code for the personal portfolio of **M. Umar Shahbaz**. Built with Jekyll, Bootstrap, and Docker, it showcases projects, skills, and more.
 
-View the site at [m-umar.me/preview](https://m-umar.me/preview/index.html)
+View the site at [mumarshahbaz.com](https://mumarshahbaz.com)
 
 ## 🚀 Features
 
