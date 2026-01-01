@@ -326,6 +326,33 @@
         },
         "additionalProperties": false
       }
+    },
+    {
+      "id": "icons",
+      "title": "Icons",
+      "file": "[[workspace]]/_data/icons.yml",
+      "fileType": "yaml",
+      "singleEntry": false,
+      "labelField": "name",
+      "schema": {
+        "type": "object",
+        "required": ["name", "class", "color"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "class": {
+            "type": "string",
+            "title": "CSS Class"
+          },
+          "color": {
+            "type": "string",
+            "title": "Background Color"
+          }
+        },
+        "additionalProperties": false
+      }
     }
   ]
 }

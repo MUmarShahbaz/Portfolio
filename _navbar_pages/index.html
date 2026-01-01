@@ -62,7 +62,7 @@ nav-order: 1
         {% if this_project.featured %}
             {% capture this_other %}
                 {% for icon in this_project.icons %}
-                    {% assign this_icon = site.data.icons[icon] %}
+                    {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
                     {% include icon.liquid icon=this_icon %}
                 {% endfor %}
                 <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a

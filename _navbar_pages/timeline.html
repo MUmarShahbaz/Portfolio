@@ -29,7 +29,7 @@ dynamic_assets:
     {%  if this_event.dot.class %}
       {% include icon.liquid icon=this_event.dot %}
     {% else %}
-      {%  assign dot = site.data.icons[this_event.dot] %}
+      {%  assign dot = site.data.icons | where_exp: 'i', 'i.name == this_event.dot' | first %}
       {% include icon.liquid icon=dot %}
     {% endif %}
   {% endcapture %}

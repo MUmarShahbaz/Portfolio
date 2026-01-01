@@ -1,7 +1,7 @@
 <div class="card h-100 border-0 shadow">
   <div class="card-body text-center p-4">
     {% for icon in include.icons %}
-      {% assign this_icon = site.data.icons[icon] %}
+      {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first %}
       {% include icon.liquid icon=this_icon %}
     {% endfor %}
     <h5 class="card-title">{{ include.title }}</h5>

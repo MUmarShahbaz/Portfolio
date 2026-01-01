@@ -5,33 +5,28 @@
     - Express
     - React
     - NodeJS
-
 - title: Git, GitHub & GitKraken
   subtitle: Collaboration
   icons:
     - Git
     - GitHub
     - GitKraken
-
 - title: Docker, Actions & Ubuntu
   subtitle: DevOps
   icons:
     - Docker
     - Actions
     - Ubuntu
-
 - title: JavaScript & TypeScript
   subtitle: JS
   icons:
     - JavaScript
     - TypeScript
-
 - title: Arduino & TTL
   subtitle: Robotics
   icons:
     - Arduino
     - Microchip
-
 - title: C++, C#, Python & Ruby
   subtitle: Other Languages
   icons:
@@ -39,9 +34,8 @@
     - CSharp
     - Python
     - Ruby
-
-- title: Unity & Blender
-  subtitle: Game Development (WIP)
+- title: Godot
+  subtitle: Game Development
   icons:
-    - Unity
-    - Blender
+    - Godot
+

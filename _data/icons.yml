@@ -1,85 +1,82 @@
-#==========================
-#       TOOL STACK
-#==========================
-MongoDB:
+- name: MongoDB
   class: devicon-mongodb-plain
   color: '#4DB33D'
-Express:
+- name: Express
   class: devicon-express-original
   color: '#303030'
-React:
+- name: React
   class: devicon-react-original
   color: '#61DAFB'
-NodeJS:
+- name: NodeJS
   class: fab fa-node-js
   color: '#3C873A'
-Git:
+- name: Git
   class: devicon-git-plain
   color: '#F1502F'
-GitHub:
+- name: GitHub
   class: devicon-github-original
   color: '#181717'
-GitKraken:
+- name: GitKraken
   class: fab fa-gitkraken
   color: '#128379'
-Docker:
+- name: Docker
   class: devicon-docker-plain
   color: '#1D63ED'
-Actions:
+- name: Actions
   class: devicon-githubactions-plain
   color: '#2088FF'
-Ubuntu:
+- name: Ubuntu
   class: devicon-ubuntu-plain
   color: '#E95420'
-JavaScript:
+- name: JavaScript
   class: devicon-javascript-plain
   color: '#f7df1e'
-TypeScript:
+- name: TypeScript
   class: devicon-typescript-plain
   color: '#3178c6'
-Unity:
+- name: Godot
+  class: devicon-godot-plain
+  color: '#478CBF'
+- name: Unity
   class: devicon-unity-plain
   color: '#000000'
-Blender:
+- name: Blender
   class: devicon-blender-original
   color: '#f5792a'
-Arduino:
+- name: Arduino
   class: devicon-arduino-plain
   color: '#00979D'
-CPlusPlus:
+- name: CPlusPlus
   class: devicon-cplusplus-plain
   color: '#00599C'
-CSharp:
+- name: CSharp
   class: devicon-csharp-plain
   color: '#68217A'
-Python:
+- name: Python
   class: devicon-python-plain
   color: '#3776AB'
-Ruby:
+- name: Ruby
   class: devicon-ruby-plain
   color: '#701516'
-Bootstrap:
+- name: Bootstrap
   class: devicon-bootstrap-plain
   color: '#7952B3'
-Jekyll:
+- name: Jekyll
   class: devicon-jekyll-plain
   color: '#CC0000'
-
-#==========================
-#     GENERAL ICONS
-#==========================
-Education:
+- name: Education
   class: fas fa-graduation-cap
   color: '#2E86C1'
-Job:
+- name: Job
   class: fas fa-briefcase
   color: '#27AE60'
-Award:
+- name: Award
   class: fas fa-certificate
   color: '#F1C40F'
-User:
+- name: User
   class: fas fa-user-tie
   color: '#8E44AD'
-Microchip:
+- name: Microchip
   class: fas fa-microchip
   color: '#000000'
+

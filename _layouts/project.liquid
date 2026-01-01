@@ -20,7 +20,7 @@ layout: default
         <div class="row d-flex justify-content-center my-4">
             {% for icon in page.icons %}
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-2">
-                    {% assign this_icon = site.data.icons[icon] %}
+                    {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
                     {% include icon_full.liquid icon=this_icon name=icon AOS="fade-up" %}
                 </div>
             {% endfor %}
