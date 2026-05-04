@@ -7,7 +7,7 @@ container_classes: container p-5
 
 <h1 class="display-1">Search Results</h1>
 <p class="muted">Showing results for "<span id="show_for"></span>"</p>
-<section id="show_result"></section>
+<section id="show_result" class="row d-flex"></section>
 {% include navbox.liquid %}
 <script defer>
     const query = (new URLSearchParams(window.location.search)).get('q');
@@ -20,10 +20,10 @@ container_classes: container p-5
             const item = element.item || element;
             const this_result_card = document.createElement('div');
             this_result_card.setAttribute('data-aos', 'fade-up');
-            this_result_card.classList.add('card', 'shadow', 'h-100', 'position-relative', 'mb-4');
+            this_result_card.classList.add('card', 'shadow', 'position-relative', 'col-12', 'col-md-6', 'col-lg-4', 'align-self-stretch', 'm-3');
             let imageHtml = '';
             if (item.image) {
-                imageHtml = `<img src='assets/img/original/${item.image}' class='card-img-top' alt='${item.title}' style='max-height:200px;object-fit:cover;'>`;
+                imageHtml = `<img src='assets${item.image}' class='card-img-top' alt='${item.title}' style='max-height:200px;object-fit:cover;'>`;
             }
             let iconsHtml = '';
                             if (Array.isArray(item.icons) && item.icons.length > 0) {

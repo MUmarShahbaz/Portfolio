@@ -2,7 +2,7 @@
 layout: default
 title:  "Welcome to Jekyll!"
 date:   2025-06-14 23:37:35 +0500
-categories: jekyll update
+categories: [jekyll, update]
 dynamic_assets:
   files: [code.css]
 container_classes: container py-5

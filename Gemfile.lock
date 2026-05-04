@@ -149,6 +149,7 @@ DEPENDENCIES
   jekyll_dynamic_assets
   jekyll_picture_tag
   logger
+  ruby-vips (~> 2.2)
   wdm (>= 0.1.0)
 
 BUNDLED WITH
