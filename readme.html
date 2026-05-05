@@ -1,0 +1,58 @@
+---
+layout: none
+langs:
+    - TypeScript
+    - JavaScript
+    - Godot
+    - CPlusPlus
+    - Ruby
+    - Arduino
+    - Python
+tools:
+    - NodeJS
+    - Git
+    - GitHub
+    - GitKraken
+    - Actions
+    - Microchip
+    - Docker
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Author</title>
+    {% inject_assets %}
+</head>
+
+<body class="container-fluid">
+    <main class="row full-page d-flex justify-content-center">
+        <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center p-3 p-sm-5 p-lg-3">
+            {% picture medium profile_picture.jpg --parent class="img-fluid rounded-circle m-5 m-md-0" %}
+        </div>
+        <div class="col-md-6 col-lg-5 d-flex flex-column justify-content-center p-2">
+            <div>
+                <h1 class="display-5 display-lg-4 text-center text-md-start">M. Umar Shahbaz</h1>
+                <p>I'm a student from Pakistan with experience in C++, Python, JavaScript, and Ruby. I enjoy the
+                    precision of C++—and, somehow, I've also grown fond of JavaScript's beautiful chaos.</p>
+            </div>
+            <div class="row d-flex justify-content-around">
+                {% for icon in page.langs %}
+                    {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
+                    {% include icon.liquid icon=this_icon %}
+                {% endfor %}
+            </div>
+            <div class="row d-flex justify-content-around">
+                {% for icon in page.tools %}
+                    {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
+                    {% include icon.liquid icon=this_icon %}
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
