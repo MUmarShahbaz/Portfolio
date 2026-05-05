@@ -53,6 +53,31 @@ tools:
             </div>
         </div>
     </main>
+    {% assign prominent = site.projects | where_exp: 'project', 'project.category == "prominent"' | sort: 'prefrence' %}
+
+    {% if prominent.size > 0 %}
+    <hr class="w-75 mx-auto my-5">
+    <section>
+    <h1 id="prominent" class="display-2 text-center my-5">Prominent Projects</h1>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+        {% for project in prominent %}
+        <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
+            {% capture this_other %}
+            {% for icon in project.icons %}
+            {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
+            {% include icon.liquid icon=this_icon %}
+            {% endfor %}
+            {% endcapture %}
+            {% assign logo = project.image | remove: '/img/original/' %}
+            {% include card.liquid img=logo alt=project.title title=project.title p=project.description
+            other=this_other %}
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    </section>
+    {% endif %}
 </body>
 
 </html>
