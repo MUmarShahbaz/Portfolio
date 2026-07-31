@@ -58,8 +58,9 @@ nav-order: 1
 <section class="py-5 container border">
     <h2 class="display-5 fw-bold text-center" data-aos="fade-up">Featured Project</h2>
     <p class="lead text-muted text-center mb-5" data-aos="fade-up">Read more about my best project till date.</p>
-    {% for this_project in site.projects %}
-        {% if this_project.featured %}
+    <div class="container-fluid"><div class="row d-flex">
+        {% for this_project in site.projects %}{% if this_project.featured %}
+            <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
             {% capture this_other %}
                 {% for icon in this_project.icons %}
                     {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
@@ -68,13 +69,12 @@ nav-order: 1
                 <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
                     class="btn btn-primary text-white w-75" href="{{ this_project.url | absolute_url }}">Read More</a></div>
             {% endcapture %}
-            <div class="row d-flex justify-content-center"><div class="col-12 col-sm-8 col-md-6 col-lg-4">
             {% assign logo = this_project.image |  remove: '/img/original/' %}
             {% include card.liquid img=logo alt=this_project.title title=this_project.title p=this_project.description
                 other=this_other AOS="fade-up" %}
-            </div></div>
-        {% endif %}
-    {% endfor %}
+            </div>
+        {% endif %}{% endfor %}
+    </div></div>
 </section>
 
 <!-- More Pages-->
