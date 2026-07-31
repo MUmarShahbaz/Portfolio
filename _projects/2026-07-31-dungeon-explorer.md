@@ -14,7 +14,7 @@ external_refrence:
    text: Open Dungeon Explorer
 permalink: /projects/Dungeon-Explorer.html
 layout: project
-category: prominent
+category: game_development
 container_classes: container py-5
 ---
 

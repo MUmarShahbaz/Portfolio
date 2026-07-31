@@ -6,28 +6,28 @@ description: A library featuring a collection of reusable components for buildin
 divider: ""
 repository: MUmarShahbaz/Godot-RPG-Components
 icons:
-  - Godot
+    - Godot
 external_refrence:
-  url: https://godotrpgcomponents.xyz
-  text: Check out the Library!!
+    url: https://godotrpgcomponents.xyz
+    text: Check out the Library!!
 permalink: /projects/Godot-RPG-Components.html
 featured: true
-category: prominent
+category: game_development
 prefrence: 3
 layout: project
 container_classes: container py-5
 dynamic_assets:
-  files: []
+    files: []
 fmContentType: project
 keywords:
-  - components
-  - framework
-  - game development
-  - godot
-  - library
-  - rpg
-  - tool
-  - addon
+    - components
+    - framework
+    - game development
+    - godot
+    - library
+    - rpg
+    - tool
+    - addon
 ---
 
 

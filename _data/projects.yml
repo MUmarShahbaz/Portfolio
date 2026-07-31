@@ -1,6 +1,7 @@
 - title: Robotic Arm
   description: Made using an Arduino Uno. Controlled over Serial communication via a custom WinForms app.
   image: /projects/archived/RBA.jpg
+  category: robotics
   prefrence: 1
   icons:
    - Arduino
@@ -9,6 +10,7 @@
 - title: Yellow Rammer
   description: Offroad Jeep, with headlights, tailights and signal-lights. Controlled Via Bluetooth using Arduino.
   image: /projects/archived/YR.png
+  category: robotics
   prefrence: 2
   icons:
    - Arduino
@@ -16,6 +18,7 @@
 - title: Line Follower
   description: Infrared-Based Line Follower Robot using an Arduino and Standard 4WD Chasis. Using PID algorithm.
   image: /projects/archived/LFR.jpg
+  category: robotics
   prefrence: 3
   icons:
    - Arduino
@@ -23,6 +26,7 @@
 - title: TTL Auto-Lamp
   description: Automatic Night Light using TTL logic (without any MCU) reducing costs by ~70%. Uses a Standard LDR Sensor and inverts the output.
   image: /projects/archived/ANL.jpg
+  category: embedded_systems
   prefrence: 4
   icons:
    - Microchip
@@ -30,6 +34,7 @@
 - title: IRH
   description: Home automation Unit. Uses a relay network and controls it via an IR Signal. Made using Arduino.
   image: /projects/archived/IRH.jpg
+  category: robotics
   prefrence: 5
   icons:
    - Arduino

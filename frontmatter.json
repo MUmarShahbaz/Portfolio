@@ -136,9 +136,10 @@
           "name": "category",
           "type": "choice",
           "choices": [
-            "prominent",
-            "wip",
-            "planned"
+            "web_development",
+            "game_development",
+            "robotics",
+            "embedded_systems"
           ],
           "required": true
         },

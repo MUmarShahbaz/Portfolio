@@ -18,11 +18,11 @@ external_refrence:
    text: Open Oscilloscope Online
 permalink: /projects/Oscilloscope-Online.html
 layout: project
-category: prominent
+category: web_development
 container_classes: container py-5
 dynamic_assets:
-  files:
-   - mermaid.min.js
+   files:
+      - mermaid.min.js
 ---
 
 # Technical Details

@@ -1,0 +1,30 @@
+{% assign pagefull = site.data.projects | where_exp: 'project', 'project.category == include.category' | sort: 'prefrence' %}
+{% assign pageless = site.projects | where_exp: 'project', 'project.category == include.category' | sort: 'prefrence' %}
+{% assign category = pagefull | concat: pageless %}
+
+{% if category.size > 0 %}
+<section>
+  <h1 id="{{ include.category }}" class="display-2" data-aos="fade-right">{{ include.category | replace: "_", " " | capitalize}}</h1>
+  <div class="container-fluid">
+    <div class="row d-flex">
+      {% for project in category %}
+      <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
+        {% capture this_other %}
+        {% for icon in project.icons %}
+        {% assign this_icon = site.data.icons |  where_exp: 'i', 'i.name == icon' | first  %}
+        {% include icon.liquid icon=this_icon %}
+        {% endfor %}
+        {% if project.url %}
+          <div class="d-flex justify-content-center position-absolute w-100" style="left: 0; bottom: 10px;"><a
+            class="btn btn-primary text-white w-75" href="{{ project.url | absolute_url }}">Read More</a></div>
+        {% endif %}
+        {% endcapture %}
+        {% assign logo = project.image | remove: '/img/original/' %}
+        {% include card.liquid img=logo alt=project.title title=project.title p=project.description
+        other=this_other AOS="fade-up" %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
