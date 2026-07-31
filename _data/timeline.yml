@@ -12,6 +12,20 @@
     Graduated with ~89% Score
   dot: Education
 
+- title: SAT
+  date: 2024-12-07
+  description: >
+    <b>1450</b></br>
+    English: 730, Maths: 720
+  dot: Award
+
+- title: IELTS
+  date: 2025-09-21
+  description: >
+    <b>7.5 Bands</b></br>
+    Equivalent to CEFR C1 Level
+  dot: Award
+
 - title: CEFR A1 German Language
   date: 2025-07-12
   description: 'Course completed on Udemy'
@@ -32,16 +46,6 @@
   description: 'Course completed at Annemarie Schimmel Haus'
   dot: Award
 
-- title: Oscilloscope Online Reboot
-  date: 2025-08-09
-  description: My Best project to date
-  dot: Job
-
-- title: Started using GitHub
-  date: 2024-08-03
-  description: Started using GitHub professionally for Open Source development
-  dot: GitHub
-
 - title: Awarded Scholarship
   date: 2023-08-16
   description: Scholarship student at<br><b>Lahore Grammar School JT BOYS Campus</b>
@@ -51,3 +55,45 @@
   date: 2024-02-17
   description: For outstanding results<br>Presented by <b>Crescent Model School</b>
   dot: Award
+
+- title: Oscilloscope Online Reboot
+  date: 2025-08-09
+  description: My Best project to date
+  dot: Job
+
+- title: Summer of Making
+  date: 2025-06-16
+  description: >
+    An event by HackClub<br>
+    Programmed for 225h and got an iPad A16!!<br>
+    Ended September 30th, 2025
+  dot: Job
+
+- title: Siege
+  date: 2025-10-01
+  description: >
+    An event by HackClub<br>
+    Programmed for 99h and got a 600$ grant!!<br>
+    Ended December 7th, 2025
+  dot: Job
+
+- title: Flavortown
+  date: 2025-12-21
+  description: >
+    An event by HackClub<br>
+    Programmed for 163h and got an iPhone 17E!!<br>
+    Ended April 30th, 2026
+  dot: Job
+
+- title: Campfire Lahore
+  date: 2026-02-28
+  description: >
+    An event by HackClub<br>
+    Helped organize this 2 day game jam!<br>
+    Gave a workshop on Git and Open Source
+  dot: Job
+
+- title: Started using GitHub
+  date: 2024-08-03
+  description: Started using GitHub professionally for Open Source development
+  dot: GitHub
