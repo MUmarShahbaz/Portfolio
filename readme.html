@@ -53,15 +53,15 @@ tools:
             </div>
         </div>
     </main>
-    {% assign prominent = site.projects | where_exp: 'project', 'project.category == "prominent"' | sort: 'prefrence' %}
+    {% assign featured = site.projects | where_exp: 'project', 'project.featured == true' | sort: 'prefrence' %}
 
-    {% if prominent.size > 0 %}
+    {% if featured.size > 0 %}
     <hr class="w-75 mx-auto my-5">
     <section>
-    <h1 id="prominent" class="display-2 text-center my-5">Prominent Projects</h1>
+    <h1 id="featured" class="display-2 text-center my-5">Featured Projects</h1>
     <div class="container">
         <div class="row d-flex justify-content-center">
-        {% for project in prominent %}
+        {% for project in featured %}
         <div class="col-12 col-md-6 col-lg-4 align-self-stretch my-3">
             {% capture this_other %}
             {% for icon in project.icons %}

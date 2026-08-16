@@ -12,6 +12,7 @@
 		"Gemfile.lock" : true,
 		"README.md" : true,
 		"search.json" : true,
+		".frontmatter": true,
 
 		// Temporarily Invisible
 		"_includes/" : true,
