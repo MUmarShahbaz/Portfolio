@@ -1,22 +1,28 @@
 - title: MERN Stack
-  subtitle: Web Development (WIP)
+  subtitle: Web Development
   icons:
     - MongoDB
     - Express
     - React
     - NodeJS
-- title: Git, GitHub & GitKraken
-  subtitle: Collaboration
+- title: Power BI, Excel & PowerPoint
+  subtitle: Data Analytics
   icons:
-    - Git
-    - GitHub
-    - GitKraken
+    - PowerBI
+    - Excel
+    - PowerPoint
 - title: Docker, Actions & Ubuntu
   subtitle: DevOps
   icons:
     - Docker
     - Actions
     - Ubuntu
+- title: Git, GitHub & GitKraken
+  subtitle: Collaboration
+  icons:
+    - Git
+    - GitHub
+    - GitKraken
 - title: JavaScript & TypeScript
   subtitle: JS
   icons:
@@ -27,6 +33,10 @@
   icons:
     - Arduino
     - Microchip
+- title: Godot
+  subtitle: Game Development
+  icons:
+    - Godot
 - title: C++, C#, Python & Ruby
   subtitle: Other Languages
   icons:
@@ -34,8 +44,3 @@
     - CSharp
     - Python
     - Ruby
-- title: Godot
-  subtitle: Game Development
-  icons:
-    - Godot
-

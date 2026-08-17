@@ -64,6 +64,15 @@
 - name: Jekyll
   class: devicon-jekyll-plain
   color: '#CC0000'
+- name: PowerBI
+  class: fab fa-powerbi
+  color: '#F2C811'
+- name: Excel
+  class: fab fa-excel
+  color: '#1D6F42'
+- name: PowerPoint
+  class: fab fa-powerpoint
+  color: '#D04423'
 - name: Education
   class: fas fa-graduation-cap
   color: '#2E86C1'
